@@ -4,36 +4,50 @@
   background-color: yellow; }
 
 .header {
-  margin: 0px;
+  margin-bottom: 10px;
   height: 96px;
   background-color: #000; }
   .header .header-content {
-    margin: 0px 200px;
+    margin: 0px 180px;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    overflow: visible;
+    position: relative; }
   .header h2 {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 1em; }
+    font-size: 0.8em;
+    letter-spacing: 2px; }
   .header .header-box-1 {
     display: flex;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: flex-end; }
     .header .header-box-1 .header-text {
       color: white; }
     .header .header-box-1 .leaf-logo {
+      margin-top: 18px;
       width: 167px;
       height: 66px; }
     .header .header-box-1 .products-text {
-      font-family: "Montserrat", sans-serif;
-      color: white; }
+      color: white;
+      margin: 20px 0px 0px 60px; }
   .header .header-box-2 {
     display: flex;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: flex-end; }
+    .header .header-box-2 .find-store {
+      margin: 20px 60px 0px 0px; }
+    .header .header-box-2 .search {
+      margin: 20px 40px 0px 0px; }
     .header .header-box-2 .cart-icon {
-      height: 50px; }
+      margin-top: 70px;
+      height: 20px; }
+
+body {
+  background-image: url("./images/midlayers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .footer {
   height: 210px;

@@ -10,8 +10,8 @@ export default function Header() {
                 <h2 className="products-text">PRODUCTS</h2>
             </div>
             <div className="header-box-2">
-                <h2>Find a Store</h2>
-                <h2>Search</h2>
+                <h2 className="find-store">Find A Store</h2>
+                <h2 className="search">Search</h2>
                 <img className="cart-icon" src={cart} alt="cart-logo"/>
             </div>
         </div>

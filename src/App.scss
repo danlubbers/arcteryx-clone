@@ -5,7 +5,8 @@
 $background-color: #000;
 $font-color: white;
 $font-family: 'Montserrat', sans-serif;
-$font-size: 1em;
+$font-size: .8em;
+$letter-spacing: 2px;
 
 .App {
   text-align: center;
@@ -14,29 +15,32 @@ $font-size: 1em;
 
 // HEADER
 .header {
-  margin: 0px;
+  margin-bottom: 10px;
   height: 96px;
   background-color: $background-color;
 
   .header-content {
     // background-color: blue;
-    margin: 0px 200px;
+    margin: 0px 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
+    position: relative;
   }
   
   h2 {
     color: $font-color;
     font-family: $font-family;
     font-size: $font-size;
+    letter-spacing: $letter-spacing
   }
 
   .header-box-1 {
     // background-color: red;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     
 
     .header-text {
@@ -44,13 +48,15 @@ $font-size: 1em;
     }
     
     .leaf-logo {
+      margin-top: 18px;
       width: 167px;
       height: 66px;
     }
   
     .products-text {
-      font-family: $font-family;
+      // font-family: $font-family;
       color: $font-color;
+      margin: 20px 0px 0px 60px;
     }
   }
 
@@ -58,14 +64,32 @@ $font-size: 1em;
     // background-color: green;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
 
+    .find-store {
+      margin: 20px 60px 0px 0px; 
+    }
+
+    .search {
+      margin: 20px 40px 0px 0px;
+    }
+    
     .cart-icon {
-      height: 50px;
+      margin-top: 70px;
+      height: 20px;
   
     }
   }
 
+}
+
+// BODY
+
+body {
+  background-image: url('./images/midlayers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-color: purple;
 }
 
 

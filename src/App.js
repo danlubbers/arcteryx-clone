@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import './reset.css';
 import './App.css';
 import Header from './Component/Header/Header';
+// import Body from './Component/Body/Body';
 // import Category from './Component/Category/Category';
 import Footer from './Component/Footer/Footer';
 
@@ -12,6 +14,10 @@ class App extends Component {
         <div className="header">
           <Header />
         </div>
+
+        {/* <div>
+          <Body />
+        </div> */}
 
         {/* <div className="category">
           <Category />
