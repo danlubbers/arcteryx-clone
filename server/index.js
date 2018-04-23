@@ -1,13 +1,23 @@
 const express = require('express'),
-      bodyParser = require('body-parser');
+      bodyParser = require('body-parser'),
+      massive = require('massive');
       // controller = require('controller');
+
+require('dotenv').config();
 
 
 const app = express();
 
+const {CONNECTION_STRING} = process.env;
+
+massive(CONNECTION_STRING).then(db=>{
+      app.set('db', db);
+})
+
 app.use(bodyParser.json());
 
 // Add Endpoints here:
+
 
 
 const port = 3500;
