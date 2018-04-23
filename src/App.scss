@@ -1,5 +1,90 @@
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+// VARIABLES
+$background-color: #000;
+$font-color: white;
+$font-family: 'Montserrat', sans-serif;
+$font-size: 1em;
+
 .App {
   text-align: center;
+  background-color: yellow;
 }
+
+// HEADER
+.header {
+  margin: 0px;
+  height: 96px;
+  background-color: $background-color;
+
+  .header-content {
+    // background-color: blue;
+    margin: 0px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h2 {
+    color: $font-color;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
+  .header-box-1 {
+    // background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+    .header-text {
+      color: $font-color;
+    }
+    
+    .leaf-logo {
+      width: 167px;
+      height: 66px;
+    }
+  
+    .products-text {
+      font-family: $font-family;
+      color: $font-color;
+    }
+  }
+
+  .header-box-2 {
+    // background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .cart-icon {
+      height: 50px;
+  
+    }
+  }
+
+}
+
+
+// FOOTER
+.footer {
+  height: 210px;
+  background-color: $background-color;
+
+  .footer-text {
+    color: $font-color;
+  }
+  
+  .arc-logo {
+    width: 143px;
+    height: 91px;
+  }
+
+}
+
+
 
 

@@ -1,2 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 .App {
-  text-align: center; }
+  text-align: center;
+  background-color: yellow; }
+
+.header {
+  margin: 0px;
+  height: 96px;
+  background-color: #000; }
+  .header .header-content {
+    margin: 0px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header h2 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em; }
+  .header .header-box-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .header .header-box-1 .header-text {
+      color: white; }
+    .header .header-box-1 .leaf-logo {
+      width: 167px;
+      height: 66px; }
+    .header .header-box-1 .products-text {
+      font-family: "Montserrat", sans-serif;
+      color: white; }
+  .header .header-box-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .header .header-box-2 .cart-icon {
+      height: 50px; }
+
+.footer {
+  height: 210px;
+  background-color: #000; }
+  .footer .footer-text {
+    color: white; }
+  .footer .arc-logo {
+    width: 143px;
+    height: 91px; }
