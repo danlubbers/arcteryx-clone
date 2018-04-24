@@ -14,7 +14,8 @@ create table products (
 );
 
 create table details (
-    product_id serial primary key,
+    id serial primary key,
+    product_id integer,
     large_img text
 );
 
@@ -48,22 +49,28 @@ insert into products (title, description, price, colour, img) values ('COLD WX P
 
 -- INSERT FOR DETAILS TABLE
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524600909/Cold-WX-Parka-SVX-Harrier-large.png');
+insert into details (product_id, large_img) values (1, 'http://res.cloudinary.com/danlubbers/image/upload/v1524600909/Cold-WX-Parka-SVX-Harrier-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524602533/Cold-WX-Jacket-SV-Black-large.png');
+insert into details (product_id, large_img) values (2, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602533/Cold-WX-Jacket-SV-Black-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524602664/Cold-WX-Jacket-LT-MultiCam-Multicam-large.png');
+insert into details (product_id, large_img) values (3, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602664/Cold-WX-Jacket-LT-MultiCam-Multicam-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524602764/Cold-WX-Jacket-SV-MultiCam-Multicam-large.png');
+insert into details (product_id, large_img) values (4, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602764/Cold-WX-Jacket-SV-MultiCam-Multicam-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524602839/Cold-WX-Hoody-LT-Ranger-Green-large.png');
+insert into details (product_id, large_img) values (5, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602839/Cold-WX-Hoody-LT-Ranger-Green-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524602914/Cold-WX-Hoody-LT-MultiCam-Multicam-large.png');
+insert into details (product_id, large_img) values (6, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602914/Cold-WX-Hoody-LT-MultiCam-Multicam-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524603031/Cold-WX-Jacket-LT-Crocodile-large.png');
+insert into details (product_id, large_img) values (7, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603031/Cold-WX-Jacket-LT-Crocodile-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524603113/Cold-WX-Bib-Pant-SVX-Harrier-large.png');
+insert into details (product_id, large_img) values (8, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603113/Cold-WX-Bib-Pant-SVX-Harrier-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524603183/Cold-WX-Pant-SV-Black-large.png');
+insert into details (product_id, large_img) values (9, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603183/Cold-WX-Pant-SV-Black-large.png');
 
-insert into details (large_img) values ('http://res.cloudinary.com/danlubbers/image/upload/v1524603258/Cold-WX-Pant-SV-MultiCam-Multicam-large.png');
+insert into details (product_id, large_img) values (10, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603258/Cold-WX-Pant-SV-MultiCam-Multicam-large.png');
+
+-- How to Join
+
+select * from products
+inner join details on details.product_id = products.product_id;
+
