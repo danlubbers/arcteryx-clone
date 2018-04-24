@@ -121,8 +121,7 @@ h2, ul {
 // FOOTER
 .footer {
   height: 201px;
-  position: absolute;
-  bottom: 0;
+  position: relative;
   padding: 50px 75px 0px 75px;
   width: 100vw;
   background-color: $background-color;
@@ -196,8 +195,36 @@ h2, ul {
   .cold-weather-text {
     margin: 0px 0px 0px 10px;
   }
-
 }
+
+.products-array {
+  margin: 50px;
+  padding: 0px 0px 0px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.single-product {
+  margin: 15px;
+}
+
+.title-price {
+  margin: 30px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+p {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: bolder;
+  padding-top: 5px;
+  
+  }
 
 h3 {
   font-family: $font-family;

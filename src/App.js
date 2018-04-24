@@ -14,13 +14,14 @@ class App extends Component {
                 <Header />
             </div>
 
-              <div className="footer">
+        {routes}
+
+        <div className="footer">
                  <Footer />
             </div>
 
-        {routes}
-
       </div>
+      
     );
   }
 }

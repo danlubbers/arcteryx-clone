@@ -23,9 +23,12 @@ export default class Category extends Component {
     render() {
         let productsArray = this.state.products.map((element, index)=> {
             return(
-                <div key={index} className="products-array">
+                <div key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
-                    <p>{element.title}</p>
+                    <div className="title-price">
+                        <p>{element.title}</p>
+                        <p>$ {element.price} USD</p>
+                    </div>
                 </div>
             )
         })
@@ -39,7 +42,7 @@ export default class Category extends Component {
                     </div>
                     <img className="insulation-img" src={backgroundCategoryImg} alt="snow mountain" />
                 </div>
-                <div>{productsArray}</div>
+                <div className="products-array">{productsArray}</div>
             </div>
 
         )
