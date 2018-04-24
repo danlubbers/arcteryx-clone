@@ -19,10 +19,16 @@ body {
   // background-image: url('./images/midlayers.jpg');
   // background-size: cover;
   // background-repeat: no-repeat;
-  background-color: purple;
+  background-color: #151515;
 }
 
 
+h2, ul {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing
+}
 
 // HEADER
 .header {
@@ -33,7 +39,7 @@ body {
 
   .header-content {
     // background-color: blue;
-    margin: 0px 180px;
+    margin: 0px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,12 +47,6 @@ body {
     position: relative;
   }
   
-  h2, ul {
-    color: $font-color;
-    font-family: $font-family;
-    font-size: $font-size;
-    letter-spacing: $letter-spacing
-  }
 
   .header-box-1 {
     // background-color: red;
@@ -131,14 +131,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    width: 83vw;
     // overflow: visible;
     // position: relative;
   }
   
 
   h2 {
-   color: $font-color;
+   color: #a4a4a4;
    font-family: $font-family;
+   letter-spacing: 1px;
   }
   
   .footer-text {
@@ -151,10 +153,10 @@ body {
     // display: flex;
     // justify-content: space-around;
     // align-items: flex-end;
-            .arc-logo {
-              width: 143px;
-              height: 91px;
-              margin: auto;
+            
+    .arc-logo {
+      width: 12vw;
+      margin-bottom: 6px;
             }
   }
 

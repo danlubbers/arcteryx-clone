@@ -3,7 +3,13 @@
   text-align: center; }
 
 body {
-  background-color: purple; }
+  background-color: #151515; }
+
+h2, ul {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px; }
 
 .header {
   margin-bottom: 10px;
@@ -11,17 +17,12 @@ body {
   height: 96px;
   background-color: #000; }
   .header .header-content {
-    margin: 0px 180px;
+    margin: 0px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: visible;
     position: relative; }
-  .header h2, .header ul {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.7em;
-    letter-spacing: 2px; }
   .header .header-box-1 {
     display: flex;
     justify-content: flex-start;
@@ -72,16 +73,17 @@ body {
   .footer .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; }
+    align-items: flex-end;
+    width: 83vw; }
   .footer h2 {
-    color: white;
-    font-family: "Montserrat", sans-serif; }
+    color: #a4a4a4;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px; }
   .footer .footer-text {
     padding: 10px;
     font-size: 0.7em; }
   .footer .footer-box-1 {
     float: left; }
     .footer .footer-box-1 .arc-logo {
-      width: 143px;
-      height: 91px;
-      margin: auto; }
+      width: 12vw;
+      margin-bottom: 6px; }
