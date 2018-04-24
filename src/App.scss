@@ -5,7 +5,7 @@
 $background-color: #000;
 $font-color: white;
 $font-family: 'Montserrat', sans-serif;
-$font-size: .8em;
+$font-size: .7em;
 $letter-spacing: 2px;
 
 .App {
@@ -16,6 +16,7 @@ $letter-spacing: 2px;
 // HEADER
 .header {
   margin-bottom: 10px;
+  width: 100vw;
   height: 96px;
   background-color: $background-color;
 
@@ -95,18 +96,58 @@ body {
 
 // FOOTER
 .footer {
-  height: 210px;
+  height: 201px;
+  position: absolute;
+  bottom: 0;
+  padding: 50px 75px 0px 75px;
+  width: 100vw;
   background-color: $background-color;
 
-  .footer-text {
-    color: $font-color;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // overflow: visible;
+    // position: relative;
   }
   
-  .arc-logo {
-    width: 143px;
-    height: 91px;
+
+  h2 {
+   color: $font-color;
+   font-family: $font-family;
+  }
+  
+  .footer-text {
+    padding: 10px;
+    font-size: $font-size;
+  }
+  
+  .footer-box-1 {
+    float: left;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: flex-end;
+            .arc-logo {
+              width: 143px;
+              height: 91px;
+              margin: auto;
+            }
   }
 
+  .footer-box-2 {
+  }
+
+  .footer-box-3 {
+
+  }
+
+  .footer-box-4 {
+
+  }
+
+  .footer-box-5 {
+    
+  }
 }
 
 
