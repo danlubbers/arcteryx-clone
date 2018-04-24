@@ -10,8 +10,19 @@ $letter-spacing: 2px;
 
 .App {
   text-align: center;
-  background-color: yellow;
+  // background-color: yellow;
 }
+
+// BODY
+
+body {
+  // background-image: url('./images/midlayers.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  background-color: purple;
+}
+
+
 
 // HEADER
 .header {
@@ -30,7 +41,7 @@ $letter-spacing: 2px;
     position: relative;
   }
   
-  h2 {
+  h2, ul {
     color: $font-color;
     font-family: $font-family;
     font-size: $font-size;
@@ -59,6 +70,22 @@ $letter-spacing: 2px;
       color: $font-color;
       margin: 20px 0px 0px 60px;
     }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: yellow;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   }
 
   .header-box-2 {
@@ -84,13 +111,10 @@ $letter-spacing: 2px;
 
 }
 
-// BODY
-
-body {
-  background-image: url('./images/midlayers.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  // background-color: purple;
+.midlayers-img {
+  width: 100vw;
+  display: block;
+  margin-top: -10px;
 }
 
 

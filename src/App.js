@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './reset.css';
 import './App.css';
 import Header from './Component/Header/Header';
-// import Body from './Component/Body/Body';
 // import Category from './Component/Category/Category';
 import Footer from './Component/Footer/Footer';
+import routes from './routes';
+import backgroundImg from './images/midlayers.jpg';
+
 
 class App extends Component {
   render() {
@@ -14,14 +16,16 @@ class App extends Component {
         <div className="header">
           <Header />
         </div>
-
-        {/* <div>
-          <Body />
-        </div> */}
+        
+        <div>
+            <img className="midlayers-img"src={backgroundImg} alt="background images"/> 
+        </div>
 
         {/* <div className="category">
           <Category />
         </div> */}
+
+        {routes}
 
         <div className="footer">
           <Footer />
