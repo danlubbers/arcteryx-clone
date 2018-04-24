@@ -1,7 +1,7 @@
 const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive');
-      // controller = require('controller');
+      controller = require('./controller');
 
 require('dotenv').config();
 
@@ -17,7 +17,7 @@ massive(CONNECTION_STRING).then(db=>{
 app.use(bodyParser.json());
 
 // Add Endpoints here:
-
+app.get(`/api/getAllProducts`, controller.read);
 
 
 const port = 3500;
