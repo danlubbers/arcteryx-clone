@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import backgroundCategoryImg from '../../images/insulation.jpg';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 export default class Category extends Component {
     constructor() {
@@ -23,13 +24,13 @@ export default class Category extends Component {
     render() {
         let productsArray = this.state.products.map((element, index)=> {
             return(
-                <div key={index} className="single-product">
+                <Link to={`/p/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>
                         <p>$ {element.price} USD</p>
                     </div>
-                </div>
+                </Link>
             )
         })
 
@@ -37,7 +38,7 @@ export default class Category extends Component {
             <div>
                 <div>
                     <div className="category-text">
-                        <h3 className="home-text">Home</h3>
+                        <Link to="/"><h3 className="home-text">Home</h3></Link>
                         <h3 className="cold-weather-text">COLD WEATHER INSULATION</h3>
                     </div>
                     <img className="insulation-img" src={backgroundCategoryImg} alt="snow mountain" />
