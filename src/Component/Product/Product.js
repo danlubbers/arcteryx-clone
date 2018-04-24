@@ -9,6 +9,8 @@ export default class Product extends Component {
             product: []
         }
     }
+
+    
     // componentidd mount
 // this.props.match.params.id
 

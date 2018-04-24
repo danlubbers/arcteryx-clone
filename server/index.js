@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 
 // Add Endpoints here:
 app.get(`/api/getAllProducts`, controller.read);
+app.get(`/api/getOneProduct`, controller.read)
 
 
 const port = 3500;
