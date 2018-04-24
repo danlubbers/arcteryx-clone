@@ -3,7 +3,7 @@
   text-align: center; }
 
 body {
-  background-color: #151515; }
+  background-color: white; }
 
 h2, ul {
   color: white;
@@ -87,3 +87,20 @@ h2, ul {
     .footer .footer-box-1 .arc-logo {
       width: 12vw;
       margin-bottom: 6px; }
+
+.insulation-img {
+  width: 95vw;
+  display: block;
+  margin: auto; }
+
+.category-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 40px 0px 25px 24px; }
+  .category-text .cold-weather-text {
+    margin: 0px 0px 0px 10px; }
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder; }

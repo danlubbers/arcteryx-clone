@@ -19,7 +19,7 @@ body {
   // background-image: url('./images/midlayers.jpg');
   // background-size: cover;
   // background-repeat: no-repeat;
-  background-color: #151515;
+  background-color: white;
 }
 
 
@@ -178,4 +178,28 @@ h2, ul {
 
 
 
+// Category PAGE Starts HERE!!!
 
+.insulation-img {
+  width: 95vw;
+  display: block;
+  margin: auto;
+  // padding: 25px 0px 0px 0px;
+}
+
+.category-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 40px 0px 25px 24px;
+
+  .cold-weather-text {
+    margin: 0px 0px 0px 10px;
+  }
+
+}
+
+h3 {
+  font-family: $font-family;
+  font-weight: bolder;
+}
