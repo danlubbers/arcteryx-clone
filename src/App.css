@@ -37,8 +37,8 @@ h2, ul {
       color: white;
       margin: 20px 0px 0px 60px; }
     .header .header-box-1 .dropdown {
-      position: relative;
-      display: inline-block; }
+      float: left;
+      overflow: hidden; }
     .header .header-box-1 .dropdown-content {
       display: none;
       position: absolute;
