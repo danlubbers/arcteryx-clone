@@ -24,7 +24,7 @@ export default class Category extends Component {
     render() {
         let productsArray = this.state.products.map((element, index)=> {
             return(
-                <Link to={`/p/${element.product_id}`} key={index} className="single-product">
+                <Link to={`/product/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>
