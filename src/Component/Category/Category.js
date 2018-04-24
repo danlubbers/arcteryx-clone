@@ -35,10 +35,10 @@ export default class Category extends Component {
         })
 
         return(
-            <div>
-                <div>
+            <div className="main-content">
+                <div >
                     <div className="category-text">
-                        <Link to="/"><h3 className="home-text">Home</h3></Link>
+                        <Link to="/" className="link-home-text"><h3 className="home-text">Home</h3></Link>
                         <h3 className="cold-weather-text">COLD WEATHER INSULATION</h3>
                     </div>
                     <img className="insulation-img" src={backgroundCategoryImg} alt="snow mountain" />

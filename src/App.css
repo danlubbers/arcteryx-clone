@@ -88,7 +88,7 @@ h2, ul {
       margin-bottom: 6px; }
 
 .insulation-img {
-  width: 95vw;
+  width: 960px;
   display: block;
   margin: auto; }
 
@@ -101,8 +101,8 @@ h2, ul {
     margin: 0px 0px 0px 10px; }
 
 .products-array {
-  margin: 50px;
-  padding: 0px 0px 0px 100px;
+  margin: 50px 100px 0px 100px;
+  padding: 0px 0px 0px px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

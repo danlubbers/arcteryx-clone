@@ -179,8 +179,14 @@ h2, ul {
 
 // Category PAGE Starts HERE!!!
 
+// .main-content {
+//   width: 960px;
+//   margin: 25px 0px 0px 150px;
+//   // background-color: yellow;
+// }
+
 .insulation-img {
-  width: 95vw;
+  width: 960px;
   display: block;
   margin: auto;
   // padding: 25px 0px 0px 0px;
@@ -198,8 +204,8 @@ h2, ul {
 }
 
 .products-array {
-  margin: 50px;
-  padding: 0px 0px 0px 100px;
+  margin: 50px 100px 0px 100px;
+  padding: 0px 0px 0px px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -229,3 +235,8 @@ h3 {
   font-family: $font-family;
   font-weight: bolder;
 }
+
+// .link-home-text, .link-home-text {
+//   color: black;
+//   text-decoration: none;
+// }
