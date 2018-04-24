@@ -17,8 +17,8 @@ massive(CONNECTION_STRING).then(db=>{
 app.use(bodyParser.json());
 
 // Add Endpoints here:
-app.get(`/api/getAllProducts`, controller.read);
-app.get(`/api/getOneProduct`, controller.read)
+app.get(`/api/getAllProducts`, controller.products);
+app.get(`/api/getOneProduct:id`, controller.product);
 
 
 const port = 3500;
