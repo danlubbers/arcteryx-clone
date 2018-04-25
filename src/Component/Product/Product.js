@@ -17,7 +17,7 @@ export default class Product extends Component {
 
         axios.get(`/api/getOneProduct/${id}`).then(res => {
             this.setState({product: res.data})
-            console.log('arcteryx')
+            // console.log('arcteryx')
         })
     }
    
@@ -47,7 +47,6 @@ export default class Product extends Component {
                 </div>
             )
         })
-        console.log(productArray)
         return(
             <div>
                 <div>{productArray}</div>
