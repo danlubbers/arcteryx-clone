@@ -1,5 +1,6 @@
 create table users (
     user_id serial primary key,
+    auth_id varchar(45),
     username varchar(45),
     password varchar(45)
 );

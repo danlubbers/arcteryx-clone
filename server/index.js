@@ -42,18 +42,19 @@ passport.use(new Auth0Strategy({
       const {id, displayName} = profile;
       // The promise will always return an array
       db.find_user([id]).then(users => {
+            console.log('random')
             if(users[0]) {
                   return done(null, users[0].id)
             } else {
-                  return db.create.user([displayName, id]).then(createUser => {
-                        return done(null, createdUser[0].id)
-                  })
+                  return db.create_user([displayName, id]).then(createUser => {
+                        return done(null, createUser[0].id)
+                  }).catch(console.log)
             }
-      })
+      }).catch(console.log)
 }
 ))
 
-// Takes user profile data and directly inserts it to the session. Serializeuser put information on the session
+// Takes user profile data and directly inserts it to the session. serializeUser put information on the session
 // Change 'profile' to 'id' and we are only putting the user id on the session instead of all the users infomation
 passport.serializeUser((id, done) => {
       return done(null, id)

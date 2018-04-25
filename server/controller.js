@@ -2,7 +2,10 @@ module.exports = {
     products: (req, res) => {
         const dbInstance = req.app.get('db');
         // References 'getAllProducts.sql file in (db) folder
-        dbInstance.products.getAllProducts().then(products => res.status(200).send(products)).catch((err)=>res.status(500).send(err))
+        dbInstance.products.getAllProducts().then(products => res.status(200).send(products)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+        })
     },
 
     product: (req, res) => {
