@@ -41,12 +41,14 @@ passport.use(new Auth0Strategy({
       // This finds the user data in the find_user.sql file
       const {id, displayName} = profile;
       // The promise will always return an array
+      console.log(id)
       db.find_user([id]).then(users => {
             console.log('random')
             if(users[0]) {
                   return done(null, users[0].id)
             } else {
-                  return db.create_user([displayName, id]).then(createUser => {
+                  // create_user([must be in order to the sql file. auth_id = id and username = displayName]) this is in the db folder as create_user.sql
+                  return db.create_user([id, displayName]).then(createUser => {
                         return done(null, createUser[0].id)
                   }).catch(console.log)
             }
