@@ -21,7 +21,7 @@ export default function Header() {
                 <h2 className="find-store">Find A Store</h2>
                 <h2 className="search">Search</h2>
                 <img className="cart-icon" src={cart} alt="cart-logo"/>
-                <h2>LOGIN</h2>
+                <a href={process.env.REACT_APP_LOGIN}><button>LOGIN</button></a>
             </div>
         </div>
         
