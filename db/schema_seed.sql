@@ -14,13 +14,13 @@ create table products (
 );
 
 create table details (
-    id serial primary key,
+    details_id serial primary key,
     product_id integer,
     large_img text
 );
 
 create cart (
-    user_id integer,
+    user_id serial primary key,
     product_id integer,
     quantity integer
 );
@@ -72,5 +72,6 @@ insert into details (product_id, large_img) values (10, 'http://res.cloudinary.c
 -- How to Join
 
 select * from products
-inner join details on details.product_id = products.product_id;
+inner join details on details.product_id = products.product_id
+where details_id = $1;
 

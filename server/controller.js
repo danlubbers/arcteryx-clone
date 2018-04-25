@@ -6,8 +6,9 @@ module.exports = {
     },
 
     product: (req, res) => {
+        console.log('woprd')
         const dbInstance = req.app.get('db');
 
-        dbInstance.getOneProduct().then(productID => res.status(200).send(productID)).catch((err)=>res.status(500).send(err))
+        dbInstance.getOneProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>res.status(500).send(err))
     } 
 }
