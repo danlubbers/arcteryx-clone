@@ -6,7 +6,7 @@ module.exports = {
     },
 
     product: (req, res) => {
-        console.log('woprd')
+        // console.log('word')
         const dbInstance = req.app.get('db');
 
         dbInstance.getOneProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>res.status(500).send(err))
