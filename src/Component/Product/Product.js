@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 export default class Product extends Component {
     constructor() {
@@ -27,11 +28,11 @@ export default class Product extends Component {
                     <div className="main-upper-box">
                         <div className="upper-left-box">
                             <div className="upper-left-text">
-                                <p>Arc'teryx</p>
-                                <p>Mens</p>
-                                <p>Cold Wx Parka SVX</p>
+                                <Link to="/" id="arcteryx"><p>Arc'teryx</p></Link>
+                                <p id="mens">Mens</p>
+                                <p id="title-link">Cold Wx Parka SVX</p>
                             </div>
-                                <img className="large-image" src={element.large_img} alt="Arc-large" />
+                                <img className="hero-image" src={element.large_img} alt="Arc-large" />
                         </div>
                         <div className="upper-right-box">
                             <p id="title">{element.title}</p>

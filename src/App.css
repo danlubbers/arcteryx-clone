@@ -131,32 +131,29 @@ h3 {
 
 .main-upper-box {
   width: 100vw;
-  background-color: purple;
   display: flex;
   justify-content: space-around;
   align-items: flex-start; }
   .main-upper-box p {
     margin-right: 5px; }
+  .main-upper-box #arcteryx, .main-upper-box #mens, .main-upper-box #title-link {
+    letter-spacing: 2px; }
   .main-upper-box .upper-left-box {
-    width: 50vw;
-    background-color: yellow; }
+    width: 50vw; }
   .main-upper-box .upper-left-text {
-    background-color: red;
-    margin: 0px;
+    margin: 25px 0px 0px 100px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start; }
+  .main-upper-box .hero-image {
+    margin: 50px 0px 0px 25px; }
 
 .upper-right-box {
   width: 50vw;
-  padding: 50px 100px 0px 100px;
-  background-color: green; }
+  padding: 50px 100px 0px 100px; }
   .upper-right-box #title {
     font-size: 2em; }
   .upper-right-box #description {
     font-size: 1em; }
   .upper-right-box #price {
     font-size: 1.2em; }
-
-.lower-box {
-  background-color: blue; }
