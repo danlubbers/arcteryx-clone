@@ -39,7 +39,11 @@ export default class Product extends Component {
                             <p id="description">{element.description}</p>
                             {/* <h4>USD</h4><p>$ </p> */}
                             <p id="price">{element.price}</p>
+                            <div>
+                               <Link to="/cart"><button className="cartBtn">ADD TO CART</button></Link>
+                            </div>
                         </div>
+                        
                     </div>
                     <div className="lower-box">
                         <p>{element.title}</p>

@@ -41,9 +41,9 @@ passport.use(new Auth0Strategy({
       // This finds the user data in the find_user.sql file
       const {id, displayName} = profile;
       // The promise will always return an array
-      console.log(id)
+      // console.log(id)
       db.find_user([id]).then(users => {
-            console.log('random')
+            // console.log('random')
             if(users[0]) {
                   return done(null, users[0].id)
             } else {

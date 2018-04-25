@@ -57,6 +57,8 @@ h2, ul {
     .header .header-box-2 .cart-icon {
       margin-top: 70px;
       height: 20px; }
+  .header .loginBtn {
+    margin-left: 10px; }
 
 .midlayers-img {
   width: 100vw;
@@ -157,3 +159,22 @@ h3 {
     font-size: 1em; }
   .upper-right-box #price {
     font-size: 1.2em; }
+  .upper-right-box .cartBtn {
+    margin-top: 15px;
+    width: 325px;
+    height: 45px;
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: #000; }
+  .upper-right-box .cartBtn:focus {
+    outline: 0; }
+
+.content {
+  background-color: red; }
+
+.upper-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black; }

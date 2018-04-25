@@ -19,8 +19,9 @@ create table details (
     large_img text
 );
 
-create cart (
-    user_id serial primary key,
+create table cart (
+    cart_id serial primary key,
+    user_id integer,
     product_id integer,
     quantity integer
 );

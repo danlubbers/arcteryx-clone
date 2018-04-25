@@ -20,8 +20,8 @@ export default function Header() {
             <div className="header-box-2">
                 <h2 className="find-store">Find A Store</h2>
                 <h2 className="search">Search</h2>
-                <img className="cart-icon" src={cart} alt="cart-logo"/>
-                <a href={process.env.REACT_APP_LOGIN}><button>LOGIN</button></a>
+                <Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link>
+                <a href={process.env.REACT_APP_LOGIN}><button className="loginBtn">LOGIN</button></a>
             </div>
         </div>
         

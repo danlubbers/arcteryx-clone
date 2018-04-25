@@ -105,8 +105,12 @@ h2, ul {
     .cart-icon {
       margin-top: 70px;
       height: 20px;
-  
     }
+    
+  }
+
+  .loginBtn {
+    margin-left: 10px;
   }
 
 }
@@ -297,8 +301,34 @@ $letter-spacing: 2px;
   #price {
     font-size: 1.2em;
   }
+
+  .cartBtn {
+    margin-top: 15px;
+    width: 325px;
+    height: 45px;
+    font-size: 1.1em;
+    font-family: $font-family;
+    color: $font-color;
+    background-color: $background-color;
+    
+  }
+  // gets rid of annoying blue outline when clicked
+  .cartBtn:focus {outline:0;}
 }
 
 .lower-box {
   // background-color: blue;
 }
+
+// CART
+
+.content {
+  background-color: red;
+}
+.upper-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
