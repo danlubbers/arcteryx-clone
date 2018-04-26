@@ -397,6 +397,10 @@ $letter-spacing: 2px;
     // background-color: purple;
   }
 
+  .product-quantity {
+    letter-spacing: 15px;
+  }
+
   .cart-content {
     margin-right: 150px;
     // background-color: green;
@@ -419,6 +423,7 @@ $letter-spacing: 2px;
     color: $font-color;
     background-color: $background-color;
   }
+  .checkoutBtn:focus {outline:0;}
 
 }
 

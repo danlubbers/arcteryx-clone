@@ -36,5 +36,14 @@ module.exports = {
             console.error(err);
             res.status(500).send(err)
         })
+    },
+
+    delete: (req, res) => {
+        const dbInstance = req.app.get('db')
+        console.log(req.params.id)
+        dbInstance.cart.deleteProduct(req.params.id).then(product=>{
+            res.status(200).send(product)
+        })
     }
+    
 }

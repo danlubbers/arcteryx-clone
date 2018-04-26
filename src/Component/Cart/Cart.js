@@ -17,12 +17,22 @@ export default class Cart extends Component {
         })
     }
 
+    deleteProduct(id) {
+    console.log('Deleting and, deleting and...', id)   
+    axios.delete(`/api/deleteProduct/${id}`).then(res=> {
+        let newProductList = this.state.cart.splice(id, 1);
+        this.setState({cart: newProductList})
+    });
+    console.log('Finally DELETED!!!')
+    this.componentDidMount();
+}
+
     render() {
         let cartArray = this.state.cart.map((element, index) => {
             return(
-                <div className="cart-main">
+                <div className="cart-main" key={index}>
                     <div className="product-details">
-                        <div className="cart-array" key={index} >
+                        <div className="cart-array">
                             <img className="product-thumbnail" src={element.img} alt="thumbnail" />
                         </div>
                         <div className="product-title">
@@ -39,7 +49,7 @@ export default class Cart extends Component {
                         <h5>{element.price}</h5>
                     </div>
                     <div className="product-remove">
-                        <h5><i className="fas fa-times"></i></h5>
+                        <button onClick={_=>this.deleteProduct(element.cart_id)}><i className="fas fa-times"></i></button>
                     </div>
                 </div>
             )

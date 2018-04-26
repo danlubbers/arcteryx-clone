@@ -215,6 +215,8 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end; }
+  .content .product-quantity {
+    letter-spacing: 15px; }
   .content .cart-content {
     margin-right: 150px;
     display: flex;
@@ -231,3 +233,5 @@ h3 {
     font-family: "Montserrat", sans-serif;
     color: white;
     background-color: #000; }
+  .content .checkoutBtn:focus {
+    outline: 0; }

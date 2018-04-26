@@ -73,7 +73,7 @@ passport.deserializeUser((id, done) => {
       // find_session_user references the sql file of same name
       app.get('db').find_session_user([id]).then(user => {
             // Puts the user[0] object on req
-            console.log('ds', user[0])
+            // console.log('ds', user[0])
             done(null, user[0]);
       }).catch((err)=>{
             console.error(err)
@@ -116,6 +116,8 @@ app.get(`/api/getOneProduct/:id`, controller.product);
 app.get(`/api/productCart`, controller.cartProducts);
 // Get ONE Product when clicked and add to the CART page
 app.post(`/api/cart/`, controller.addCart)
+// Delete Product from Cart
+app.delete(`/api/deleteProduct/:id`, controller.delete);
 
 massive(CONNECTION_STRING).then(db=>{
       app.set('db', db);
