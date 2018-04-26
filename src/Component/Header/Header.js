@@ -13,7 +13,7 @@ export default function Header() {
                 <span className="dropdown">
                    <Link to="/category"><h2 className="products-text">PRODUCTS</h2></Link>
                 </span>
-                    <div className="dropdown-content">
+                    <div className="overlay">
                     <h2>TEST</h2>
                     </div>
             </div>

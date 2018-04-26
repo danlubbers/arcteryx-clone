@@ -14,15 +14,22 @@ export default class Cart extends Component {
             <div className="content">
                 <div className="upper-text">
                     <h5>MY CART</h5>
+
+                    
                     <h5>QUANTITY</h5>
+                    
+
+
                     <h5>PRICE</h5>
                     <h5>REMOVE</h5>
                 </div>
                 <div className="product-content">
                     <h5>Alpha SV</h5>
+                    <i class="fas fa-minus"></i>
                     <h5>1</h5>
+                    <i class="fas fa-plus"></i>
                     <h5>749.00</h5>
-                    <h5>Remove button</h5>
+                    <h5><i class="fas fa-times"></i></h5>
                 </div>
                 <div className="cart-container">
                     {/* <h5>CART CONTENT</h5> */}

@@ -70,12 +70,30 @@ h2, ul {
   // FOR DROP DOWN MENU
 
   .dropdown {
-    
-    .products-text {
-      // font-family: $font-family;
-      color: $font-color;
-      margin: 20px 0px 0px 60px;
-    }
+    position: relative;
+    width: 50%; 
+  }
+  .products-text {
+    // font-family: $font-family;
+    color: $font-color;
+    margin: 20px 0px 0px 60px;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+
+  .dropdown:hover .overlay {
+    bottom: 0px;
+    height: 100%;
   }
 
   .header-box-2 {

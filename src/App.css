@@ -33,9 +33,25 @@ h2, ul {
       margin-top: 18px;
       width: 167px;
       height: 66px; }
-  .header .dropdown .products-text {
+  .header .dropdown {
+    position: relative;
+    width: 50%; }
+  .header .products-text {
     color: white;
     margin: 20px 0px 0px 60px; }
+  .header .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease; }
+  .header .dropdown:hover .overlay {
+    bottom: 0px;
+    height: 100%; }
   .header .header-box-2 {
     display: flex;
     justify-content: flex-start;
