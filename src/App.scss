@@ -65,26 +65,16 @@ h2, ul {
       height: 66px;
     }
   
+  }
+
+  // FOR DROP DOWN MENU
+
+  .dropdown {
+    
     .products-text {
       // font-family: $font-family;
       color: $font-color;
       margin: 20px 0px 0px 60px;
-    }
-
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: yellow;
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
   }
 

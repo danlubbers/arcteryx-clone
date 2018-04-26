@@ -33,19 +33,9 @@ h2, ul {
       margin-top: 18px;
       width: 167px;
       height: 66px; }
-    .header .header-box-1 .products-text {
-      color: white;
-      margin: 20px 0px 0px 60px; }
-    .header .header-box-1 .dropdown {
-      float: left;
-      overflow: hidden; }
-    .header .header-box-1 .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: yellow;
-      z-index: 1; }
-    .header .header-box-1 .dropdown:hover .dropdown-content {
-      display: block; }
+  .header .dropdown .products-text {
+    color: white;
+    margin: 20px 0px 0px 60px; }
   .header .header-box-2 {
     display: flex;
     justify-content: flex-start;
