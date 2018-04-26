@@ -9,3 +9,9 @@
 -- WHERE carts.user_id = $1 ;
 
 -- CART is a MANY TO ONE
+
+select cart_id, user_id, img, title, colour, price, quantity from products
+join cart on cart.product_id = products.product_id
+where user_id = $1;
+
+

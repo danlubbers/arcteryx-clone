@@ -48,7 +48,7 @@ export default class Product extends Component {
                             {/* <h4>USD</h4><p>$ </p> */}
                             <p id="price">{element.price}</p>
                             <div>
-                               <Link to="/cart"><button className="cartBtn" onClick={_=> this.addToCart(this.state.product)}>ADD TO CART</button></Link>
+                               <button className="cartBtn" onClick={_=> this.addToCart(this.state.product)}>ADD TO CART</button>
                             </div>
                         </div>
                         

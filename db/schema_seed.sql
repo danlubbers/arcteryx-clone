@@ -16,7 +16,7 @@ create table products (
 create table details (
     details_id serial primary key,
     product_id integer,
-    large_img text
+    large_img text, 
 );
 
 create table cart (

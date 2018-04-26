@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class Cart extends Component {
     constructor() {
@@ -9,9 +10,24 @@ export default class Cart extends Component {
         }
     }
 
-    
+    componentDidMount() {
+        console.log('yup')
+        axios.get(`/api/productCart`).then(res => {
+            this.setState({cart: res.data})
+        })
+    }
 
     render() {
+        let cartArray = this.state.cart.map((element, index) => {
+            return(
+                <div key={index}>
+                    <img src={element.img} alt="thumbnail" />
+                    <p>{element.title}</p>
+                    <p>{element.description}</p>
+                </div>
+            )
+        })
+
         return(
             <div className="content">
                 <div className="upper-text">
@@ -26,6 +42,7 @@ export default class Cart extends Component {
                     <h5>REMOVE</h5>
                 </div>
                 <div className="product-content">
+                    {cartArray}
                     <h5>Alpha SV</h5>
                     <i className="fas fa-minus"></i>
                     <h5>1</h5>

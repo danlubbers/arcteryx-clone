@@ -19,11 +19,20 @@ module.exports = {
     })
     }, 
 
+    cartProducts: (req, res) => {
+        const dbInstance = req.app.get('db');
+
+        dbInstance.cart.getAllCart(req.user.user_id).then(productID => res.status(200).send(productID)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+        })
+    },
+
     addCart: (req, res) => {
         const dbInstance = req.app.get('db');
             // req.user.id because we are pulling off of Auth0
-        // console.log(req.user)
-        dbInstance.cart.addToCart(req.user.id, req.body.productID).then(cartID => res.status(200).send(cartID)).catch((err)=>{
+        console.log(req.user.user_id,  'working')
+        dbInstance.cart.addToCart(req.user.user_id, req.body.productID).then(cartID => res.status(200).send(cartID)).catch((err)=>{
             console.error(err);
             res.status(500).send(err)
         })
