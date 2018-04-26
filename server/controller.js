@@ -13,6 +13,19 @@ module.exports = {
         const dbInstance = req.app.get('db');
         // References 'getOneProduct.sql file in (db) folder
         // Must have (req.params.id) to get the id and pass it through
-        dbInstance.products.getOneProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>res.status(500).send(err))
-    } 
+        dbInstance.products.getOneProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+    })
+    }, 
+
+    addCart: (req, res) => {
+        const dbInstance = req.app.get('db');
+            // req.user.id because we are pulling off of Auth0
+        // console.log(req.user)
+        dbInstance.cart.addToCart(req.user.id, req.body.productID).then(cartID => res.status(200).send(cartID)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+        })
+    }
 }

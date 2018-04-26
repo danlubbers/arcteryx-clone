@@ -20,6 +20,14 @@ export default class Product extends Component {
             // console.log('arcteryx')
         })
     }
+
+    addToCart() {
+        let id = this.props.match.params.id
+
+        axios.post(`/api/cart`, {productID: id}).then(res => {
+            // this.setState({product: res.data})
+        })
+    }
    
     render() {
         let productArray = this.state.product.map((element, index)=> {
@@ -40,7 +48,7 @@ export default class Product extends Component {
                             {/* <h4>USD</h4><p>$ </p> */}
                             <p id="price">{element.price}</p>
                             <div>
-                               <Link to="/cart"><button className="cartBtn">ADD TO CART</button></Link>
+                               <Link to="/cart"><button className="cartBtn" onClick={_=> this.addToCart(this.state.product)}>ADD TO CART</button></Link>
                             </div>
                         </div>
                         

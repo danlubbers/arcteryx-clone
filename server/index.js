@@ -43,13 +43,15 @@ passport.use(new Auth0Strategy({
       // The promise will always return an array
       // console.log(id)
       db.find_user([id]).then(users => {
-            // console.log('random')
+            // console.log('user', users[0])
             if(users[0]) {
-                  return done(null, users[0].id)
+                  // console.log('user found', users[0].id)
+
+                  return done(null, users[0].user_id)
             } else {
                   // create_user([must be in order to the sql file. auth_id = id and username = displayName]) this is in the db folder as create_user.sql
                   return db.create_user([id, displayName]).then(createUser => {
-                        return done(null, createUser[0].id)
+                        return done(null, createUser[0].user_id)
                   }).catch(console.log)
             }
       }).catch(console.log)
@@ -59,6 +61,7 @@ passport.use(new Auth0Strategy({
 // Takes user profile data and directly inserts it to the session. serializeUser put information on the session
 // Change 'profile' to 'id' and we are only putting the user id on the session instead of all the users infomation
 passport.serializeUser((id, done) => {
+      // console.log('DUDESSSSS')
       return done(null, id)
 })
 
@@ -66,11 +69,14 @@ passport.serializeUser((id, done) => {
 // Deserialize is for after a user logs in
 passport.deserializeUser((id, done) => {
 //    return done(null, id) - don't need this now
-
+      // console.log('DUDE ')
       // find_session_user references the sql file of same name
       app.get('db').find_session_user([id]).then(user => {
             // Puts the user[0] object on req
+            console.log('ds', user[0])
             done(null, user[0]);
+      }).catch((err)=>{
+            console.error(err)
       })
 })
 
@@ -81,7 +87,7 @@ app.get('/auth', passport.authenticate('auth0'));
 // This is where we want to redirect the user
 app.get('/auth/callback', passport.authenticate('auth0', {
       // Add # since we are using HashRouter
-      successRedirect: 'http://localhost:3000/#/private',
+      successRedirect: 'http://localhost:3000',
       failureRedirect: 'http://localhost:3000'
 }))
 
@@ -102,8 +108,12 @@ app.get('/logout', function(req, res) {
 })
 
 // Add Front-end Endpoints here:
+// GET All Products to display on Categories Page
 app.get(`/api/getAllProducts`, controller.products);
+// Get ONE Products when clicked to display on Product Page
 app.get(`/api/getOneProduct/:id`, controller.product);
+// Get ONE Product when clicked and add to the CART page
+app.post(`/api/cart`, controller.addCart)
 
 massive(CONNECTION_STRING).then(db=>{
       app.set('db', db);

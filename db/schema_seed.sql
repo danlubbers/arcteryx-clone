@@ -23,7 +23,7 @@ create table cart (
     cart_id serial primary key,
     user_id integer,
     product_id integer,
-    quantity integer
+    quantity integer default 1
 );
 
 -- INSERT FOR PRODUCT TABLE
