@@ -323,12 +323,59 @@ $letter-spacing: 2px;
 // CART
 
 .content {
-  background-color: red;
-}
-.upper-text {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 1px solid black;
+  margin: 40px 100px 10px 100px;
+  // background-color: red;
+  .upper-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+  }
+
+  h5 {
+    font-size: .8em;
+  }
+
+  .product-content {
+    @extend .upper-text;
+    margin-top: 10px;
+    // background-color: yellow;
+  }
+
+  .cart-container {
+    margin-top: 20px;
+    margin-left: 725px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    // background-color: purple;
+  }
+
+  .cart-content {
+    margin-right: 150px;
+    // background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .item, .express, .total {
+    margin-top: 5px;
+  }
+
+  .checkoutBtn {
+    margin: 15px 5px 0px 0px;
+    width: 250px;
+    height: 45px;
+    font-size: 1.1em;
+    font-family: $font-family;
+    color: $font-color;
+    background-color: $background-color;
+  }
+
 }
 

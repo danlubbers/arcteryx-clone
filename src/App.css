@@ -171,10 +171,38 @@ h3 {
     outline: 0; }
 
 .content {
-  background-color: red; }
-
-.upper-text {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 1px solid black; }
+  margin: 40px 100px 10px 100px; }
+  .content .upper-text, .content .product-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px; }
+  .content h5 {
+    font-size: .8em; }
+  .content .product-content {
+    margin-top: 10px; }
+  .content .cart-container {
+    margin-top: 20px;
+    margin-left: 725px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end; }
+  .content .cart-content {
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline; }
+  .content .item, .content .express, .content .total {
+    margin-top: 5px; }
+  .content .checkoutBtn {
+    margin: 15px 5px 0px 0px;
+    width: 250px;
+    height: 45px;
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: #000; }
