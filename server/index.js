@@ -115,7 +115,7 @@ app.get(`/api/getOneProduct/:id`, controller.product);
 // Display Products that were added to the cart (componentDidMount)
 app.get(`/api/productCart`, controller.cartProducts);
 // Get ONE Product when clicked and add to the CART page
-app.post(`/api/cart`, controller.addCart)
+app.post(`/api/cart/`, controller.addCart)
 
 massive(CONNECTION_STRING).then(db=>{
       app.set('db', db);

@@ -184,10 +184,29 @@ h3 {
     align-items: center;
     border-bottom: 1px solid black;
     padding-bottom: 10px; }
+  .content .cart-main {
+    width: 79vw;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   .content h5 {
     font-size: .8em; }
   .content .product-content {
     margin-top: 10px; }
+  .content .product-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .content .product-thumbnail {
+    width: 55px; }
+  .content .product-title {
+    margin-left: 10px;
+    width: 100px; }
+  .content .product-quantity {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
   .content .cart-container {
     margin-top: 20px;
     margin-left: 725px;

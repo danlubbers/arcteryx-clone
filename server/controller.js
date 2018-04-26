@@ -30,7 +30,7 @@ module.exports = {
 
     addCart: (req, res) => {
         const dbInstance = req.app.get('db');
-            // req.user.id because we are pulling off of Auth0
+            // req.user.user_id because we are pulling off of Auth0
         console.log(req.user.user_id,  'working')
         dbInstance.cart.addToCart(req.user.user_id, req.body.productID).then(cartID => res.status(200).send(cartID)).catch((err)=>{
             console.error(err);
