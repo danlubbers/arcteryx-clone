@@ -49,7 +49,7 @@ export default class Cart extends Component {
                         <h5>{element.price}</h5>
                     </div>
                     <div className="product-remove">
-                        <button onClick={_=>this.deleteProduct(element.cart_id)}><i className="fas fa-times"></i></button>
+                        <button onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times"></i></button>
                     </div>
                 </div>
             )

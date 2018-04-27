@@ -1,4 +1,4 @@
 delete from cart 
-where cart_id = $1;
+where product_id = $1;
 
 select * from cart;
