@@ -22,7 +22,6 @@ create table details (
 create table cart (
     cart_id serial primary key,
     user_id integer,
-    product_id integer,
     quantity integer default 1
 );
 
