@@ -1,28 +1,34 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import backgroundCategoryImg from '../../images/insulation.jpg';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
+// import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getProducts } from '../../ducks/reducer';
 
-export default class Category extends Component {
-    constructor() {
-        super();
+class Category extends Component {
+    // constructor() {
+    //     super();
 
-        this.state = {
-            products: []
-        }
+    //     this.state = {
+    //         products: []
+    //     }
 
 
-    }
+    // }
 
     componentDidMount() {
-        axios.get(`/api/getAllProducts`).then(res=>{
-            this.setState({products: res.data})
-            console.log(res.data)
-        })
+        // axios.get(`/api/getAllProducts`).then(res=>{
+        //     this.setState({products: res.data})
+        // console.log(this.props.getProducts())
+        this.props.getProducts()
+            // console.log(res.data)
+        
     }
 
     render() {
-        let productsArray = this.state.products.map((element, index)=> {
+        // the if statement is because the page loads before redux has a chance to send back the products array.
+        if (this.props.products) {
+        var productsArray = this.props.products.map((element, index)=> {
             return(
                 <Link to={`/product/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
@@ -32,7 +38,7 @@ export default class Category extends Component {
                     </div>
                 </Link>
             )
-        })
+        })}
 
         return(
             <div className="main-content">
@@ -49,3 +55,11 @@ export default class Category extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return{
+        products: state.products
+    }
+}
+
+export default connect(mapStateToProps, {getProducts}) (Category);

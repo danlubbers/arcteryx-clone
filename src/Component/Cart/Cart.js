@@ -67,14 +67,8 @@ export default class Cart extends Component {
                 <div className="">
                     {cartArray}
                 </div>
-                    {/* <i className="fas fa-minus"></i>
-                    <h5>1</h5>
-                    <i className="fas fa-plus"></i>
-                    <h5>749.00</h5>
-                    <h5><i className="fas fa-times"></i></h5> */}
                 </div>
                 <div className="cart-container">
-                    {/* <h5>CART CONTENT</h5> */}
                     <div className="cart-content">
                         <h5 className="item">Item Total:</h5>
                         <h5 className="express">Express Shipping:</h5>
