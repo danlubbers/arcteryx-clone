@@ -69,7 +69,6 @@ export function addCart(id) {
 }
 
 export function getCartProducts() {
-    console.log('backend')
     let cartProducts = axios.get(`/api/productCart`).then(res => {
        console.log(res.data)
         return res.data

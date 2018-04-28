@@ -5,13 +5,13 @@ import { connect } from 'react-redux';
 import { getCartProducts } from '../../ducks/reducer';
 
 class Cart extends Component {
-    // constructor() {
-    //     super();
+    constructor() {
+        super();
 
-    //     this.state = {
-    //         cart: []
-    //     }
-    // }
+        this.state = {
+            cart: []
+        }
+    }
 
     componentDidMount() {
         // // console.log('yup')
@@ -32,7 +32,6 @@ class Cart extends Component {
 }
 
     render() {
-        console.log('before array.map')
         if (this.props.cart) {
         var cartArray = this.props.cart.map((element, index) => {
             console.log('cart', cartArray)
@@ -61,7 +60,6 @@ class Cart extends Component {
                 </div>
             )
         })}
-        console.log(cartArray)
         return(
             <div className="content">
                 <div className="upper-text">
