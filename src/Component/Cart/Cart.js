@@ -11,7 +11,7 @@ export default class Cart extends Component {
     }
 
     componentDidMount() {
-        console.log('yup')
+        // console.log('yup')
         axios.get(`/api/productCart`).then(res => {
             this.setState({cart: res.data})
         })

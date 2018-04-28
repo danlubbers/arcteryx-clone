@@ -15,7 +15,7 @@ const GET_USER_INFO = 'GET_USER_INFO';
 
 export function getProducts() {
     let products = axios.get(`/api/getAllProducts`).then(res => {
-        console.log('test', res.data)
+        // console.log('test', res.data)
         return res.data
     }); 
         return { 
@@ -41,6 +41,7 @@ export function getUser() {
 export default function reducer(state=initialState, action) {
     // console.log(action)
     switch(action.type) {
+        // '_FULFILLED, fulfills the promise, otherwise redux will not return the Array
         case PRODUCTS + '_FULFILLED':
         // console.log('test')
             return Object.assign( {}, state, {products: action.payload});

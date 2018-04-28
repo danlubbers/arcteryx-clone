@@ -6,23 +6,9 @@ import { connect } from 'react-redux';
 import { getProducts } from '../../ducks/reducer';
 
 class Category extends Component {
-    // constructor() {
-    //     super();
-
-    //     this.state = {
-    //         products: []
-    //     }
-
-
-    // }
 
     componentDidMount() {
-        // axios.get(`/api/getAllProducts`).then(res=>{
-        //     this.setState({products: res.data})
-        // console.log(this.props.getProducts())
-        this.props.getProducts()
-            // console.log(res.data)
-        
+        this.props.getProducts()  
     }
 
     render() {
