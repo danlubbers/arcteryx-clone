@@ -1,22 +1,32 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProduct } from '../../ducks/reducer';
+import { addCart } from '../../ducks/reducer';
 
 class Product extends Component {
+    // constructor() {
+    //     super()
+
+    //     this.state = {
+    //         cart: []
+    //     }
+    // }
     
     componentDidMount() {
-        // console.log('before axios get in product.js')
+        // needs to pass in (this.props.match.params.id) to match 
             this.props.getProduct(this.props.match.params.id)
     }
 
     addToCart() {
+        // or i can put (this.props...) to a variable and pass in the variable
         let id = this.props.match.params.id
 
-        axios.post(`/api/cart`, {productID: id}).then(res => {
-            // this.setState({product: res.data})
-        })
+        this.props.addCart(id)
+        // axios.post(`/api/cart`, {productID: id}).then(res => {
+        //     // this.setState({product: res.data})
+        // })
     }
    
     render() {
@@ -39,7 +49,7 @@ class Product extends Component {
                             {/* <h4>USD</h4><p>$ </p> */}
                             <p id="price">{element.price}</p>
                             <div>
-                               <button className="cartBtn" onClick={_=> this.addToCart(this.state.product)}>ADD TO CART</button>
+                               <button className="cartBtn" onClick={_=> this.addToCart(this.props.product)}>ADD TO CART</button>
                             </div>
                         </div>
                         
@@ -60,8 +70,9 @@ class Product extends Component {
 
 function mapStateToProps(state) {
     return{
-        product: state.product
+        product: state.product,
+        productID: state.product
     }
 }
 
-export default connect(mapStateToProps, {getProduct}) (Product);
+export default connect(mapStateToProps, {getProduct, addCart}) (Product);
