@@ -1,24 +1,14 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getProduct } from '../../ducks/reducer';
 
-export default class Product extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            product: []
-        }
-    }
-
+class Product extends Component {
+    
     componentDidMount() {
         // console.log('before axios get in product.js')
-        let id = this.props.match.params.id;
-
-        axios.get(`/api/getOneProduct/${id}`).then(res => {
-            this.setState({product: res.data})
-            // console.log('arcteryx')
-        })
+            this.props.getProduct(this.props.match.params.id)
     }
 
     addToCart() {
@@ -30,7 +20,8 @@ export default class Product extends Component {
     }
    
     render() {
-        let productArray = this.state.product.map((element, index)=> {
+        if (this.props.product) {
+        var productArray = this.props.product.map((element, index)=> {
             return(
                 <div key={index}>
                     <div className="main-upper-box">
@@ -58,7 +49,7 @@ export default class Product extends Component {
                     </div>
                 </div>
             )
-        })
+        })}
         return(
             <div>
                 <div>{productArray}</div>
@@ -66,3 +57,11 @@ export default class Product extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return{
+        product: state.product
+    }
+}
+
+export default connect(mapStateToProps, {getProduct}) (Product);

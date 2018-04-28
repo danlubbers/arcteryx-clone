@@ -3,16 +3,19 @@ import axios from "axios";
 // Set initialState
 const initialState = {
     user: {},
-    products: null
+    products: [],
+    product: []
 }
 
 // Create our Action types with const and variable is ALL CAPS!
 const PRODUCTS = 'PRODUCTS';
+const PRODUCT = 'PRODUCT';
 const GET_USER_INFO = 'GET_USER_INFO';
 
 
 // Action Creator Functions return a 'type' and 'payload'
 
+// Action Creator to getAllProducts for Category Page
 export function getProducts() {
     let products = axios.get(`/api/getAllProducts`).then(res => {
         // console.log('test', res.data)
@@ -23,6 +26,19 @@ export function getProducts() {
             payload: products
     }
     
+}
+
+// Action Creator to getOneProducts for Product Page
+export function getProduct(id) {
+    console.log(id)
+    let product = axios.get(`/api/getOneProduct/${id}`).then(res => {
+        console.log('test', res.data)
+        return res.data
+    });
+        return {
+            type: PRODUCT,
+            payload: product
+        }
 }
 
 
@@ -45,6 +61,8 @@ export default function reducer(state=initialState, action) {
         case PRODUCTS + '_FULFILLED':
         // console.log('test')
             return Object.assign( {}, state, {products: action.payload});
+        case PRODUCT + '_FULFILLED':
+            return Object.assign( {}, state, {product: action.payload})
             
         // Add our action types to our reducer
         case GET_USER_INFO + '_FULFILLED':
