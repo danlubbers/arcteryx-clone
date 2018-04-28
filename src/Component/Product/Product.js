@@ -46,7 +46,7 @@ class Product extends Component {
                         <div className="upper-right-box">
                             <p id="title">{element.title}</p>
                             <p id="description">{element.description}</p>
-                            {/* <h4>USD</h4><p>$ </p> */}
+                            <p id="usd">USD $ </p>
                             <p id="price">{element.price}</p>
                             <div>
                                <button className="cartBtn" onClick={_=> this.addToCart(this.props.product)}>ADD TO CART</button>
@@ -70,7 +70,9 @@ class Product extends Component {
 
 function mapStateToProps(state) {
     return{
+        // This is to display product on page (componentDidMount)
         product: state.product,
+        // This is for addToCart button
         productID: state.product
     }
 }

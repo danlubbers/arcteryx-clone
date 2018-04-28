@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom';
 export default class Cart extends Component {
     constructor() {
         super();
@@ -33,7 +33,7 @@ export default class Cart extends Component {
                 <div className="cart-main" key={index}>
                     <div className="product-details">
                         <div className="cart-array">
-                            <img className="product-thumbnail" src={element.img} alt="thumbnail" />
+                            <Link to={`/product/${element.product_id}`}><img className="product-thumbnail" src={element.img} alt="thumbnail" /></Link>
                         </div>
                         <div className="product-title">
                             <p>{element.title}</p>
@@ -49,7 +49,7 @@ export default class Cart extends Component {
                         <h5>$ {element.price}</h5>
                     </div>
                     <div className="product-remove">
-                        <button onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times"></i></button>
+                        <button onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times" id='removeBtn'></i></button>
                     </div>
                 </div>
             )

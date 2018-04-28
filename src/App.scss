@@ -397,6 +397,19 @@ $letter-spacing: 2px;
     align-items: center;
   }
 
+  .product-remove {
+    padding: 0px;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+
+
+  #removeBtn:hover {
+    cursor: pointer;
+  }
+
   .cart-array {
     // background-color: red;
   }

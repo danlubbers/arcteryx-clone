@@ -197,6 +197,13 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center; }
+  .content .product-remove {
+    padding: 0px;
+    background: none;
+    border: none;
+    outline: none; }
+  .content #removeBtn:hover {
+    cursor: pointer; }
   .content .cart-container {
     margin-top: 20px;
     margin-left: 725px;
