@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+// import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getCartProducts } from '../../ducks/reducer';
+import { getCartProducts, removeFromCart } from '../../ducks/reducer';
 
 class Cart extends Component {
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
 
-        this.state = {
-            cart: []
-        }
-    }
+    //     this.state = {
+    //         cart: []
+    //     }
+    // }
 
     componentDidMount() {
         // // console.log('yup')
@@ -23,11 +23,14 @@ class Cart extends Component {
 
     deleteProduct(id) {
     console.log('Deleting and, deleting and...', id)   
-    axios.delete(`/api/deleteProduct/${id}`).then(res=> {
-        let newProductList = this.state.cart.splice(id, 1);
-        this.setState({cart: newProductList})
-    });
-    console.log('Finally DELETED!!!')
+    // axios.delete(`/api/deleteProduct/${id}`).then(res=> {
+    //     let newProductList = this.state.cart.splice(id, 1);
+    //     this.setState({cart: newProductList})
+    // });
+    // console.log('Finally DELETED!!!')
+    // let id = this.props.match.params.id
+    this.props.removeFromCart(id)
+    
     this.componentDidMount();
 }
 
@@ -94,4 +97,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {getCartProducts}) (Cart);
+export default connect(mapStateToProps, {getCartProducts, removeFromCart}) (Cart);

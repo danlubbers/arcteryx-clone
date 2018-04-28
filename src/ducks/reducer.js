@@ -6,7 +6,8 @@ const initialState = {
     products: [],
     product: [],
     addToCart: [],
-    cartProducts: []
+    cartProducts: [],
+    removeProduct: []
 }
 
 // Create our Action types with const and variable is ALL CAPS!
@@ -15,6 +16,7 @@ const PRODUCTS = 'PRODUCTS';
 const PRODUCT = 'PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const CART_PRODUCTS = 'CART_PRODUCTS';
+const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
 
 // Action Creator Functions return a 'type' and 'payload'
@@ -77,7 +79,16 @@ export function getCartProducts() {
             type: CART_PRODUCTS,
             payload: cartProducts
         }
+}
 
+export function removeFromCart(id) {
+    let removeProduct = axios.delete(`/api/deleteProduct/${id}`).then(res => {
+            return res.data
+    });
+        return {
+            type: REMOVE_PRODUCT,
+            payload: removeProduct
+        }
 }
 
 // Add the function reducer with the parameters 'state' set to equal initialState and 'action'
@@ -88,8 +99,6 @@ export default function reducer(state=initialState, action) {
         case GET_USER_INFO + '_FULFILLED':
         // Use Object.assign to get the previous value of state and update it's property on the payload.
             return Object.assign({}, state, {user: action.payload})
-        default:
-            return state;
         // '_FULFILLED, fulfills the promise, otherwise redux will not return the Array
         case PRODUCTS + '_FULFILLED':
         // console.log('test')
@@ -100,6 +109,10 @@ export default function reducer(state=initialState, action) {
             return Object.assign( {}, state, {addToCart: action.payload});
         case CART_PRODUCTS + '_FULFILLED':
             return Object.assign( {}, state, {cartProducts: action.payload});
+        case REMOVE_PRODUCT + '_FULFILLED':
+            return Object.assign( {}, state, {removeProduct: action.payload});
+        default:
+            return state;
     }
 
 }
