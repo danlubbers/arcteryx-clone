@@ -5,14 +5,16 @@ const initialState = {
     user: {},
     products: [],
     product: [],
-    cart: []
+    addToCart: [],
+    cartProducts: []
 }
 
 // Create our Action types with const and variable is ALL CAPS!
 const GET_USER_INFO = 'GET_USER_INFO';
 const PRODUCTS = 'PRODUCTS';
 const PRODUCT = 'PRODUCT';
-const CART = 'CART'
+const ADD_TO_CART = 'ADD_TO_CART';
+const CART_PRODUCTS = 'CART_PRODUCTS';
 
 
 // Action Creator Functions return a 'type' and 'payload'
@@ -56,17 +58,28 @@ export function getProduct(id) {
 
 export function addCart(id) {
     console.log(id)
-    let cart = axios.post(`/api/cart`, {productID: id}).then(res => {
+    let addToCart = axios.post(`/api/cart`, {productID: id}).then(res => {
         console.log('test', res.data)
         return res.data
     });
         return {
-            type: CART,
-            payload: cart
+            type: ADD_TO_CART,
+            payload: addToCart
         }
 }
 
+export function getCartProducts() {
+    console.log('backend')
+    let cartProducts = axios.get(`/api/productCart`).then(res => {
+       console.log(res.data)
+        return res.data
+    });
+        return {
+            type: CART_PRODUCTS,
+            payload: cartProducts
+        }
 
+}
 
 // Add the function reducer with the parameters 'state' set to equal initialState and 'action'
 export default function reducer(state=initialState, action) {
@@ -84,8 +97,10 @@ export default function reducer(state=initialState, action) {
             return Object.assign( {}, state, {products: action.payload});
         case PRODUCT + '_FULFILLED':
             return Object.assign( {}, state, {product: action.payload});
-        case CART + '_FULFILLED':
-            return Object.assign( {}, state, {cart: action.payload});
+        case ADD_TO_CART + '_FULFILLED':
+            return Object.assign( {}, state, {addToCart: action.payload});
+        case CART_PRODUCTS + '_FULFILLED':
+            return Object.assign( {}, state, {cartProducts: action.payload});
     }
 
 }

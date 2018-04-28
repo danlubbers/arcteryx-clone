@@ -21,7 +21,7 @@ module.exports = {
 
     cartProducts: (req, res) => {
         const dbInstance = req.app.get('db');
-
+        
         dbInstance.cart.getAllCart(req.user.user_id).then(productID => res.status(200).send(productID)).catch((err)=>{
             console.error(err);
             res.status(500).send(err)

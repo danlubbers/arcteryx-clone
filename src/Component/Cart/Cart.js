@@ -1,20 +1,24 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-export default class Cart extends Component {
-    constructor() {
-        super();
+import { connect } from 'react-redux';
+import { getCartProducts } from '../../ducks/reducer';
 
-        this.state = {
-            cart: []
-        }
-    }
+class Cart extends Component {
+    // constructor() {
+    //     super();
+
+    //     this.state = {
+    //         cart: []
+    //     }
+    // }
 
     componentDidMount() {
-        // console.log('yup')
-        axios.get(`/api/productCart`).then(res => {
-            this.setState({cart: res.data})
-        })
+        // // console.log('yup')
+        // axios.get(`/api/productCart`).then(res => {
+        //     this.setState({cart: res.data})
+        // })
+        this.props.getCartProducts()
     }
 
     deleteProduct(id) {
@@ -28,7 +32,10 @@ export default class Cart extends Component {
 }
 
     render() {
-        let cartArray = this.state.cart.map((element, index) => {
+        console.log('before array.map')
+        if (this.props.cart) {
+        var cartArray = this.props.cart.map((element, index) => {
+            console.log('cart', cartArray)
             return(
                 <div className="cart-main" key={index}>
                     <div className="product-details">
@@ -53,8 +60,8 @@ export default class Cart extends Component {
                     </div>
                 </div>
             )
-        })
-
+        })}
+        console.log(cartArray)
         return(
             <div className="content">
                 <div className="upper-text">
@@ -82,3 +89,11 @@ export default class Cart extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        cart: state.cartProducts
+    }
+}
+
+export default connect(mapStateToProps, {getCartProducts}) (Cart);
