@@ -25,16 +25,16 @@
     
     .text-category {
         margin: -20px 50px 10px 0px;
-        font-size: 2em;
+        font-size: 1.5em;
         text-transform: uppercase;
     }
     .text-title {
         margin: 0px 50px 10px 0px;
-        font-size: 1.5em;
+        font-size: 1em;
         text-transform: uppercase;
     }
     .text-description {
-        margin: 0px 50px 10px 0px;
+        margin: 0px 0px 10px 0px;
         font-size: 13px;
     }
 
@@ -50,6 +50,7 @@
             background-color: rgba(0,0,0,0.75);
             border: 1px solid white;
             outline: none;
+            cursor: pointer;
         }
     }
 }
