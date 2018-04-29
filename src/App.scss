@@ -138,11 +138,24 @@ h2, ul {
 
 }
 
-.midlayers-img {
+.assault-img {
   width: 100vw;
   display: block;
   margin-top: -10px;
 }
+
+.insulation-img {
+  @extend .assault-img
+}
+
+.midlayers-img {
+  @extend .assault-img
+}
+
+.x-functional-img {
+  @extend .assault-img
+}
+
 
 
 // FOOTER
@@ -212,7 +225,7 @@ h2, ul {
 //   // background-color: yellow;
 // }
 
-.insulation-img {
+.insulation-img-2 {
   width: 960px;
   display: block;
   margin: auto;

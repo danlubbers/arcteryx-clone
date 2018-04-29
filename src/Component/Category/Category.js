@@ -33,7 +33,7 @@ class Category extends Component {
                         <Link to="/" className="link-home-text"><h3 className="home-text">Home</h3></Link>
                         <h3 className="cold-weather-text">COLD WEATHER INSULATION</h3>
                     </div>
-                    <img className="insulation-img" src={backgroundCategoryImg} alt="snow mountain" />
+                    <img className="insulation-img-2" src={backgroundCategoryImg} alt="snow mountain" />
                 </div>
                 <div className="products-array">{productsArray}</div>
             </div>

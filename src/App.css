@@ -56,7 +56,7 @@ h2, ul {
   .header .loginBtn {
     margin-left: 10px; }
 
-.midlayers-img {
+.assault-img, .insulation-img, .midlayers-img, .x-functional-img {
   width: 100vw;
   display: block;
   margin-top: -10px; }
@@ -85,7 +85,7 @@ h2, ul {
       width: 12vw;
       margin-bottom: 6px; }
 
-.insulation-img {
+.insulation-img-2 {
   width: 960px;
   display: block;
   margin: auto; }
