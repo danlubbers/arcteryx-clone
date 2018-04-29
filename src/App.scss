@@ -82,13 +82,13 @@ h2, ul {
   .products-text {
     // font-family: $font-family;
     color: $font-color;
-    margin: 20px 0px 0px 60px;
+    margin: 20px 0px 2px 60px;
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: yellow;
+    background-color: blu;
     min-width: 160px;
     z-index: 1;
   }
@@ -118,11 +118,11 @@ h2, ul {
     align-items: flex-end;
 
     .find-store {
-      margin: 20px 60px 0px 0px; 
+      margin: 20px 60px 4px 0px; 
     }
 
     .search {
-      margin: 20px 40px 0px 0px;
+      margin: 20px 40px 4px 0px;
     }
     
     .cart-icon {
@@ -138,23 +138,30 @@ h2, ul {
 
 }
 
-.assault-img {
-  width: 100vw;
-  display: block;
+// Carousel
+
+.carousel {
   margin-top: -10px;
+  // background-color: yellow;
+  
+  .assault-img {
+    width: 100vw;
+    display: block;
+  }
+  
+  .insulation-img {
+    @extend .assault-img
+  }
+  
+  .midlayers-img {
+    @extend .assault-img
+  }
+  
+  .x-functional-img {
+    @extend .assault-img
+  }
 }
 
-.insulation-img {
-  @extend .assault-img
-}
-
-.midlayers-img {
-  @extend .assault-img
-}
-
-.x-functional-img {
-  @extend .assault-img
-}
 
 
 
@@ -162,6 +169,7 @@ h2, ul {
 .footer {
   height: 201px;
   position: relative;
+  margin-top: 76px;
   padding: 50px 75px 0px 75px;
   width: 100vw;
   background-color: $background-color;

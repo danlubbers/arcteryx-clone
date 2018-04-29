@@ -35,11 +35,11 @@ h2, ul {
       height: 66px; }
   .header .products-text {
     color: white;
-    margin: 20px 0px 0px 60px; }
+    margin: 20px 0px 2px 60px; }
   .header .dropdown-content {
     display: none;
     position: absolute;
-    background-color: yellow;
+    background-color: blu;
     min-width: 160px;
     z-index: 1; }
   .header .header-box-2 {
@@ -47,23 +47,25 @@ h2, ul {
     justify-content: flex-start;
     align-items: flex-end; }
     .header .header-box-2 .find-store {
-      margin: 20px 60px 0px 0px; }
+      margin: 20px 60px 4px 0px; }
     .header .header-box-2 .search {
-      margin: 20px 40px 0px 0px; }
+      margin: 20px 40px 4px 0px; }
     .header .header-box-2 .cart-icon {
       margin-top: 70px;
       height: 20px; }
   .header .loginBtn {
     margin-left: 10px; }
 
-.assault-img, .insulation-img, .midlayers-img, .x-functional-img {
-  width: 100vw;
-  display: block;
+.carousel {
   margin-top: -10px; }
+  .carousel .assault-img, .carousel .insulation-img, .carousel .midlayers-img, .carousel .x-functional-img {
+    width: 100vw;
+    display: block; }
 
 .footer {
   height: 201px;
   position: relative;
+  margin-top: 76px;
   padding: 50px 75px 0px 75px;
   width: 100vw;
   background-color: #000; }
