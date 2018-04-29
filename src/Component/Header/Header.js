@@ -7,36 +7,18 @@ import {Link} from 'react-router-dom';
 
 export default function Header() {
     return (
-        <div className="header-content">
-            <div className="header-box-1"> 
-                <Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link>
-                <span className="dropdown">
-                   <Link to="/category"><h2 className="products-text">PRODUCTS</h2></Link>
-                </span>
-                    <div className="dropdown-content">
-                    <h2>TEST</h2>
-                    </div>
-            </div>
-            <div className="header-box-2">
-                <h2 className="find-store">Find A Store</h2>
-                <h2 className="search">Search</h2>
-                <Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link>
-                <a href={process.env.REACT_APP_LOGIN}><button className="loginBtn">LOGIN</button></a>
-            </div>
-        </div>
-        
-        // <header className="header-content">
-        //     <div className="header-box-1"> 
-        //         <img className="leaf-logo" src={logo} alt="bird-leaf-logo"/>
-        //         <h2 className="products-text">PRODUCTS</h2>
-        //     </div>
-        //     <nav className="header-box-2">
-        //         <ul>
-        //             <li className="find-store">Find A Store</li>
-        //             <li className="search">Search</li>
-        //             <li><img className="cart-icon" src={cart} alt="cart-logo"/></li>
-        //         </ul>
-        //     </nav>
-        // </header>
+        <nav className="navbar">
+            <ul>
+                <div className="header-box-1">
+                    <Link to="/"><li><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></li></Link>
+                    <Link to="/category"><li><h2 className="products-text">PRODUCTS</h2></li></Link>
+                </div>
+                <div className="header-box-2">
+                    <li className="find-store">Find A Store</li>
+                    <li className="search">Search<i className="fas fa-search" id="fa-search"></i></li>
+                    <Link to="/cart"><li><img className="cart-icon" src={cart} alt="cart-logo"/></li></Link>
+                </div>
+            </ul>
+        </nav>
     )
 }

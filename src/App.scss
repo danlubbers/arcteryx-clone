@@ -37,36 +37,73 @@ h2, ul {
   height: 96px;
   background-color: $background-color;
 
-  .header-content {
+  .navbar {
     // background-color: blue;
-    margin: 0px 40px;
+    margin: 0px 0px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     overflow: visible;
     position: relative;
+  }
+
+  ul {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   
 
   .header-box-1 {
     // background-color: red;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     
-
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+        
     .header-text {
       color: $font-color;
     }
     
     .leaf-logo {
-      margin-top: 18px;
+      margin: 18px 0px 0px 20px;
       width: 167px;
       height: 66px;
     }
-  
-  }
 
+     .products-text {
+    // font-family: $font-family;
+    color: $font-color;
+    margin: 0px 0px 2px 30px;
+  }
+}
+
+.header-box-2 {
+  // background-color: grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+          .find-store {
+            margin: 0px 0px 0px 0px; 
+          }
+          
+          .search {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 50px;
+          }
+          
+          .fa-search {
+            color: white; 
+            margin-left: 8px; 
+          }
+          
+          .cart-icon {
+            margin: 0px 20px -3px 25px;
+            height: 20px;
+          }
+  }
   // FOR DROP DOWN MENU
 
   // .header-content h2 {
@@ -79,18 +116,14 @@ h2, ul {
   //   float: left;
   //   overflow: hidden; 
   // }
-  .products-text {
-    // font-family: $font-family;
-    color: $font-color;
-    margin: 20px 0px 2px 60px;
-  }
+ 
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: blu;
-    min-width: 160px;
-    z-index: 1;
+  // .dropdown-content {
+  //   display: none;
+  //   position: absolute;
+  //   background-color: yellow;
+  //   min-width: 160px;
+  //   z-index: 1;
   }
 
   // .dropdown-content h2{
@@ -111,32 +144,7 @@ h2, ul {
   //   display: block;
   // }
 
-  .header-box-2 {
-    // background-color: green;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
 
-    .find-store {
-      margin: 20px 60px 4px 0px; 
-    }
-
-    .search {
-      margin: 20px 40px 4px 0px;
-    }
-    
-    .cart-icon {
-      margin-top: 70px;
-      height: 20px;
-    }
-    
-  }
-
-  .loginBtn {
-    margin-left: 10px;
-  }
-
-}
 
 // Carousel
 

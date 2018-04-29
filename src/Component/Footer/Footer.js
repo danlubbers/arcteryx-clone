@@ -23,7 +23,8 @@ export default function Footer() {
                 <h2 className="footer-text">Warranty Policy</h2>
             </div>
             <div className="footer-box-5">
-                <h2 className="footer-text">Shop / Sign-In</h2>
+            {/* Sign-In to Auth0 */}
+            <a href={process.env.REACT_APP_LOGIN}><h2 className="footer-text">Shop / Sign-In</h2></a>
                 <h2 className="footer-text">Privacy Policy</h2>
             </div>
         </div>
