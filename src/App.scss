@@ -310,17 +310,21 @@ h2, ul {
 
 // Category PAGE Starts HERE!!!
 
-// .main-content {
-//   width: 960px;
-//   margin: 25px 0px 0px 150px;
-//   // background-color: yellow;
-// }
+.main-content {
+  width: 90vw;
+  margin: 25px 0px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: yellow;
+}
 
 .insulation-img-2 {
   position: relative;
-  width: 80vw;
+  width: 90vw;
   display: block;
-  margin: 0px 50px;
+  margin: 0px 0px 0px 0px;
   z-index: 1;
   // padding: 25px 0px 0px 0px;
 }
@@ -329,10 +333,12 @@ h2, ul {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 40px 0px 25px 24px;
+  margin: 40px 0px 25px 0px;
+  font-size: .8em;
 
   .cold-weather-text {
     margin: 0px 0px 0px 10px;
+    font-size: 1.2em;
   }
 }
 
@@ -341,7 +347,7 @@ h2, ul {
   position: absolute;
   width: 420px;
   height: 140px;
-  margin: 35px 0px 0px 50px;
+  margin: 35px 0px 0px 0px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -372,10 +378,17 @@ h2, ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-end;
+}
+
+.array-image {
+  height: 205px;
+  width: 162px;
 }
 
 .single-product {
+  height: 281px;
+  width: 162px;
   margin: 15px;
   text-decoration: none;
   // color: black;
@@ -390,7 +403,7 @@ h2, ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 
 p {

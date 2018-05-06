@@ -171,27 +171,37 @@ h2, ul {
   .footer .footer-box-5 {
     margin-bottom: 32px; }
 
+.main-content {
+  width: 90vw;
+  margin: 25px 0px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .insulation-img-2 {
   position: relative;
-  width: 80vw;
+  width: 90vw;
   display: block;
-  margin: 0px 50px;
+  margin: 0px 0px 0px 0px;
   z-index: 1; }
 
 .category-text {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 40px 0px 25px 24px; }
+  margin: 40px 0px 25px 0px;
+  font-size: .8em; }
   .category-text .cold-weather-text {
-    margin: 0px 0px 0px 10px; }
+    margin: 0px 0px 0px 10px;
+    font-size: 1.2em; }
 
 .cold-weather-box {
   background-color: black;
   position: absolute;
   width: 420px;
   height: 140px;
-  margin: 35px 0px 0px 50px;
+  margin: 35px 0px 0px 0px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -214,9 +224,15 @@ h2, ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start; }
+  align-items: flex-end; }
+
+.array-image {
+  height: 205px;
+  width: 162px; }
 
 .single-product {
+  height: 281px;
+  width: 162px;
   margin: 15px;
   text-decoration: none; }
 
@@ -225,7 +241,7 @@ h2, ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: baseline; }
+  align-items: center; }
 
 p {
   font-family: "Montserrat", sans-serif;

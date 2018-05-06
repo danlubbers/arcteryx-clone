@@ -37,8 +37,8 @@ class Product extends Component {
                     <div className="main-upper-box">
                         <div className="upper-left-box">
                             <div className="upper-left-text">
-                                <Link to="/" id="arcteryx"><p>Arc'teryx</p></Link>
-                                <p id="mens">Mens</p>
+                                <Link to="/" id="arcteryx"><p>Arc'teryx ></p></Link>
+                                <p id="mens">Mens ></p>
                                 <p id="title-link">Cold Wx Parka SVX</p>
                             </div>
                                 <img className="hero-image" src={element.large_img} alt="Arc-large" />
@@ -46,8 +46,7 @@ class Product extends Component {
                         <div className="upper-right-box">
                             <p id="title">{element.title}</p>
                             <p id="description">{element.description}</p>
-                            <p id="usd">USD $ </p>
-                            <p id="price">{element.price}</p>
+                            <p id="price">USD ${element.price}</p>
                             <div>
                                <button className="cartBtn" onClick={_=> this.addToCart(this.props.product)}>ADD TO CART</button>
                             </div>

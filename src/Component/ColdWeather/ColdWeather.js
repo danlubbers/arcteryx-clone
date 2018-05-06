@@ -20,7 +20,7 @@ class ColdWeather extends Component {
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>
-                        <p>$ {element.price} USD</p>
+                        <p className='price'>${element.price} USD</p>
                     </div>
                 </Link>
             )
