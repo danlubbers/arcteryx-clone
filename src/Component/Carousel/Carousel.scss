@@ -1,0 +1,92 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-dots {
+    background-color: #111;
+    height: 79px;
+    margin: 0px 0px -51px 0px;
+    padding: 30px;
+
+}
+
+.text-box-1 {
+    background-color: black;
+    position: fixed;
+    height: 227px;
+    width: 485px;
+    margin: 100px 0px 0px 0px;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+
+    
+    .text-category-1 {
+        margin: -20px 25px 10px 0px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    .text-title-1 {
+        margin: 0px 25px 10px 0px;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    .text-description-1 {
+        margin: 0px 20px 10px 0px;
+        width: 28vw;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    
+    .text-button-1 {
+        margin: 20px 25px 0px 30px;
+        height: 36px;
+        width: 173px;
+        font-size: 16px;
+        color: white;
+        background-color: rgba(0,0,0,0.75);
+        border: 1px solid white;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .text-button-3 {
+        // background-color: yellow;
+        width: 250px;
+    }
+
+    .text-button-4 {
+        // background-color: yellow;
+        width: 250px;
+    }
+}
+.text-box-2, .text-box-3, .text-box-4 {
+    @extend .text-box-1;
+}
+
+.text-category-2, .text-category-3, .text-category-4 {
+    @extend .text-category-1;
+}
+
+.text-title-2, .text-title-3, .text-title-4 {
+    @extend .text-title-1;
+}
+
+.text-description-2, .text-description-3, .text-description-4 {
+    @extend .text-description-1;
+}
+
+.text-button-2, .text-button-3, .text-button-4 {
+    @extend .text-button-1;
+}
+
+
+
+
+
+
+
