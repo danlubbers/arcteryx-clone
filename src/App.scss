@@ -132,11 +132,15 @@ h2, ul {
     position: absolute;
     top: -350px;
     transition: .25s ease-in-out;
+    opacity: 0;
+    transition-property: opacity;
     z-index: -1;
+
   }
 
   .slide-menu-position {
     top: 95px;
+    opacity: 1;
   }
 
   // navbar images
