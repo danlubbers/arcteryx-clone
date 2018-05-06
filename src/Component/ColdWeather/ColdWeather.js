@@ -3,18 +3,18 @@ import backgroundCategoryImg from '../../images/insulation.jpg';
 // import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getProducts } from '../../ducks/reducer';
+import { getAllColdProducts } from '../../ducks/reducer';
 
 class ColdWeather extends Component {
 
     componentDidMount() {
-        this.props.getProducts()  
+        this.props.getAllColdProducts()  
     }
 
     render() {
         // the if statement is because the page loads before redux has a chance to send back the products array.
-        if (this.props.products) {
-        var productsArray = this.props.products.map((element, index)=> {
+        if (this.props.coldProducts) {
+        var productsArray = this.props.coldProducts.map((element, index)=> {
             return(
                 <Link to={`/product/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
@@ -48,8 +48,8 @@ class ColdWeather extends Component {
 
 function mapStateToProps(state) {
     return{
-        products: state.products
+        coldProducts: state.allColdProducts
     }
 }
 
-export default connect(mapStateToProps, {getProducts}) (ColdWeather);
+export default connect(mapStateToProps, {getAllColdProducts}) (ColdWeather);

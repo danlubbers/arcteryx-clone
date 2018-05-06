@@ -22,9 +22,9 @@ export default class Carousel extends Component {
         slidesToShow: 1,
         slidesToSlide: 4,
         // autoplay: true, 
-        autoPlaySpeed: 1000,
-        // cssEase: "linear",
-        // adaptiveHeight: true,
+        autoPlaySpeed: 500,
+        cssEase: "linear",
+        adaptiveHeight: true,
         initialSlide: 0
     };
     return (

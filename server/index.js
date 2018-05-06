@@ -108,8 +108,8 @@ app.get('/logout', function(req, res) {
 })
 
 // Add Front-end Endpoints here:
-// GET All Products to display on Categories Page (componentDidMount)
-app.get(`/api/getAllProducts`, controller.products);
+// GET All COLD WEATHER Products to display on Categories Page (componentDidMount)
+app.get(`/api/getAllColdWeatherProducts`, controller.products);
 // Get ONE Products when clicked to display on Product Page (componentDidMount)
 app.get(`/api/getOneProduct/:id`, controller.product);
 // Display Products that were added to the cart (componentDidMount)
