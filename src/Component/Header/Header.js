@@ -50,7 +50,14 @@ class Header extends Component {
                         </div>
             
                         <div className={slideCSS} onMouseLeave={this.handleLeave}>
-                        <div className='container-left'>CONTAINER FOR LOGIN</div>
+                        <div className='container-left'>
+                            <h2 className='signin'>Sign-in here to start shopping as a LEAF customer.</h2>
+                            {/* Sign-In to Auth0 */}
+                            <a href={process.env.REACT_APP_LOGIN}>
+                            <button className='start-shoppingBtn'> Start Shopping</button></a>
+                        </div>
+                        {/* div to create the vertical line in CSS */}
+                        <div className='vertical-line'></div>
                             <div className="dropdown-categories">
                                 <div className='box1'>
                                     <img className="combat-uniforms" src={combatUniforms} alt="combat uniforms" />
