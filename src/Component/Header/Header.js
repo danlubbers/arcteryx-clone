@@ -46,10 +46,10 @@ class Header extends Component {
                     <ul>
                         <div className="header-box-1">
                             <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
-                            <li><button className="productsTextBtn" onMouseOver={this.handleOver} onMouseOut={this.handleLeave}>{showMenu ? 'PRODUCTS ' : 'PRODUCTS '}<i className="fa fa-angle-down" id="fa-angle-down"></i></button></li>
+                            <li><button className="productsTextBtn" onMouseOver={this.handleOver} >{showMenu ? 'PRODUCTS ' : 'PRODUCTS '}<i className="fa fa-angle-down" id="fa-angle-down"></i></button></li>
                         </div>
             
-                        <div className={slideCSS}>
+                        <div className={slideCSS} onMouseLeave={this.handleLeave}>
                         <div className='container-left'>CONTAINER FOR LOGIN</div>
                             <div className="dropdown-categories">
                                 <div className='box1'>
@@ -72,10 +72,10 @@ class Header extends Component {
                                     <img className="wetWeather" src={wetWeather} alt="wet weather" />
                                     <p className='nav-text'>Wet Weather Protection</p>
                                 </div>
-                                <div className='box6'>
-                                    <Link to='/category'><img className="coldWeather" src={coldWeather} alt="cold weather" /></Link>
+                                <Link to='/category'><div className='box6'>
+                                    <img className="coldWeather" src={coldWeather} alt="cold weather" />
                                     <p className='nav-text'>Cold Weather Insulation</p>
-                                </div>
+                                </div></Link>
                                 <div className='box7'>
                                     <img className="accessories" src={accessories} alt="accessories" />
                                     <p className='nav-text'>Apparel Accessories</p>
