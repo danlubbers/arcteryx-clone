@@ -152,9 +152,11 @@ h2, ul {
     margin-bottom: 32px; }
 
 .insulation-img-2 {
-  width: 960px;
+  position: relative;
+  width: 80vw;
   display: block;
-  margin: auto; }
+  margin: 0px 50px;
+  z-index: 1; }
 
 .category-text {
   display: flex;
@@ -163,6 +165,28 @@ h2, ul {
   margin: 40px 0px 25px 24px; }
   .category-text .cold-weather-text {
     margin: 0px 0px 0px 10px; }
+
+.cold-weather-box {
+  background-color: black;
+  position: absolute;
+  width: 420px;
+  height: 140px;
+  margin: 35px 0px 0px 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 2; }
+  .cold-weather-box .cold-weather-category {
+    margin: 0px 0px 0px 20px;
+    font-size: 1.4em; }
+  .cold-weather-box .cold-weather-description {
+    width: 30vw;
+    margin: 10px 0px 0px 20px;
+    letter-spacing: 2.5px;
+    font-size: 12px; }
 
 .products-array {
   margin: 50px 100px 0px 100px;

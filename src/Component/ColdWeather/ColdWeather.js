@@ -28,10 +28,14 @@ class ColdWeather extends Component {
 
         return(
             <div className="main-content">
-                <div >
+                <div>
                     <div className="category-text">
                         <Link to="/" className="link-home-text"><h3 className="home-text">Home</h3></Link>
-                        <h3 className="cold-weather-text">COLD WEATHER INSULATION</h3>
+                        <h3 className="cold-weather-text">> COLD WEATHER INSULATION</h3>
+                    </div>
+                        <div className="cold-weather-box">
+                        <h1 className="cold-weather-category">COLD WEATHER INSULATION</h1>
+                        <p className="cold-weather-description">Technical construction and specialized materials to enable and sustain personnel in extreme cold conditions.</p>
                     </div>
                     <img className="insulation-img-2" src={backgroundCategoryImg} alt="snow mountain" />
                 </div>
