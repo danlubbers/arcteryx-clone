@@ -24,10 +24,15 @@ class Header extends Component {
         this.state = {
             showMenu: false
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleOver = this.handleOver.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
     }
 
-    handleClick() {
+    handleOver() {
+        this.setState({showMenu: !this.state.showMenu})
+    }
+
+    handleLeave() {
         this.setState({showMenu: !this.state.showMenu})
     }
 
@@ -41,10 +46,11 @@ class Header extends Component {
                     <ul>
                         <div className="header-box-1">
                             <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
-                            <li><button className="productsTextBtn" onClick={this.handleClick}>{showMenu ? 'HIDE ' : 'PRODUCTS '}<i className="fa fa-angle-down" id="fa-angle-down"></i></button></li>
+                            <li><button className="productsTextBtn" onMouseOver={this.handleOver} onMouseOut={this.handleLeave}>{showMenu ? 'PRODUCTS ' : 'PRODUCTS '}<i className="fa fa-angle-down" id="fa-angle-down"></i></button></li>
                         </div>
-
+            
                         <div className={slideCSS}>
+                        <div className='container-left'>CONTAINER FOR LOGIN</div>
                             <div className="dropdown-categories">
                                 <div className='box1'>
                                     <img className="combat-uniforms" src={combatUniforms} alt="combat uniforms" />
@@ -67,7 +73,7 @@ class Header extends Component {
                                     <p className='nav-text'>Wet Weather Protection</p>
                                 </div>
                                 <div className='box6'>
-                                    <img className="coldWeather" src={coldWeather} alt="cold weather" />
+                                    <Link to='/category'><img className="coldWeather" src={coldWeather} alt="cold weather" /></Link>
                                     <p className='nav-text'>Cold Weather Insulation</p>
                                 </div>
                                 <div className='box7'>
@@ -98,6 +104,7 @@ class Header extends Component {
                             <li className="search">Search<i className="fas fa-search" id="fa-search"></i></li>
                             <li><Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
                         </div>
+                    
                     </ul>
                 </nav>
             </section>

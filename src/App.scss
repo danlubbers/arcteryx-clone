@@ -36,7 +36,6 @@ h2, ul {
   width: 100vw;
   height: 96px;
   background-color: $background-color;
- 
 
   .navbar {
     // background-color: blue;
@@ -46,7 +45,7 @@ h2, ul {
     align-items: flex-end;
     overflow: visible;
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
 
   ul {
@@ -122,19 +121,18 @@ h2, ul {
 
   }
   // FOR DROP DOWN MENU
-
+ 
   .slide-menu {
     background-color: #333;
     width: 100%;
     height: 350px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-    color: whitesmoke;
     position: absolute;
     top: -350px;
-    transition: .15s;
-    z-index: 1;
+    transition: .25s ease-in-out;
+    z-index: -1;
   }
 
   .slide-menu-position {
@@ -142,8 +140,20 @@ h2, ul {
   }
 
   // navbar images
+.container-left {
+  height: 300px;
+  width: 500px;
+  margin: 0px 25px 0px 25px;
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropdown-categories {
   // background-color: red;
+  width: 800px;
+  margin: 0px 50px 0px 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -154,7 +164,7 @@ h2, ul {
 .box1 {
   height: 140px;
   width: 95px;
-  margin: 0px 5px 0px 5px;
+  margin: 5px;
   background-color: white;
   display: flex;
   flex-direction: column;
