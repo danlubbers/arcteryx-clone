@@ -10,13 +10,13 @@ export default function Header() {
         <nav className="navbar">
             <ul>
                 <div className="header-box-1">
-                    <Link to="/"><li><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></li></Link>
-                    <Link to="/category"><li><h2 className="products-text">PRODUCTS</h2></li></Link>
+                    <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
+                    <li><Link to="/category"><h2 className="products-text">PRODUCTS <i className="fa fa-angle-down" id="fa-angle-down"></i></h2></Link></li>
                 </div>
                 <div className="header-box-2">
                     <li className="find-store">Find A Store</li>
                     <li className="search">Search<i className="fas fa-search" id="fa-search"></i></li>
-                    <Link to="/cart"><li><img className="cart-icon" src={cart} alt="cart-logo"/></li></Link>
+                    <li><Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
                 </div>
             </ul>
         </nav>

@@ -35,12 +35,14 @@ h2, ul {
     .header .header-box-1 .header-text {
       color: white; }
     .header .header-box-1 .leaf-logo {
-      margin: 18px 0px 0px 20px;
+      margin: 18px 0px 0px 100px;
       width: 167px;
       height: 66px; }
     .header .header-box-1 .products-text {
       color: white;
-      margin: 0px 0px 2px 30px; }
+      margin: 0px 0px 2px 70px; }
+    .header .header-box-1 .fa-angle-down {
+      color: white; }
   .header .header-box-2 {
     display: flex;
     justify-content: flex-start;
@@ -54,7 +56,7 @@ h2, ul {
       color: white;
       margin-left: 8px; }
     .header .header-box-2 .cart-icon {
-      margin: 0px 20px -3px 25px;
+      margin: 0px 80px -3px 25px;
       height: 20px; }
 
 .carousel {
@@ -87,6 +89,8 @@ h2, ul {
     .footer .footer-box-1 .arc-logo {
       width: 12vw;
       margin-bottom: 6px; }
+  .footer .footer-box-5 {
+    margin-bottom: 32px; }
 
 .insulation-img-2 {
   width: 960px;

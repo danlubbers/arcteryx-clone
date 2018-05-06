@@ -67,7 +67,7 @@ h2, ul {
     }
     
     .leaf-logo {
-      margin: 18px 0px 0px 20px;
+      margin: 18px 0px 0px 100px;
       width: 167px;
       height: 66px;
     }
@@ -75,7 +75,10 @@ h2, ul {
      .products-text {
     // font-family: $font-family;
     color: $font-color;
-    margin: 0px 0px 2px 30px;
+    margin: 0px 0px 2px 70px;
+  }
+  .fa-angle-down {
+    color: white;
   }
 }
 
@@ -100,7 +103,7 @@ h2, ul {
           }
           
           .cart-icon {
-            margin: 0px 20px -3px 25px;
+            margin: 0px 80px -3px 25px;
             height: 20px;
           }
   }
@@ -223,11 +226,12 @@ h2, ul {
   }
 
   .footer-box-4 {
-
+    
   }
 
   .footer-box-5 {
-    
+    margin-bottom: 32px;
+    // background-color: red;
   }
 }
 
