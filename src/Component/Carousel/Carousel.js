@@ -43,12 +43,37 @@ export default class Carousel extends Component {
                     <img className="insulation-img" src={insulation} alt="insulation"/>
                 </div>
                 <div>
+                <div className="text-box">
+                    <h1 className="text-category">Enhanced Mobility</h1>
+                    <h1 className="text-title">Assault Uniform LT </h1>
+                    <p className="text-description">Full range of motion combat uniform for hot weather conditions.</p>
+                <div className="button-container">
+                    <Link to={`/product/1`}><button className="text-button">ASSAULT SHIRT LT</button></Link>
+                    <Link to={`/product/8`}><button className="text-button">ASSAULT PANT LT</button></Link>
+                </div>
+                </div>
                     <img className="assault-img" src={assault} alt="assault"/>
                 </div>
                 <div>
+                <div className="text-box">
+                    <h1 className="text-category">Everyday Function</h1>
+                    <h1 className="text-title">New Naga Pullover AR </h1>
+                    <p className="text-description">Air permeable midlayer with warmth with weather resistance for wet, cold environments.</p>
+                <div className="button-container">
+                    <Link to={`/product/`}><button className="text-button">VIEW NAGA PULLOVER AR</button></Link>
+                </div>
+                </div>
                     <img className="midlayers-img" src={midlayers} alt="midlayers"/>
                 </div>
                 <div>
+                <div className="text-box">
+                    <h1 className="text-category">xFunctional Carry</h1>
+                    <h1 className="text-title">New Courier Bag 15 </h1>
+                    <p className="text-description">Messenger style bag capable of concealed carry and administrative duties.</p>
+                <div className="button-container">
+                    <Link to={`/product/`}><button className="text-button">VIEW COURIER BAG 15</button></Link>
+                </div>
+                </div>
                     <img className="x-functional-img" src={xFunctional} alt="x-functional"/>
                 </div>
 
