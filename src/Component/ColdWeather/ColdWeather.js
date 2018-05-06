@@ -16,7 +16,7 @@ class ColdWeather extends Component {
         if (this.props.coldProducts) {
         var productsArray = this.props.coldProducts.map((element, index)=> {
             return(
-                <Link to={`/product/${element.product_id}`} key={index} className="single-product">
+                <Link to={`/coldWeatherProduct/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>

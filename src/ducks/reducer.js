@@ -4,7 +4,7 @@ import axios from "axios";
 const initialState = {
     user: {},
     allColdProducts: [],
-    product: [],
+    oneColdProduct: [],
     addToCart: [],
     cartProducts: [],
     removeProduct: []
@@ -13,7 +13,7 @@ const initialState = {
 // Create our Action types with const and variable is ALL CAPS!
 const GET_USER_INFO = 'GET_USER_INFO';
 const ALL_COLD_PRODUCTS = 'ALL_COLD_PRODUCTS';
-const PRODUCT = 'PRODUCT';
+const ONE_COLD_PRODUCT = 'ONE_COLD_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const CART_PRODUCTS = 'CART_PRODUCTS';
 const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
@@ -46,14 +46,14 @@ export function getAllColdProducts() {
 }
 
 // Action Creator to getOneProducts for Product Page
-export function getProduct(id) {
+export function getOneColdProduct(id) {
     // console.log(id)
-    let product = axios.get(`/api/getOneProduct/${id}`).then(res => {
-        // console.log('test2', res.data)
+    let product = axios.get(`/api/getOneColdWeatherProduct/${id}`).then(res => {
+        console.log('test2', res.data)
         return res.data
     });
         return {
-            type: PRODUCT,
+            type: ONE_COLD_PRODUCT,
             payload: product
         }
 }
@@ -103,8 +103,8 @@ export default function reducer(state=initialState, action) {
         case ALL_COLD_PRODUCTS + '_FULFILLED':
         // console.log('test2')
             return Object.assign( {}, state, {allColdProducts: action.payload});
-        case PRODUCT + '_FULFILLED':
-            return Object.assign( {}, state, {product: action.payload});
+        case ONE_COLD_PRODUCT + '_FULFILLED':
+            return Object.assign( {}, state, {oneColdProduct: action.payload});
         case ADD_TO_CART + '_FULFILLED':
             return Object.assign( {}, state, {addToCart: action.payload});
         case CART_PRODUCTS + '_FULFILLED':

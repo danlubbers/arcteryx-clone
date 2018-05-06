@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 // import axios from 'axios';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getProduct } from '../../ducks/reducer';
+import { getOneColdProduct } from '../../ducks/reducer';
 import { addCart } from '../../ducks/reducer';
 
 class Product extends Component {
@@ -16,7 +16,7 @@ class Product extends Component {
     
     componentDidMount() {
         // needs to pass in (this.props.match.params.id) to match 
-            this.props.getProduct(this.props.match.params.id)
+            this.props.getOneColdProduct(this.props.match.params.id)
     }
 
     addToCart() {
@@ -30,8 +30,8 @@ class Product extends Component {
     }
    
     render() {
-        if (this.props.product) {
-        var productArray = this.props.product.map((element, index)=> {
+        if (this.props.coldProduct) {
+        var productArray = this.props.coldProduct.map((element, index)=> {
             return(
                 <div key={index}>
                     <div className="main-upper-box">
@@ -70,10 +70,10 @@ class Product extends Component {
 function mapStateToProps(state) {
     return{
         // This is to display product on page (componentDidMount)
-        product: state.product,
+        coldProduct: state.oneColdProduct,
         // This is for addToCart button
         productID: state.product
     }
 }
 
-export default connect(mapStateToProps, {getProduct, addCart}) (Product);
+export default connect(mapStateToProps, {getOneColdProduct, addCart}) (Product);

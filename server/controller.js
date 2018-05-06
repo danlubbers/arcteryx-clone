@@ -13,7 +13,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
         // References 'getOneProduct.sql file in (db) folder
         // Must have (req.params.id) to get the id and pass it through
-        dbInstance.products.getOneProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>{
+        dbInstance.products.getOneColdWeatherProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>{
             console.error(err);
             res.status(500).send(err)
     })

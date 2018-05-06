@@ -9,7 +9,7 @@ export default (
     <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route path="/coldWeather" component={ColdWeather} />
-        <Route path="/product/:id" component={Product} />
+        <Route path="/coldWeatherProduct/:id" component={Product} />
         <Route path="/cart" component={Cart} />
     </Switch>
 )
