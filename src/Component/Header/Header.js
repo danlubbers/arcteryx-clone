@@ -72,7 +72,7 @@ class Header extends Component {
                                     <img className="wetWeather" src={wetWeather} alt="wet weather" />
                                     <p className='nav-text'>Wet Weather Protection</p>
                                 </div>
-                                <Link to='/category'><div className='box6'>
+                                <Link to='/coldWeather'><div className='box6'>
                                     <img className="coldWeather" src={coldWeather} alt="cold weather" />
                                     <p className='nav-text'>Cold Weather Insulation</p>
                                 </div></Link>

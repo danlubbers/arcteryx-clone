@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProducts } from '../../ducks/reducer';
 
-class Category extends Component {
+class ColdWeather extends Component {
 
     componentDidMount() {
         this.props.getProducts()  
@@ -48,4 +48,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {getProducts}) (Category);
+export default connect(mapStateToProps, {getProducts}) (ColdWeather);
