@@ -19,6 +19,15 @@ module.exports = {
     })
     }, 
 
+    xFunctionalProducts: (req, res) => {
+        const dbInstance = req.app.get('db');
+        // References 'getAllProducts.sql file in (db) folder
+        dbInstance.products.getAllxFunctionalProducts().then(products => res.status(200).send(products)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+        })
+    },
+
     cartProducts: (req, res) => {
         const dbInstance = req.app.get('db');
         

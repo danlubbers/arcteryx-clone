@@ -87,10 +87,10 @@ class Header extends Component {
                                     <img className="accessories" src={accessories} alt="accessories" />
                                     <p className='nav-text'>Apparel Accessories</p>
                                 </div>
-                                <div className='box8'>
+                                <Link to='/Xfunctional'><div className='box8'>
                                     <img className="crossFunctional" src={crossFunctional} alt="cross functional" />
                                     <p className='nav-text'>Cross Functional Equipment</p>
-                                </div>
+                                </div></Link>
                                 <div className='box9'>
                                     <img className="loadCarry" src={loadCarry} alt="load carry" />
                                     <p className='nav-text'>Load Carriage Equipment</p>
