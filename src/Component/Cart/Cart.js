@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getCartProducts, removeFromCart } from '../../ducks/reducer';
+import { getCartProducts, changeQuantity, removeFromCart } from '../../ducks/reducer';
 
 class Cart extends Component {
     // constructor() {
@@ -19,6 +19,13 @@ class Cart extends Component {
         //     this.setState({cart: res.data})
         // })
         this.props.getCartProducts()
+    }
+
+    changeQuantity(value, item) {
+        console.log(item)
+        let cartID = item.cart_id;
+        let newQuantity = item.quantity + value;
+        this.props.changeQuantity(cartID, newQuantity)
     }
 
     deleteProduct(id) {
@@ -50,9 +57,9 @@ class Cart extends Component {
                         </div>
                     </div>
                     <div className="product-quantity">
-                        <i className="fas fa-minus"></i>
-                        <h5>1</h5>
-                        <i className="fas fa-plus"></i>
+                        <button onClick={_=>this.changeQuantity(-1, element)}><i className="fas fa-minus"></i></button>
+                        <h5>{element.quantity}</h5>
+                        <button onClick={_=>this.changeQuantity(1, element)}><i className="fas fa-plus"></i></button>
                     </div>
                     <div className="product-price">
                         <h5>$ {element.price}</h5>
@@ -97,4 +104,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {getCartProducts, removeFromCart}) (Cart);
+export default connect(mapStateToProps, {getCartProducts, changeQuantity, removeFromCart}) (Cart);

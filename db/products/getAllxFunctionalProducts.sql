@@ -1,1 +1,2 @@
-select * from xfunctional;
+select * from products
+where category = 'xFunctional';

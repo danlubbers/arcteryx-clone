@@ -36,8 +36,8 @@ export default class Carousel extends Component {
                     <h1 className="text-title-1">New Cold WX Parka & BIB Pant SVX </h1>
                     <p className="text-description-1">For the operational needs of personnel in extreme cold weather conditions.</p>
                 <div className="button-container-1">
-                    <Link to={`/product/1`}><button className="text-button-1">View Parka SVX</button></Link>
-                    <Link to={`/product/8`}><button className="text-button-1">View Bib Pant SVX</button></Link>
+                    <Link to={`/coldWeatherProduct/1`}><button className="text-button-1">View Parka SVX</button></Link>
+                    <Link to={`/coldWeatherProduct/8`}><button className="text-button-1">View Bib Pant SVX</button></Link>
                 </div>
                 </div>
                     <img className="insulation-img" src={insulation} alt="insulation"/>
@@ -71,7 +71,7 @@ export default class Carousel extends Component {
                     <h1 className="text-title-4">New Courier Bag 15 </h1>
                     <p className="text-description-4">Messenger style bag capable of concealed carry and administrative duties.</p>
                 <div className="button-container-4">
-                    <Link to={`/XFunctionalProduct/2`}><button className="text-button-4">VIEW COURIER BAG 15</button></Link>
+                    <Link to={`/XFunctionalProduct/12`}><button className="text-button-4">VIEW COURIER BAG 15</button></Link>
                 </div>
                 </div>
                     <img className="x-functional-img" src={xFunctional} alt="x-functional"/>

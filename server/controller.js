@@ -48,6 +48,30 @@ module.exports = {
         })
     },
 
+    updateQuantity: (req, res) => {
+        const dbInstance = req.app.get('db')
+        let {cartID, newQuantity} = req.body;
+        console.log('BODY', req.body)
+        // changeQuantity is referencing the SQL file in database
+        // cartID references cart_id $1, and newQuantity references quantity $2
+        // UPdate the quantity, then....
+        dbInstance.cart.changeQuantity(cartID, newQuantity).then(response=>{
+            console.log(response)
+            // Retrieve updated cart
+            dbInstance.cart.getAllCart(req.user.user_id).then(cart=>{
+            // and send it back
+                res.status(200).send(cart)
+            }).catch(err=>{
+                console.error(err)
+                res.status(500).send(err)
+            })
+        }).catch(err=>{
+            console.error(err)
+            res.status(500).send(err)
+        })
+
+    },
+
     addCart: (req, res) => {
         const dbInstance = req.app.get('db');
             // req.user.user_id because we are pulling off of Auth0

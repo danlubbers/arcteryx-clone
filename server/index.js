@@ -118,8 +118,10 @@ app.get(`/api/getAllxFunctionalProducts`, controller.xFunctionalProducts)
 app.get(`/api/getOnexFunctionalProduct/:id`, controller.xFunctionalProduct);
 // Display Products that were added to the cart (componentDidMount)
 app.get(`/api/productCart`, controller.cartProducts);
+// POST endpoint for changing Quantity
+app.put(`/api/cart`, controller.updateQuantity)
 // Get ONE Product when clicked and add to the CART page
-app.post(`/api/cart/`, controller.addCart)
+app.post(`/api/cart`, controller.addCart)
 // Delete Product from Cart
 app.delete(`/api/deleteProduct/:id`, controller.delete);
 

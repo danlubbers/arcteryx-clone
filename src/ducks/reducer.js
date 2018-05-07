@@ -9,6 +9,7 @@ const initialState = {
     onexFunctionalProduct: [],
     addToCart: [],
     cartProducts: [],
+    cartQuantity: [],
     removeProduct: []
 }
 
@@ -20,6 +21,7 @@ const ALL_X_FUNCTIONAL_PRODUCTS = 'ALL_X_FUNCTIONAL_PRODUCTS';
 const ONE_X_FUNCTIONAL_PRODUCT = 'ONE_X_FUNCTIONAL_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const CART_PRODUCTS = 'CART_PRODUCTS';
+const CART_QUANTITY = 'CART_QUANTITY';
 const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
 
@@ -110,6 +112,17 @@ export function getCartProducts() {
         }
 }
 
+export function changeQuantity(cartID, newQuantity) {
+    let cartQuantity = axios.put(`/api/cart`, {cartID, newQuantity}).then(res=>{
+        console.log(res)
+        return res.data
+    });
+        return {
+            type: CART_QUANTITY,
+            payload: cartQuantity
+        }
+}
+
 export function removeFromCart(id) {
     let removeProduct = axios.delete(`/api/deleteProduct/${id}`).then(res => {
             return res.data
@@ -142,6 +155,9 @@ export default function reducer(state=initialState, action) {
         case ADD_TO_CART + '_FULFILLED':
             return Object.assign( {}, state, {addToCart: action.payload});
         case CART_PRODUCTS + '_FULFILLED':
+            return Object.assign( {}, state, {cartProducts: action.payload});
+        case CART_QUANTITY + '_FULFILLED':
+        // cartProducts overwrites the array with the new cart
             return Object.assign( {}, state, {cartProducts: action.payload});
         case REMOVE_PRODUCT + '_FULFILLED':
             return Object.assign( {}, state, {removeProduct: action.payload});
