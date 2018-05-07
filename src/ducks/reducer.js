@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Set initialState
 const initialState = {
-    user: {},
+    user: null,
     allColdProducts: [],
     oneColdProduct: [],
     allxFunctionalProducts: [],

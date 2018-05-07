@@ -348,15 +348,21 @@ h3 {
   .content .product-remove {
     margin-right: -33px; }
   .content .cart-content {
-    margin-right: 150px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline; }
+  .content .item-row, .content .express-row, .content .total-row {
+    margin-top: 10px;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center; }
   .content .item, .content .express, .content .total {
     margin-top: 5px; }
   .content .checkoutBtn {
-    margin: 15px 5px 0px 0px;
     width: 250px;
     height: 45px;
     font-size: 1.1em;

@@ -96,10 +96,23 @@ class Cart extends Component {
                 <div className="cart-container">
                     <div className="cart-content">
                         <div className='item-row'>
-                            <h5 className="item">Item Total: </h5>{cartTotal}
+                            <h5 className="item">Item Total:</h5>
+                            <div>
+                                ${cartTotal}
+                            </div>
                         </div>
-                        <h5 className="express">Express Shipping: Free</h5>
-                        <h5 className="total">Total: </h5>{cartTotal}
+                        <div className='express-row'>
+                        <h5 className="express">Express Shipping:</h5>
+                            <div> 
+                               <h5> Free-Ninety-Nine </h5>
+                            </div>      
+                        </div>
+                        <div className='total-row'>
+                            <h5 className="total">Total: </h5>
+                            <div>
+                                ${cartTotal}
+                            </div>
+                        </div>
                     </div>
                     <div className="checkoutBtn-container"> 
                         <button className="checkoutBtn">CONTINUE CHECKOUT</button>

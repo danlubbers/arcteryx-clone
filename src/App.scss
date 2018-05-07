@@ -590,7 +590,6 @@ $letter-spacing: 2px;
   }
 
   .cart-content {
-    margin-right: 150px;
     // background-color: green;
     display: flex;
     flex-direction: column;
@@ -598,12 +597,30 @@ $letter-spacing: 2px;
     align-items: baseline;
   }
 
+  .item-row {
+    margin-top: 10px;
+    width: 20vw;
+    display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: space-between;
+	  align-items: center;
+    // background-color: yellow;
+  }
+
+  .express-row {
+    @extend .item-row;
+  }
+
+  .total-row {
+    @extend .item-row;
+  }
+
   .item, .express, .total {
     margin-top: 5px;
   }
 
   .checkoutBtn {
-    margin: 15px 5px 0px 0px;
     width: 250px;
     height: 45px;
     font-size: 1.1em;

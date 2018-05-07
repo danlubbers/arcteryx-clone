@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import logo from '../../images/arcteryx-LEAF-birdword-334x132.jpg';
 import cart from '../../images/cart.png';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {getUser} from '../../ducks/reducer';
 
 import combatUniforms from '../../images/nav-images/combat-uniforms.gif';
 import baseLayer from '../../images/nav-images/base-layer.gif';
@@ -28,6 +30,10 @@ class Header extends Component {
         this.handleLeave = this.handleLeave.bind(this);
     }
 
+    componentDidMount() {
+        this.props.getUser()
+    }
+
     handleOver() {
         this.setState({showMenu: !this.state.showMenu})
     }
@@ -39,6 +45,8 @@ class Header extends Component {
     render() {
         let {showMenu} = this.state;
         let slideCSS = showMenu ? 'slide-menu slide-menu-position' : 'slide-menu';
+
+        let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}><button className='start-shoppingBtn'>LogOut</button></a> : <a href={process.env.REACT_APP_LOGIN}><button className='start-shoppingBtn'>Start Shopping</button></a>
 
         return (
             <section className="main">
@@ -53,8 +61,8 @@ class Header extends Component {
                         <div className='container-left'>
                             <h2 className='signin'>Sign-in here to start shopping as a LEAF customer.</h2>
                             {/* Sign-In to Auth0 */}
-                            <a href={process.env.REACT_APP_LOGIN}>
-                            <button className='start-shoppingBtn'> Start Shopping</button></a>
+                            {logInDisplay}
+                            
                         </div>
                         {/* div to create the vertical line in CSS */}
                         <div className='vertical-line'></div>
@@ -118,4 +126,11 @@ class Header extends Component {
         )
     }
 }
-export default Header;
+
+function mapStateToProps(state) {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, {getUser}) (Header);
