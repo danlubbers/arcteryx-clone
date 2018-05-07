@@ -6,6 +6,7 @@ const initialState = {
     allColdProducts: [],
     oneColdProduct: [],
     allxFunctionalProducts: [],
+    onexFunctionalProduct: [],
     addToCart: [],
     cartProducts: [],
     removeProduct: []
@@ -15,7 +16,8 @@ const initialState = {
 const GET_USER_INFO = 'GET_USER_INFO';
 const ALL_COLD_PRODUCTS = 'ALL_COLD_PRODUCTS';
 const ONE_COLD_PRODUCT = 'ONE_COLD_PRODUCT';
-const ALL_X_FUNCTIONAL_PRODUCTS = 'ALL_X_FUNCTIONAL_PRODUCTS'
+const ALL_X_FUNCTIONAL_PRODUCTS = 'ALL_X_FUNCTIONAL_PRODUCTS';
+const ONE_X_FUNCTIONAL_PRODUCT = 'ONE_X_FUNCTIONAL_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const CART_PRODUCTS = 'CART_PRODUCTS';
 const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
@@ -72,6 +74,19 @@ export function getAllxFunctionalProducts() {
     
 }
 
+// Action Creator to getOneProducts for Product Page
+export function getOnexFunctionalProduct(id) {
+    // console.log(id)
+    let xProduct = axios.get(`/api/getOnexFunctionalProduct/${id}`).then(res => {
+        console.log('test2', res.data)
+        return res.data
+    });
+        return {
+            type: ONE_X_FUNCTIONAL_PRODUCT,
+            payload: xProduct
+        }
+}
+
 export function addCart(id) {
     console.log(id)
     let addToCart = axios.post(`/api/cart`, {productID: id}).then(res => {
@@ -122,6 +137,8 @@ export default function reducer(state=initialState, action) {
         case ALL_X_FUNCTIONAL_PRODUCTS + '_FULFILLED':
             // console.log('test2')
             return Object.assign( {}, state, {allxFunctionalProducts: action.payload});
+        case ONE_X_FUNCTIONAL_PRODUCT + '_FULFILLED':
+            return Object.assign( {}, state, {onexFunctionalProduct: action.payload});
         case ADD_TO_CART + '_FULFILLED':
             return Object.assign( {}, state, {addToCart: action.payload});
         case CART_PRODUCTS + '_FULFILLED':

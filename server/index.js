@@ -114,7 +114,8 @@ app.get(`/api/getAllColdWeatherProducts`, controller.coldWeatherProducts);
 app.get(`/api/getOneColdWeatherProduct/:id`, controller.coldWeatherProduct);
 // GET ALL xFUNCATIONAL PRODUCTS
 app.get(`/api/getAllxFunctionalProducts`, controller.xFunctionalProducts)
-
+// GET ONE xFUNCATIONAL PRODUCT
+app.get(`/api/getOnexFunctionalProduct/:id`, controller.xFunctionalProduct);
 // Display Products that were added to the cart (componentDidMount)
 app.get(`/api/productCart`, controller.cartProducts);
 // Get ONE Product when clicked and add to the CART page

@@ -16,7 +16,7 @@ class Xfunctional extends Component {
         if (this.props.xFunctionalProducts) {
         var productsArray = this.props.xFunctionalProducts.map((element, index)=> {
             return(
-                <Link to={`/coldWeatherProduct/${element.product_id}`} key={index} className="single-product">
+                <Link to={`/xFunctionalProduct/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>

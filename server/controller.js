@@ -21,11 +21,22 @@ module.exports = {
 
     xFunctionalProducts: (req, res) => {
         const dbInstance = req.app.get('db');
-        // References 'getAllProducts.sql file in (db) folder
+        // References 'getAllxFunctinoalProducts.sql file in (db) folder
         dbInstance.products.getAllxFunctionalProducts().then(products => res.status(200).send(products)).catch((err)=>{
             console.error(err);
             res.status(500).send(err)
         })
+    },
+
+    xFunctionalProduct: (req, res) => {
+        // console.log('word')
+        const dbInstance = req.app.get('db');
+        // References 'getOnexFunctionalProduct.sql file in (db) folder
+        // Must have (req.params.id) to get the id and pass it through
+        dbInstance.products.getOnexFunctionalProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+    })
     },
 
     cartProducts: (req, res) => {
