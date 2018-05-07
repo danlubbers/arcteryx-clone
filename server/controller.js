@@ -1,5 +1,5 @@
 module.exports = {
-    products: (req, res) => {
+    coldWeatherProducts: (req, res) => {
         const dbInstance = req.app.get('db');
         // References 'getAllProducts.sql file in (db) folder
         dbInstance.products.getAllColdWeatherProducts().then(products => res.status(200).send(products)).catch((err)=>{
@@ -8,7 +8,7 @@ module.exports = {
         })
     },
 
-    product: (req, res) => {
+    coldWeatherProduct: (req, res) => {
         // console.log('word')
         const dbInstance = req.app.get('db');
         // References 'getOneProduct.sql file in (db) folder

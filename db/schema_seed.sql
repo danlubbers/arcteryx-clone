@@ -4,6 +4,7 @@ create table users (
     username varchar(45)
 );
 
+-- Table for Cold Weather Insulated Products
 create table products (
     product_id serial primary key,
     title text,
@@ -13,10 +14,22 @@ create table products (
     img text
 );
 
+-- Table for Cold Weather Insulated Products
 create table details (
     details_id serial primary key,
     product_id integer,
     large_img text, 
+);
+
+-- Table for xFunctional Products
+create table xFunctional (
+    product_id serial primary key,
+    title text,
+    description text,
+    price decimal,
+    colour text,
+    img text, 
+    large_img text
 );
 
 create table cart (
@@ -68,6 +81,24 @@ insert into details (product_id, large_img) values (8, 'http://res.cloudinary.co
 insert into details (product_id, large_img) values (9, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603183/Cold-WX-Pant-SV-Black-large.png');
 
 insert into details (product_id, large_img) values (10, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603258/Cold-WX-Pant-SV-MultiCam-Multicam-large.png');
+
+-- Insert for xFunctional
+insert into xFunctional (title, description, price, colour, img, large_img) values ('XFUNCTIONAL PANT AR', 'Cross-functional technical pant with casual appearance.', '149.00', 'Greenstone', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/xFunctional-Pant-AR-Greenstone.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/xFunctional-Pant-AR-Greenstone-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('COURIER BAG 15', 'A messenger style bag capable of carrying a sub-gun platform in a secure and concealed manner.', '279.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/Courier-Bag-15-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654921/xFunctional/Courier-Bag-15-Black-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('BLADE 28 BACKPACK', 'Streamlined overnight travel pack that carries and organizes laptops, digital tools, clothing and personal items.', '199.00', 'Pilot', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/Blade-28-Backpack-Pilot.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/Blade-28-Backpack-Pilot-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('BLADE 20 BACKPACK', 'Minimalist styled pack created to carry daily tools for the digital world.', '179.00', 'Pilot', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/Blade-20-Backpack-Pilot.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654921/xFunctional/Blade-20-Backpack-Pilot-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('BLADE 6 BACKPACK', 'Compact daypack with refined, clean styling. Created to carry smaller laptops, tablets and core essentials.', '139.00', 'Katalox', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/Blade-6-Backpack-Katalox.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654921/xFunctional/Blade-6-Backpack-Katalox-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('SLINGBLADE 4 SHOULDER BAG', 'Small, versatile, intelligently organized shoulder bag for travel and everyday use.', '79.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/Slingblade-4-Shoulder-Bag-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/Slingblade-4-Shoulder-Bag-Black-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('V80 ROLLING DUFFLE', '80L rolling gear hauler with exceptional strength-to-weight ratio.', '425.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/V80-Rolling-Duffle-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/V80-Rolling-Duffle-Black-large.png');
+
+insert into xFunctional (title, description, price, colour, img, large_img) values ('V110 ROLLING DUFFLE', '110L rolling gear hauler with exceptional strength-to-weight ratio.', '449.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/V110-Rolling-Duffle-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/V110-Rolling-Duffle-Black-large.png');
+
 
 -- How to Join
 
