@@ -341,7 +341,12 @@ h3 {
     justify-content: space-around;
     align-items: flex-end; }
   .content .product-quantity {
-    letter-spacing: 15px; }
+    letter-spacing: 15px;
+    margin-right: 65px; }
+  .content .product-price {
+    margin-right: 120px; }
+  .content .product-remove {
+    margin-right: -33px; }
   .content .cart-content {
     margin-right: 150px;
     display: flex;
