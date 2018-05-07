@@ -323,12 +323,14 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center; }
-  .content .product-remove {
-    padding: 0px;
-    background: none;
+  .content #fa-minusBtn, .content #fa-plusBtn {
+    margin: 0px 10px 0px 0px;
     border: none;
-    outline: none; }
-  .content #removeBtn:hover {
+    cursor: pointer; }
+  .content #fa-plusBtn {
+    margin-right: 30px; }
+  .content #removeBtn {
+    border: none;
     cursor: pointer; }
   .content .cart-container {
     margin-top: 20px;

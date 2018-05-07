@@ -370,8 +370,6 @@ h2, ul {
 
 }
 
-
-
 .products-array {
   margin: 50px 100px 0px 100px;
   padding: 0px;
@@ -546,16 +544,19 @@ $letter-spacing: 2px;
     align-items: center;
   }
 
-  .product-remove {
-    padding: 0px;
-    background: none;
+  #fa-minusBtn {
+    margin: 0px 10px 0px 0px;
     border: none;
-    outline: none;
+    cursor: pointer;
   }
 
+  #fa-plusBtn {
+    @extend #fa-minusBtn;
+    margin-right: 30px;
+  }
 
-
-  #removeBtn:hover {
+  #removeBtn {
+    border: none;
     cursor: pointer;
   }
 

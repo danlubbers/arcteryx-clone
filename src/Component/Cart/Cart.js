@@ -67,15 +67,15 @@ class Cart extends Component {
                         </div>
                     </div>
                     <div className="product-quantity">
-                        <button onClick={_=>this.changeQuantity(-1, element)}><i className="fas fa-minus"></i></button>
+                        <button id='fa-minusBtn' onClick={_=>this.changeQuantity(-1, element)}> <i className="fas fa-minus"> </i></button>
                         <h5>{element.quantity}</h5>
-                        <button onClick={_=>this.changeQuantity(1, element)}><i className="fas fa-plus"></i></button>
+                        <button id='fa-plusBtn' onClick={_=>this.changeQuantity(1, element)}> <i className="fas fa-plus"> </i></button>
                     </div>
                     <div className="product-price">
                         <h5>$ {(element.price * element.quantity).toFixed(2)}</h5>
                     </div>
                     <div className="product-remove">
-                        <button onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times" id='removeBtn'></i></button>
+                        <button id='removeBtn' onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times" ></i></button>
                     </div>
                 </div>
             )
@@ -95,9 +95,11 @@ class Cart extends Component {
                 </div>
                 <div className="cart-container">
                     <div className="cart-content">
-                        <h5 className="item">Item Total: {cartTotal}</h5>
+                        <div className='item-row'>
+                            <h5 className="item">Item Total: </h5>{cartTotal}
+                        </div>
                         <h5 className="express">Express Shipping: Free</h5>
-                        <h5 className="total">Total: {cartTotal}</h5>
+                        <h5 className="total">Total: </h5>{cartTotal}
                     </div>
                     <div className="checkoutBtn-container"> 
                         <button className="checkoutBtn">CONTINUE CHECKOUT</button>
