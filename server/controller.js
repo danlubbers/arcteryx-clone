@@ -51,7 +51,7 @@ module.exports = {
     updateQuantity: (req, res) => {
         const dbInstance = req.app.get('db')
         let {cartID, newQuantity} = req.body;
-        console.log('BODY', req.body)
+        // console.log('BODY', req.body)
         // changeQuantity is referencing the SQL file in database
         // cartID references cart_id $1, and newQuantity references quantity $2
         // UPdate the quantity, then....

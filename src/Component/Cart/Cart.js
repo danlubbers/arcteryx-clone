@@ -5,19 +5,23 @@ import { connect } from 'react-redux';
 import { getCartProducts, changeQuantity, removeFromCart } from '../../ducks/reducer';
 
 class Cart extends Component {
-    // constructor() {
-    //     super();
+    constructor() {
+        super();
 
-    //     this.state = {
-    //         cart: []
-    //     }
-    // }
+        this.state = {
+            
+        }
+
+    }
+    
 
     componentDidMount() {
         // // console.log('yup')
         // axios.get(`/api/productCart`).then(res => {
         //     this.setState({cart: res.data})
         // })
+
+        // References the method in the reducer
         this.props.getCartProducts()
     }
 
@@ -42,9 +46,15 @@ class Cart extends Component {
 }
 
     render() {
+        var cartTotal = 0;
+        cartTotal = (this.props.cart.reduce((acc, val)=>acc+(val.quantity * val.price),0)).toFixed(2) || '0.00'
+        // console.log('total', cartTotal)
+
         if (this.props.cart) {
         var cartArray = this.props.cart.map((element, index) => {
-            console.log('cart', cartArray)
+            // console.log('cart', cartArray)
+  
+       
             return(
                 <div className="cart-main" key={index}>
                     <div className="product-details">
@@ -62,7 +72,7 @@ class Cart extends Component {
                         <button onClick={_=>this.changeQuantity(1, element)}><i className="fas fa-plus"></i></button>
                     </div>
                     <div className="product-price">
-                        <h5>$ {element.price}</h5>
+                        <h5>$ {(element.price * element.quantity).toFixed(2)}</h5>
                     </div>
                     <div className="product-remove">
                         <button onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times" id='removeBtn'></i></button>
@@ -85,9 +95,9 @@ class Cart extends Component {
                 </div>
                 <div className="cart-container">
                     <div className="cart-content">
-                        <h5 className="item">Item Total:</h5>
-                        <h5 className="express">Express Shipping:</h5>
-                        <h5 className="total">Total:</h5>
+                        <h5 className="item">Item Total: {cartTotal}</h5>
+                        <h5 className="express">Express Shipping: Free</h5>
+                        <h5 className="total">Total: {cartTotal}</h5>
                     </div>
                     <div className="checkoutBtn-container"> 
                         <button className="checkoutBtn">CONTINUE CHECKOUT</button>
@@ -100,6 +110,7 @@ class Cart extends Component {
 
 function mapStateToProps(state) {
     return {
+        // 'cartProducts' comes from the state on reducer and puts it on variable called 'cart'
         cart: state.cartProducts
     }
 }
