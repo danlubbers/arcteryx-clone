@@ -12,6 +12,7 @@ class Checkout extends Component {
         }).catch(err => console.log(err))
     }
     render() {
+        // console.log(process.env.REACT_APP_STRIPE_KEY)
         return(
             <div>
                 <StripeCheckout 

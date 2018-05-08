@@ -4,17 +4,19 @@ const express = require('express'),
       controller = require('./controller'),
       session = require('express-session'),
       Auth0Strategy = require('passport-auth0'),
-      stripe = require('stripe')(process.env.SECRET_STRIPE_KEY)
+      stripe = require('stripe')(process.env.S_STRIPE_KEY)
       passport = require('passport');
+      cors = require('cors');
 
 require('dotenv').config();
 
 
 const app = express();
 
-const {CONNECTION_STRING, SESSION_SECRET, DOMAIN, CLIENT_ID, CLIENT_SECRET, CALLBACK_URL, SERVER_PORT} = process.env;
+const {CONNECTION_STRING, SESSION_SECRET, DOMAIN, CLIENT_ID, CLIENT_SECRET, CALLBACK_URL, SERVER_PORT, S_STRIPE_KEY, REACT_APP_STRIPE_KEY} = process.env;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // Allows use of Sessions
 app.use(session({

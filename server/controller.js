@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.SECRET_STRIPE_KEY)
+const stripe = require('stripe')(process.env.S_STRIPE_KEY)
 
 module.exports = {
     coldWeatherProducts: (req, res) => {
@@ -94,7 +94,7 @@ module.exports = {
 
     stripe: (req, res) => {
         const dbInstance = req.app.get('db')
-        console.log(req.body.amount)
+        // console.log(req.body.amount)
         const charge = stripe.charges.create({
             amount: req.body.amount,
             currency: 'usd',

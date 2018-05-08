@@ -90,7 +90,7 @@ export function getOnexFunctionalProduct(id) {
 }
 
 export function addCart(id) {
-    console.log(id)
+    // console.log(id)
     let addToCart = axios.post(`/api/cart`, {productID: id}).then(res => {
         console.log('test', res.data)
         return res.data
