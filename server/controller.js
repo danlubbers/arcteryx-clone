@@ -1,3 +1,5 @@
+const stripe = require('stripe')(process.env.SECRET_STRIPE_KEY)
+
 module.exports = {
     coldWeatherProducts: (req, res) => {
         const dbInstance = req.app.get('db');
@@ -91,7 +93,7 @@ module.exports = {
     },
 
     stripe: (req, res) => {
-        const dbInstance = app.get('db')
+        const dbInstance = req.app.get('db')
         console.log(req.body.amount)
         const charge = stripe.charges.create({
             amount: req.body.amount,
@@ -99,7 +101,7 @@ module.exports = {
             source: req.body.token.id,
             description: 'Example charge'
         })
-        res.sednStatus(200) // clear out cart here
+        res.sendStatus(200) // clear out cart here
     }
     
 }

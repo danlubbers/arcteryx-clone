@@ -627,6 +627,7 @@ $letter-spacing: 2px;
     font-family: $font-family;
     color: $font-color;
     background-color: $background-color;
+    cursor: pointer;
   }
   .checkoutBtn:focus {outline:0;}
 

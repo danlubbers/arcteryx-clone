@@ -6,9 +6,9 @@ class Checkout extends Component {
 
     onToken = (token) => {
         token.card = void 0; // Does not store card information
-        console.log(this.props.total)
-        axios.post(`/api/charge`, {token, amount: this.props.total}).then(res => {
-            console.log('Yeah, buddy! Gimme to money')
+        console.log(this.props.amount)
+        axios.post(`/api/payment`, {token, amount: this.props.amount}).then(res => {
+            console.log('Yeah, buddy! Gimme yo money')
         }).catch(err => console.log(err))
     }
     render() {
@@ -17,7 +17,9 @@ class Checkout extends Component {
                 <StripeCheckout 
                 token = {this.onToken}
                 stripeKey = {process.env.REACT_APP_STRIPE_KEY}
-                amount = {this.props.amount}/>
+                amount = {this.props.amount}>
+                <button className="checkoutBtn">CONTINUE CHECKOUT</button>
+                </StripeCheckout>
             </div>
         )
     }

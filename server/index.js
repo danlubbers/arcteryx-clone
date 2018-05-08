@@ -128,7 +128,7 @@ app.post(`/api/cart`, controller.addCart)
 app.delete(`/api/deleteProduct/:id`, controller.delete);
 
 // <------ STRIPE PAYMENT -------> \\
-app.post(`/api/charge`, controller.stripe); 
+app.post(`/api/payment`, controller.stripe); 
 
 
 massive(CONNECTION_STRING).then(db=>{

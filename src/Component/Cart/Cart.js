@@ -116,8 +116,8 @@ class Cart extends Component {
                         </div>
                     </div>
                     <div className="checkoutBtn-container"> 
-                        <button className="checkoutBtn">CONTINUE CHECKOUT</button>
-                        <Checkout amount={cartTotal * 100}/>
+                    <Checkout amount={cartTotal * 100}/>
+                         
                     </div>
                 </div>
             </div>

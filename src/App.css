@@ -368,6 +368,7 @@ h3 {
     font-size: 1.1em;
     font-family: "Montserrat", sans-serif;
     color: white;
-    background-color: #000; }
+    background-color: #000;
+    cursor: pointer; }
   .content .checkoutBtn:focus {
     outline: 0; }
