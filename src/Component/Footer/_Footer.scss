@@ -2,7 +2,7 @@
     height: 201px;
     position: relative;
     margin-top: 25px;
-    padding: 50px 75px 0px 75px;
+    padding: 50px 75px 0px 170px;
     width: 100vw;
     background-color: $background-color;
   
@@ -10,9 +10,9 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      width: 83vw;
-      // overflow: visible;
-      // position: relative;
+      width: 70vw;
+      overflow: visible;
+      position: relative;
     }
     
   
@@ -34,7 +34,7 @@
       // align-items: flex-end;
               
       .arc-logo {
-        width: 12vw;
+        width: 8vw;
         margin-bottom: 6px;
               }
     }
