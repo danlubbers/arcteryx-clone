@@ -88,6 +88,18 @@ module.exports = {
         dbInstance.cart.deleteProduct(req.params.id).then(product=>{
             res.status(200).send(product)
         })
+    },
+
+    stripe: (req, res) => {
+        const dbInstance = app.get('db')
+        console.log(req.body.amount)
+        const charge = stripe.charges.create({
+            amount: req.body.amount,
+            currency: 'usd',
+            source: req.body.token.id,
+            description: 'Example charge'
+        })
+        res.sednStatus(200) // clear out cart here
     }
     
 }

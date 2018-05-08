@@ -4,6 +4,7 @@ const express = require('express'),
       controller = require('./controller'),
       session = require('express-session'),
       Auth0Strategy = require('passport-auth0'),
+      stripe = require('stripe')(process.env.SECRET_STRIPE_KEY)
       passport = require('passport');
 
 require('dotenv').config();
@@ -107,6 +108,7 @@ app.get('/logout', function(req, res) {
       res.redirect('http://localhost:3000')
 })
 
+
 // Add Front-end Endpoints here:
 // GET All COLD WEATHER Products to display on COLD WEATHER Page (componentDidMount)
 app.get(`/api/getAllColdWeatherProducts`, controller.coldWeatherProducts);
@@ -124,6 +126,10 @@ app.put(`/api/cart`, controller.updateQuantity)
 app.post(`/api/cart`, controller.addCart)
 // Delete Product from Cart
 app.delete(`/api/deleteProduct/:id`, controller.delete);
+
+// <------ STRIPE PAYMENT -------> \\
+app.post(`/api/charge`, controller.stripe); 
+
 
 massive(CONNECTION_STRING).then(db=>{
       app.set('db', db);
