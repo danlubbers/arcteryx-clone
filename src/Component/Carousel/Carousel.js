@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
-import './Carousel.css';
 import assault from '../../images/assault.jpg';
 import insulation from '../../images/insulation.jpg';
 import midlayers from '../../images/midlayers.jpg';

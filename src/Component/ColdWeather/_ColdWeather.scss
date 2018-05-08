@@ -1,0 +1,105 @@
+.main-content {
+    width: 90vw;
+    margin: 25px 0px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: yellow;
+  }
+  
+  .insulation-img-2 {
+    position: relative;
+    width: 90vw;
+    display: block;
+    margin: 0px 0px 0px 0px;
+    z-index: 1;
+    // padding: 25px 0px 0px 0px;
+  }
+  
+  .category-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 40px 0px 25px 0px;
+    font-size: .8em;
+  
+    .cold-weather-text {
+      margin: 0px 0px 0px 10px;
+      font-size: 1.2em;
+    }
+  }
+  
+  .cold-weather-box {
+    background-color: black;
+    position: absolute;
+    width: 420px;
+    height: 140px;
+    margin: 35px 0px 0px 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 2;
+  
+    .cold-weather-category {
+      margin: 0px 0px 0px 20px;
+      font-size: 1.4em;
+    }  
+  
+    .cold-weather-description {
+      width: 30vw;
+      margin: 10px 0px 0px 20px;
+      letter-spacing: 2.5px;
+      font-size: 12px;
+    }
+  
+  }
+  
+  .products-array {
+    margin: 50px 100px 0px 100px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .array-image {
+    height: 205px;
+    width: 162px;
+  }
+  
+  .single-product {
+    height: 281px;
+    width: 162px;
+    margin: 15px;
+    text-decoration: none;
+    // color: black;
+  }
+  
+  .single-product:visited {
+    // color: black;
+  }
+  
+  .title-price {
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: bolder;
+    padding-top: 5px;
+    }
+  
+  h3 {
+    font-family: $font-family;
+    font-weight: bolder;
+  }

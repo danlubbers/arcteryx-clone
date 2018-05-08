@@ -1,0 +1,57 @@
+.footer {
+    height: 201px;
+    position: relative;
+    margin-top: 25px;
+    padding: 50px 75px 0px 75px;
+    width: 100vw;
+    background-color: $background-color;
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 83vw;
+      // overflow: visible;
+      // position: relative;
+    }
+    
+  
+    h2 {
+     color: #a4a4a4;
+     font-family: $font-family;
+     letter-spacing: 1px;
+    }
+    
+    .footer-text {
+      padding: 10px;
+      font-size: $font-size;
+    }
+    
+    .footer-box-1 {
+      float: left;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: flex-end;
+              
+      .arc-logo {
+        width: 12vw;
+        margin-bottom: 6px;
+              }
+    }
+  
+    .footer-box-2 {
+    }
+  
+    .footer-box-3 {
+  
+    }
+  
+    .footer-box-4 {
+      
+    }
+  
+    .footer-box-5 {
+      margin-bottom: 32px;
+      // background-color: red;
+    }
+  }

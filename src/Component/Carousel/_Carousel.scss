@@ -1,6 +1,28 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.carousel {
+    margin-top: -10px;
+    // background-color: yellow;
+    
+    .assault-img {
+      width: 100vw;
+      display: block;
+    }
+    
+    .insulation-img {
+      @extend .assault-img
+    }
+    
+    .midlayers-img {
+      @extend .assault-img
+    }
+    
+    .x-functional-img {
+      @extend .assault-img
+    }
+  }
+
 .slick-dots {
     background-color: #111;
     height: 79px;

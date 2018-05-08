@@ -1,4 +1,13 @@
 // HEADER
+
+h2, ul {
+  // background-color: red;
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing
+}
+
 .header {
     margin-bottom: 10px;
     width: 100vw;
@@ -15,6 +24,7 @@
       position: relative;
       z-index: 100;
     }
+
   
     ul {
       width: 100vw;
