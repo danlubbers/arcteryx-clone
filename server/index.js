@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
@@ -8,7 +9,6 @@ const express = require('express'),
       passport = require('passport');
       cors = require('cors');
 
-require('dotenv').config();
 
 
 const app = express();
