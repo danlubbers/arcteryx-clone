@@ -448,22 +448,31 @@ h3 {
 
 .content {
   margin: 40px 100px 10px 100px; }
-  .content .upper-text, .content .product-content {
-    display: flex;
-    justify-content: space-between;
+  .content .upper-text {
+    display: grid;
+    grid-template-columns: 1fr  200px 200px 150px;
+    justify-items: center;
     align-items: center;
+    text-align: left;
     border-bottom: 1px solid black;
     padding-bottom: 10px; }
+    .content .upper-text .mycart {
+      justify-self: start; }
+    .content .upper-text .quantity {
+      justify-self: center; }
+    .content .upper-text .remove {
+      justify-self: end; }
   .content .cart-main {
-    width: 79vw;
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr  200px 200px 150px;
     align-items: center; }
   .content h5 {
     font-size: .8em; }
   .content .product-content {
-    margin-top: 10px; }
+    margin-top: 10px;
+    display: grid;
+    grid-gap: 10px; }
   .content .product-details {
     display: flex;
     justify-content: flex-start;
@@ -471,24 +480,22 @@ h3 {
   .content .product-thumbnail {
     width: 55px; }
   .content .product-title {
-    margin-left: 10px;
+    margin-left: 25px;
     width: 100px; }
   .content .product-quantity {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center; }
   .content #fa-minusBtn, .content #fa-plusBtn {
     margin: 0px 10px 0px 0px;
     border: none;
     cursor: pointer; }
   .content #fa-plusBtn {
-    margin-right: 30px; }
+    margin-right: -65px; }
   .content #removeBtn {
     border: none;
     cursor: pointer; }
   .content .cart-container {
-    margin-top: 20px;
-    margin-left: 725px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -497,10 +504,8 @@ h3 {
   .content .product-quantity {
     letter-spacing: 15px;
     margin-right: 65px; }
-  .content .product-price {
-    margin-right: 120px; }
   .content .product-remove {
-    margin-right: -33px; }
+    justify-self: end; }
   .content .cart-content {
     display: flex;
     flex-direction: column;

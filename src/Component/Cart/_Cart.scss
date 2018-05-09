@@ -2,19 +2,37 @@
     margin: 40px 100px 10px 100px;
     // background-color: red;
     .upper-text {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr  200px 200px 150px;
+      // grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
       align-items: center;
+      text-align: left;
       border-bottom: 1px solid black;
       padding-bottom: 10px;
+
+      .mycart {
+        justify-self: start;
+      }
+
+      .quantity {
+        justify-self: center;
+      }
+
+      .remove {
+        justify-self: end;
+      }
+
+
     }
   
     .cart-main {
       // background-color: green;
-      width: 79vw;
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-between;
+      width: 100%;
+      // margin-top: 25px;
+      display: grid;
+      grid-template-columns: 1fr  200px 200px 150px;
+      // grid-template-columns: repeat(4, 1fr);
       align-items: center;
     }
   
@@ -23,9 +41,12 @@
     }
   
     .product-content {
-      @extend .upper-text;
+      // @extend .upper-text;
       margin-top: 10px;
       // background-color: yellow;
+      display: grid;
+      grid-gap: 10px;
+      
     }
   
     .product-details {
@@ -39,14 +60,14 @@
     }
   
     .product-title {
-      margin-left: 10px;
+      margin-left: 25px;
       width: 100px;
       // background-color: yellow;
     }
   
     .product-quantity {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
     }
   
@@ -58,12 +79,13 @@
   
     #fa-plusBtn {
       @extend #fa-minusBtn;
-      margin-right: 30px;
+      margin-right: -65px;
     }
   
     #removeBtn {
       border: none;
       cursor: pointer;
+      
     }
   
     .cart-array {
@@ -71,8 +93,8 @@
     }
   
     .cart-container {
-      margin-top: 20px;
-      margin-left: 725px;
+      // margin-top: 20px;
+      // margin-left: 725px;
       height: 200px;
       display: flex;
       flex-direction: column;
@@ -88,11 +110,12 @@
     }
   
     .product-price {
-      margin-right: 120px;
+      // margin-right: 120px;
     }
   
     .product-remove {
-      margin-right: -33px;
+      // margin-right: -33px;
+      justify-self: end;
     }
   
     .cart-content {

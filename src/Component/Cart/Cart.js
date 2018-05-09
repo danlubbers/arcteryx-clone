@@ -77,7 +77,7 @@ class Cart extends Component {
                         <button id='fa-plusBtn' onClick={_=>this.changeQuantity(1, element)}> <i className="fas fa-plus"> </i></button>
                     </div>
                     <div className="product-price">
-                        <h5>$ {(element.price * element.quantity).toFixed(2)}</h5>
+                        <h5>${(element.price * element.quantity).toFixed(2)}</h5>
                     </div>
                     <div className="product-remove">
                         <button id='removeBtn' onClick={_=>this.deleteProduct(element.product_id)}><i className="fas fa-times" ></i></button>
@@ -88,15 +88,13 @@ class Cart extends Component {
         return(
             <div className="content">
                 <div className="upper-text">
-                    <h5>MY CART</h5>  
-                    <h5>QUANTITY</h5>                    
-                    <h5>PRICE</h5>
-                    <h5>REMOVE</h5>
+                    <h5 className='mycart' >MY CART</h5>  
+                    <h5 className='quantity'>QUANTITY</h5>                    
+                    <h5 className='price'>PRICE</h5>
+                    <h5 className='remove'>REMOVE</h5>
                 </div>
                 <div className="product-content">
-                <div className="">
                     {cartArray}
-                </div>
                 </div>
                 <div className="cart-container">
                     <div className="cart-content">
