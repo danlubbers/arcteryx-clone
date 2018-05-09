@@ -1,10 +1,14 @@
 .footer {
     height: 201px;
     position: relative;
-    margin-top: 25px;
+    margin-top: 75px;
     padding: 50px 75px 0px 170px;
     width: 100vw;
     background-color: $background-color;
+
+    @media (max-width: #{$screen-xs}) {
+      display: none;
+    }
   
     .footer-content {
       display: flex;

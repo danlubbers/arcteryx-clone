@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
+html {
+  height: 100vh; }
+
 .App {
-  text-align: center; }
+  text-align: center;
+  background-color: white; }
 
 h2, ul {
   color: white;
@@ -23,12 +27,13 @@ h2, ul {
     overflow: visible;
     position: relative;
     z-index: 100; }
-  .header ul {
+  .header .header-ul {
     margin: auto;
     width: 960px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; }
+    align-items: flex-end;
+    background-color: black; }
   .header .header-box-1 {
     display: flex;
     justify-content: space-between;
@@ -39,31 +44,51 @@ h2, ul {
       margin: 18px 0px 0px 100px;
       width: 167px;
       height: 66px; }
+      @media (max-width: 376px) {
+        .header .header-box-1 .leaf-logo {
+          margin: 25px 0 0 20px;
+          width: 120px;
+          height: 45px; } }
     .header .header-box-1 .productsTextBtn {
       color: white;
       margin: 0px 0px 2px 70px;
       background-color: black;
       border: none; }
+      @media (max-width: 376px) {
+        .header .header-box-1 .productsTextBtn {
+          margin: 0px 0px 0 5px; } }
     .header .header-box-1 .productsTextBtn:focus {
       outline: 0; }
-    .header .header-box-1 .fa-angle-down {
+    .header .header-box-1 .triangle-up, .header .header-box-1 .triangle-down {
       color: white; }
+      @media (max-width: 376px) {
+        .header .header-box-1 .triangle-up, .header .header-box-1 .triangle-down {
+          display: none; } }
   .header .header-box-2 {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end; }
     .header .header-box-2 .find-store {
       margin: 0px 0px 0px 0px; }
+      @media (max-width: 376px) {
+        .header .header-box-2 .find-store {
+          display: none; } }
     .header .header-box-2 .search {
       margin: 0px 0px 0px 0px;
       padding: 0px 0px 0px 50px;
       color: white; }
-    .header .header-box-2 .fa-search {
+      @media (max-width: 376px) {
+        .header .header-box-2 .search {
+          display: none; } }
+    .header .header-box-2 #fa-search {
       color: white;
       margin-left: 8px; }
     .header .header-box-2 .cart-icon {
       margin: 0px 80px -3px 25px;
       height: 20px; }
+      @media (max-width: 376px) {
+        .header .header-box-2 .cart-icon {
+          margin: 0px 20px -5px 25px; } }
 
 .slide-menu {
   background-color: #333;
@@ -78,11 +103,17 @@ h2, ul {
   opacity: 0;
   transition-property: opacity;
   z-index: -1; }
+  @media (max-width: 376px) {
+    .slide-menu {
+      display: none; } }
 
 .slide-menu-position {
   top: 95px;
   right: 0px;
   opacity: 1; }
+  @media (max-width: 376px) {
+    .slide-menu-position {
+      display: none; } }
 
 .container-left {
   height: 300px;
@@ -142,15 +173,18 @@ h2, ul {
 
 .carousel {
   margin-top: -10px; }
+  @media (max-width: 376px) {
+    .carousel {
+      margin-top: -11px; } }
   .carousel .assault-img, .carousel .insulation-img, .carousel .midlayers-img, .carousel .x-functional-img {
     width: 100vw;
     display: block; }
 
-.slick-dots {
+ul.slick-dots {
   background-color: #111;
   height: 79px;
-  margin: 0px 0px -51px 0px;
-  padding: 30px; }
+  margin: 0px 0px -50px 0px;
+  padding: 30px 0 30px 0; }
 
 .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
   background-color: black;
@@ -165,19 +199,34 @@ h2, ul {
   justify-content: center;
   align-items: flex-end;
   text-align: right; }
+  @media (max-width: 376px) {
+    .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
+      position: absolute;
+      margin: 80px 0px 0px 0px;
+      width: 375px;
+      z-index: 1; } }
   .text-box-1 .text-category-1, .text-box-2 .text-category-1, .text-box-3 .text-category-1, .text-box-4 .text-category-1, .text-box-1 .text-category-2, .text-box-2 .text-category-2, .text-box-3 .text-category-2, .text-box-4 .text-category-2, .text-box-1 .text-category-3, .text-box-2 .text-category-3, .text-box-3 .text-category-3, .text-box-4 .text-category-3, .text-box-1 .text-category-4, .text-box-2 .text-category-4, .text-box-3 .text-category-4, .text-box-4 .text-category-4 {
     margin: -20px 25px 10px 0px;
     font-size: 1.5em;
     text-transform: uppercase; }
+    @media (max-width: 376px) {
+      .text-box-1 .text-category-1, .text-box-2 .text-category-1, .text-box-3 .text-category-1, .text-box-4 .text-category-1, .text-box-1 .text-category-2, .text-box-2 .text-category-2, .text-box-3 .text-category-2, .text-box-4 .text-category-2, .text-box-1 .text-category-3, .text-box-2 .text-category-3, .text-box-3 .text-category-3, .text-box-4 .text-category-3, .text-box-1 .text-category-4, .text-box-2 .text-category-4, .text-box-3 .text-category-4, .text-box-4 .text-category-4 {
+        font-size: .5em; } }
   .text-box-1 .text-title-1, .text-box-2 .text-title-1, .text-box-3 .text-title-1, .text-box-4 .text-title-1, .text-box-1 .text-title-2, .text-box-2 .text-title-2, .text-box-3 .text-title-2, .text-box-4 .text-title-2, .text-box-1 .text-title-3, .text-box-2 .text-title-3, .text-box-3 .text-title-3, .text-box-4 .text-title-3, .text-box-1 .text-title-4, .text-box-2 .text-title-4, .text-box-3 .text-title-4, .text-box-4 .text-title-4 {
     margin: 0px 25px 10px 0px;
     font-size: 1em;
     text-transform: uppercase; }
+    @media (max-width: 376px) {
+      .text-box-1 .text-title-1, .text-box-2 .text-title-1, .text-box-3 .text-title-1, .text-box-4 .text-title-1, .text-box-1 .text-title-2, .text-box-2 .text-title-2, .text-box-3 .text-title-2, .text-box-4 .text-title-2, .text-box-1 .text-title-3, .text-box-2 .text-title-3, .text-box-3 .text-title-3, .text-box-4 .text-title-3, .text-box-1 .text-title-4, .text-box-2 .text-title-4, .text-box-3 .text-title-4, .text-box-4 .text-title-4 {
+        font-size: .5em; } }
   .text-box-1 .text-description-1, .text-box-2 .text-description-1, .text-box-3 .text-description-1, .text-box-4 .text-description-1, .text-box-1 .text-description-2, .text-box-2 .text-description-2, .text-box-3 .text-description-2, .text-box-4 .text-description-2, .text-box-1 .text-description-3, .text-box-2 .text-description-3, .text-box-3 .text-description-3, .text-box-4 .text-description-3, .text-box-1 .text-description-4, .text-box-2 .text-description-4, .text-box-3 .text-description-4, .text-box-4 .text-description-4 {
     margin: 0px 20px 10px 0px;
     width: 28vw;
     font-size: 12px;
     letter-spacing: 2px; }
+    @media (max-width: 376px) {
+      .text-box-1 .text-description-1, .text-box-2 .text-description-1, .text-box-3 .text-description-1, .text-box-4 .text-description-1, .text-box-1 .text-description-2, .text-box-2 .text-description-2, .text-box-3 .text-description-2, .text-box-4 .text-description-2, .text-box-1 .text-description-3, .text-box-2 .text-description-3, .text-box-3 .text-description-3, .text-box-4 .text-description-3, .text-box-1 .text-description-4, .text-box-2 .text-description-4, .text-box-3 .text-description-4, .text-box-4 .text-description-4 {
+        font-size: .5em; } }
   .text-box-1 .text-button-1, .text-box-2 .text-button-1, .text-box-3 .text-button-1, .text-box-4 .text-button-1, .text-box-1 .text-button-2, .text-box-2 .text-button-2, .text-box-3 .text-button-2, .text-box-4 .text-button-2, .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3, .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
     margin: 20px 25px 0px 30px;
     height: 36px;
@@ -188,6 +237,9 @@ h2, ul {
     border: 1px solid white;
     outline: none;
     cursor: pointer; }
+    @media (max-width: 376px) {
+      .text-box-1 .text-button-1, .text-box-2 .text-button-1, .text-box-3 .text-button-1, .text-box-4 .text-button-1, .text-box-1 .text-button-2, .text-box-2 .text-button-2, .text-box-3 .text-button-2, .text-box-4 .text-button-2, .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3, .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
+        width: 100px; } }
   .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3 {
     width: 250px; }
   .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
@@ -196,10 +248,13 @@ h2, ul {
 .footer {
   height: 201px;
   position: relative;
-  margin-top: 25px;
+  margin-top: 75px;
   padding: 50px 75px 0px 170px;
   width: 100vw;
   background-color: #000; }
+  @media (max-width: 376px) {
+    .footer {
+      display: none; } }
   .footer .footer-content {
     display: flex;
     justify-content: space-between;
@@ -349,8 +404,12 @@ h3 {
   margin-top: 50px;
   font-size: 26px; }
 
+.construction {
+  margin-top: 100px;
+  color: red; }
+
 .searchText {
-  margin: 100px 0 430px 0; }
+  margin: 20px 0 430px 0; }
 
 .searchIcon {
   margin-left: 20px; }

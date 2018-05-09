@@ -7,14 +7,20 @@ $font-color: white;
 $font-family: 'Montserrat', sans-serif;
 $font-size: .7em;
 $letter-spacing: 2px;
+$screen-xs: 376px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
+
+html {
+  height: 100vh;
+}
+
 .App {
   text-align: center;
-  // background-color: yellow;
+  background-color: white;
 }
 
 // Header

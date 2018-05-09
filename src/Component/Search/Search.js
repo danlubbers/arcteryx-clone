@@ -21,7 +21,9 @@ export default class Search extends Component {
             <div>
                 <input className='inputSearch' value={this.state.search} onChange={e=>{this.inputSearch(e.target.value)}} placeholder='SEARCH'/><SearchIcon className='searchIcon'/>
                 <div>
+                    <h6 className='construction'>UNDER CONSTRUCTION</h6>
                     <h6 className='searchText'>Start Typing to Search for Products</h6>
+                    
                 </div>
             </div>
             

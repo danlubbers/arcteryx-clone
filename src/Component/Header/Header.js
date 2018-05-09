@@ -7,6 +7,7 @@ import {getUser} from '../../ducks/reducer';
 
 import TriangleDown from 'react-icons/lib/go/triangle-down';
 import TriangleUp from 'react-icons/lib/go/triangle-up';
+import SearchIcon from 'react-icons/lib/fa/search';
 
 import combatUniforms from '../../images/nav-images/combat-uniforms.gif';
 import baseLayer from '../../images/nav-images/base-layer.gif';
@@ -54,10 +55,10 @@ class Header extends Component {
         return (
             <section className="main">
                 <nav className="navbar">
-                    <ul>
+                    <ul className='header-ul'>
                         <div className="header-box-1">
                             <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
-                            <li><button className="productsTextBtn" onMouseOver={this.handleOver}>PRODUCTS {showMenu ? <TriangleUp /> : <TriangleDown />}</button></li>
+                            <li><button className="productsTextBtn" onMouseOver={this.handleOver}>PRODUCTS {showMenu ? <TriangleUp className='triangle-up'/> : <TriangleDown className='triangle-down'/>}</button></li>
                         </div>
             
                         <div className={slideCSS} onMouseLeave={this.handleLeave}>
@@ -119,7 +120,7 @@ class Header extends Component {
 
                         <div className="header-box-2">
                             <li className="find-store">Find A Store</li>
-                            <Link to='/search/'><li className="search">Search<i className="fas fa-search" id="fa-search"></i></li></Link>
+                            <Link to='/search/'><li className="search">Search<SearchIcon id="fa-search" /></li></Link>
                             <li><Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
                         </div>
                     
