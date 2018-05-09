@@ -28,7 +28,7 @@ export default class Carousel extends Component {
     };
     return (
         <div className="carousel">
-            <Slider ref={slider => (this.slider = slider)}{...settings}>
+            <Slider ref={slider => (this.slider = slider)}{...settings} style={{position: 'relative', zIndex: '500 !important'}}>
             <div>
                 <div className="text-box-1">
                     <h1 className="text-category-1">Extreme Cold Weather Kit</h1>
@@ -76,8 +76,10 @@ export default class Carousel extends Component {
                     <img className="x-functional-img" src={xFunctional} alt="x-functional"/>
                 </div>
 
-
             </Slider>
+
+            
+           
         </div>
     )
     }

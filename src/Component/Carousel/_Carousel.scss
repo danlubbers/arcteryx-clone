@@ -3,10 +3,12 @@
 
 .carousel {
     margin-top: -10px;
+
     // background-color: yellow;
 
     @media (max-width: #{$screen-xs}) {
         margin-top: -11px;
+        
       }
     
     .assault-img {
@@ -27,6 +29,11 @@
     }
   }
 
+  .slick-list {
+    @media (max-width: #{$screen-xs}) {
+        height: 400px !important; 
+      }
+    }
 
 ul.slick-dots {
     background-color: #111;
@@ -36,10 +43,21 @@ ul.slick-dots {
 
     @media (max-width: #{$screen-xs}) {
         display: none;
+        position: absolute;
         margin: 0px 0px -50px 0px;
         height: 40px;
+        z-index: 1;
       }
 }
+
+// .slick-slide .slick-initialzed {
+//     @media (max-width: #{$screen-xs}) {
+//         color: red;
+//         width: 100vw;
+//         height: 100vh; 
+       
+//     }
+// }
 
 
 
@@ -58,11 +76,16 @@ ul.slick-dots {
     text-align: right;
 
     @media (max-width: #{$screen-xs}) {
-        // display: none;
+        display: block;
         position: absolute;
-        margin: 80px 0px 0px 0px;
-        width: 375px;
-        z-index: 1;
+        width: 100vw;
+        height: 40vh;
+        margin: 187px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
       }
 
     
@@ -73,7 +96,8 @@ ul.slick-dots {
 
         @media (max-width: #{$screen-xs}) {
             // display: none;
-            font-size: .5em;
+            font-size: .8em;
+            margin: -50px 0px 10px 0px;
           }
     }
     .text-title-1 {
@@ -83,7 +107,8 @@ ul.slick-dots {
 
         @media (max-width: #{$screen-xs}) {
             // display: none;
-            font-size: .5em;
+            font-size: .7em;
+            margin-right: 0px;
           }
     }
     .text-description-1 {
@@ -94,7 +119,10 @@ ul.slick-dots {
 
         @media (max-width: #{$screen-xs}) {
             // display: none;
-            font-size: .5em;
+            font-size: .6em;
+            width: 94vw;
+            margin: 0px 0px 0px 0px;
+            text-align: center;
           }
     }
 
@@ -112,8 +140,13 @@ ul.slick-dots {
 
         @media (max-width: #{$screen-xs}) {
             // display: none;
-            width: 100px;
-          }
+            width: 50vw;
+            margin: 20px 0px 10px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .text-button-3 {
@@ -146,7 +179,26 @@ ul.slick-dots {
     @extend .text-button-1;
 }
 
+// .text-box-mobile-xs {
+//     display: none;
 
+//     @media (max-width: #{$screen-xs}) {
+//         display: block;
+//         background-color: black;
+//         position: absolute;
+//         height: 40vh;
+//         width: 100vw;
+//         margin: 50px 0px 0px 0px;
+//         color: white;
+//         z-index: 2;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: flex-end;
+//         text-align: right;
+//       }
+
+//     }
 
 
 

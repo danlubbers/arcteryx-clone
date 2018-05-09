@@ -6,7 +6,8 @@ html {
 
 .App {
   text-align: center;
-  background-color: white; }
+  background-color: white;
+  position: relative; }
 
 h2, ul {
   color: white;
@@ -180,6 +181,10 @@ h2, ul {
     width: 100vw;
     display: block; }
 
+@media (max-width: 376px) {
+  .slick-list {
+    height: 400px !important; } }
+
 ul.slick-dots {
   background-color: #111;
   height: 79px;
@@ -188,8 +193,10 @@ ul.slick-dots {
   @media (max-width: 376px) {
     ul.slick-dots {
       display: none;
+      position: absolute;
       margin: 0px 0px -50px 0px;
-      height: 40px; } }
+      height: 40px;
+      z-index: 1; } }
 
 .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
   background-color: black;
@@ -206,24 +213,32 @@ ul.slick-dots {
   text-align: right; }
   @media (max-width: 376px) {
     .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
+      display: block;
       position: absolute;
-      margin: 80px 0px 0px 0px;
-      width: 375px;
-      z-index: 1; } }
+      width: 100vw;
+      height: 40vh;
+      margin: 187px 0px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 5; } }
   .text-box-1 .text-category-1, .text-box-2 .text-category-1, .text-box-3 .text-category-1, .text-box-4 .text-category-1, .text-box-1 .text-category-2, .text-box-2 .text-category-2, .text-box-3 .text-category-2, .text-box-4 .text-category-2, .text-box-1 .text-category-3, .text-box-2 .text-category-3, .text-box-3 .text-category-3, .text-box-4 .text-category-3, .text-box-1 .text-category-4, .text-box-2 .text-category-4, .text-box-3 .text-category-4, .text-box-4 .text-category-4 {
     margin: -20px 25px 10px 0px;
     font-size: 1.5em;
     text-transform: uppercase; }
     @media (max-width: 376px) {
       .text-box-1 .text-category-1, .text-box-2 .text-category-1, .text-box-3 .text-category-1, .text-box-4 .text-category-1, .text-box-1 .text-category-2, .text-box-2 .text-category-2, .text-box-3 .text-category-2, .text-box-4 .text-category-2, .text-box-1 .text-category-3, .text-box-2 .text-category-3, .text-box-3 .text-category-3, .text-box-4 .text-category-3, .text-box-1 .text-category-4, .text-box-2 .text-category-4, .text-box-3 .text-category-4, .text-box-4 .text-category-4 {
-        font-size: .5em; } }
+        font-size: .8em;
+        margin: -50px 0px 10px 0px; } }
   .text-box-1 .text-title-1, .text-box-2 .text-title-1, .text-box-3 .text-title-1, .text-box-4 .text-title-1, .text-box-1 .text-title-2, .text-box-2 .text-title-2, .text-box-3 .text-title-2, .text-box-4 .text-title-2, .text-box-1 .text-title-3, .text-box-2 .text-title-3, .text-box-3 .text-title-3, .text-box-4 .text-title-3, .text-box-1 .text-title-4, .text-box-2 .text-title-4, .text-box-3 .text-title-4, .text-box-4 .text-title-4 {
     margin: 0px 25px 10px 0px;
     font-size: 1em;
     text-transform: uppercase; }
     @media (max-width: 376px) {
       .text-box-1 .text-title-1, .text-box-2 .text-title-1, .text-box-3 .text-title-1, .text-box-4 .text-title-1, .text-box-1 .text-title-2, .text-box-2 .text-title-2, .text-box-3 .text-title-2, .text-box-4 .text-title-2, .text-box-1 .text-title-3, .text-box-2 .text-title-3, .text-box-3 .text-title-3, .text-box-4 .text-title-3, .text-box-1 .text-title-4, .text-box-2 .text-title-4, .text-box-3 .text-title-4, .text-box-4 .text-title-4 {
-        font-size: .5em; } }
+        font-size: .7em;
+        margin-right: 0px; } }
   .text-box-1 .text-description-1, .text-box-2 .text-description-1, .text-box-3 .text-description-1, .text-box-4 .text-description-1, .text-box-1 .text-description-2, .text-box-2 .text-description-2, .text-box-3 .text-description-2, .text-box-4 .text-description-2, .text-box-1 .text-description-3, .text-box-2 .text-description-3, .text-box-3 .text-description-3, .text-box-4 .text-description-3, .text-box-1 .text-description-4, .text-box-2 .text-description-4, .text-box-3 .text-description-4, .text-box-4 .text-description-4 {
     margin: 0px 20px 10px 0px;
     width: 28vw;
@@ -231,7 +246,10 @@ ul.slick-dots {
     letter-spacing: 2px; }
     @media (max-width: 376px) {
       .text-box-1 .text-description-1, .text-box-2 .text-description-1, .text-box-3 .text-description-1, .text-box-4 .text-description-1, .text-box-1 .text-description-2, .text-box-2 .text-description-2, .text-box-3 .text-description-2, .text-box-4 .text-description-2, .text-box-1 .text-description-3, .text-box-2 .text-description-3, .text-box-3 .text-description-3, .text-box-4 .text-description-3, .text-box-1 .text-description-4, .text-box-2 .text-description-4, .text-box-3 .text-description-4, .text-box-4 .text-description-4 {
-        font-size: .5em; } }
+        font-size: .6em;
+        width: 94vw;
+        margin: 0px 0px 0px 0px;
+        text-align: center; } }
   .text-box-1 .text-button-1, .text-box-2 .text-button-1, .text-box-3 .text-button-1, .text-box-4 .text-button-1, .text-box-1 .text-button-2, .text-box-2 .text-button-2, .text-box-3 .text-button-2, .text-box-4 .text-button-2, .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3, .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
     margin: 20px 25px 0px 30px;
     height: 36px;
@@ -244,7 +262,12 @@ ul.slick-dots {
     cursor: pointer; }
     @media (max-width: 376px) {
       .text-box-1 .text-button-1, .text-box-2 .text-button-1, .text-box-3 .text-button-1, .text-box-4 .text-button-1, .text-box-1 .text-button-2, .text-box-2 .text-button-2, .text-box-3 .text-button-2, .text-box-4 .text-button-2, .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3, .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
-        width: 100px; } }
+        width: 50vw;
+        margin: 20px 0px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
   .text-box-1 .text-button-3, .text-box-2 .text-button-3, .text-box-3 .text-button-3, .text-box-4 .text-button-3 {
     width: 250px; }
   .text-box-1 .text-button-4, .text-box-2 .text-button-4, .text-box-3 .text-button-4, .text-box-4 .text-button-4 {
