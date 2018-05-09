@@ -241,11 +241,20 @@ h2, ul {
     padding: 0px;
   }
 
+  // SUB NAV for MOBILE
+  .sub-dropdown {
+      @media (min-width: #{$screen-md}){
+        display: none;
+      }
+  }
+
+
+  // RESPONSIVE TEMPLATES 
   // iPhone 6
   @mixin xs {
     @media (max-width: #{$screen-xs}){
 
-      @content;
+      // @content;
     
     }
   }
@@ -262,7 +271,6 @@ h2, ul {
 // Tablet 
   @mixin md {
     @media (max-width: #{$screen-md}){
-      
 
     }
   }
@@ -271,7 +279,7 @@ h2, ul {
   @mixin lg {
     @media (max-width: #{$screen-lg}){
       
-    // slide-menu: none;
+    
     }
   }
 

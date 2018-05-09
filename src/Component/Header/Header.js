@@ -118,6 +118,17 @@ class Header extends Component {
                             </div>
                         </div>
 
+                        {/* Starting SUBNAV BAR FOR MOBILE */}
+                        <div className='sub-dropdown'>
+                            <ul>
+                                <li>
+                                    <dt>
+                                       <h2>SHOP</h2>
+                                    </dt>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div className="header-box-2">
                             <li className="find-store">Find A Store</li>
                             <Link to='/search/'><li className="search">Search<SearchIcon id="fa-search" /></li></Link>

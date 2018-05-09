@@ -42,12 +42,16 @@ ul.slick-dots {
     padding: 30px 0 30px 0;
 
     @media (max-width: #{$screen-xs}) {
-        display: none;
+        // display: none;
         position: absolute;
         margin: 0px 0px -35px 0px;
         height: 40px;
         z-index: 1;
       }
+}
+
+.slick-dots li button:before {
+    color: white !important;
 }
 
 // .slick-slide .slick-initialzed {
@@ -96,7 +100,7 @@ ul.slick-dots {
 
         @media (max-width: #{$screen-xs}) {
             // display: none;
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin: -30px 0px 10px 0px;
           }
     }

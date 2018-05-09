@@ -172,6 +172,10 @@ h2, ul {
   margin-bottom: 8px;
   padding: 0px; }
 
+@media (min-width: 768px) {
+  .sub-dropdown {
+    display: none; } }
+
 .carousel {
   margin-top: -10px; }
   @media (max-width: 376px) {
@@ -192,11 +196,13 @@ ul.slick-dots {
   padding: 30px 0 30px 0; }
   @media (max-width: 376px) {
     ul.slick-dots {
-      display: none;
       position: absolute;
       margin: 0px 0px -35px 0px;
       height: 40px;
       z-index: 1; } }
+
+.slick-dots li button:before {
+  color: white !important; }
 
 .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
   background-color: black;
@@ -229,7 +235,7 @@ ul.slick-dots {
     text-transform: uppercase; }
     @media (max-width: 376px) {
       .text-box-1 .text-category-1, .text-box-2 .text-category-1, .text-box-3 .text-category-1, .text-box-4 .text-category-1, .text-box-1 .text-category-2, .text-box-2 .text-category-2, .text-box-3 .text-category-2, .text-box-4 .text-category-2, .text-box-1 .text-category-3, .text-box-2 .text-category-3, .text-box-3 .text-category-3, .text-box-4 .text-category-3, .text-box-1 .text-category-4, .text-box-2 .text-category-4, .text-box-3 .text-category-4, .text-box-4 .text-category-4 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin: -30px 0px 10px 0px; } }
   .text-box-1 .text-title-1, .text-box-2 .text-title-1, .text-box-3 .text-title-1, .text-box-4 .text-title-1, .text-box-1 .text-title-2, .text-box-2 .text-title-2, .text-box-3 .text-title-2, .text-box-4 .text-title-2, .text-box-1 .text-title-3, .text-box-2 .text-title-3, .text-box-3 .text-title-3, .text-box-4 .text-title-3, .text-box-1 .text-title-4, .text-box-2 .text-title-4, .text-box-3 .text-title-4, .text-box-4 .text-title-4 {
     margin: 0px 25px 10px 0px;
