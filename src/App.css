@@ -56,7 +56,8 @@ h2, ul {
       margin: 0px 0px 0px 0px; }
     .header .header-box-2 .search {
       margin: 0px 0px 0px 0px;
-      padding: 0px 0px 0px 50px; }
+      padding: 0px 0px 0px 50px;
+      color: white; }
     .header .header-box-2 .fa-search {
       color: white;
       margin-left: 8px; }
