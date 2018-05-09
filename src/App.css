@@ -342,6 +342,18 @@ h3 {
   .upper-right-box .cartBtn:focus {
     outline: 0; }
 
+.inputSearch {
+  width: 600px;
+  height: 35px;
+  margin-top: 50px;
+  font-size: 26px; }
+
+.searchText {
+  margin: 100px 0 430px 0; }
+
+.searchIcon {
+  margin-left: 20px; }
+
 .content {
   margin: 40px 100px 10px 100px; }
   .content .upper-text, .content .product-content {

@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUser} from '../../ducks/reducer';
 
+import TriangleDown from 'react-icons/lib/go/triangle-down';
+import TriangleUp from 'react-icons/lib/go/triangle-up';
+
 import combatUniforms from '../../images/nav-images/combat-uniforms.gif';
 import baseLayer from '../../images/nav-images/base-layer.gif';
 import midLayer from '../../images/nav-images/mid-layer.gif';
@@ -54,7 +57,7 @@ class Header extends Component {
                     <ul>
                         <div className="header-box-1">
                             <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
-                            <li><button className="productsTextBtn" onMouseOver={this.handleOver} >{showMenu ? 'PRODUCTS ' : 'PRODUCTS '}<i className="fa fa-angle-down" id="fa-angle-down"></i></button></li>
+                            <li><button className="productsTextBtn" onMouseOver={this.handleOver}>PRODUCTS {showMenu ? <TriangleUp /> : <TriangleDown />}</button></li>
                         </div>
             
                         <div className={slideCSS} onMouseLeave={this.handleLeave}>
