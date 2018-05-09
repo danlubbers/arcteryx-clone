@@ -185,6 +185,11 @@ ul.slick-dots {
   height: 79px;
   margin: 0px 0px -50px 0px;
   padding: 30px 0 30px 0; }
+  @media (max-width: 376px) {
+    ul.slick-dots {
+      display: none;
+      margin: 0px 0px -50px 0px;
+      height: 40px; } }
 
 .text-box-1, .text-box-2, .text-box-3, .text-box-4 {
   background-color: black;
@@ -254,7 +259,8 @@ ul.slick-dots {
   background-color: #000; }
   @media (max-width: 376px) {
     .footer {
-      display: none; } }
+      margin: 75px 0px 0px 0px;
+      padding: 30px 0px 0px 35px; } }
   .footer .footer-content {
     display: flex;
     justify-content: space-between;
@@ -274,6 +280,9 @@ ul.slick-dots {
     .footer .footer-box-1 .arc-logo {
       width: 8vw;
       margin-bottom: 6px; }
+      @media (max-width: 376px) {
+        .footer .footer-box-1 .arc-logo {
+          display: none; } }
   .footer .footer-box-5 {
     margin-bottom: 32px; }
 

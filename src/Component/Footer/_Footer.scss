@@ -7,7 +7,9 @@
     background-color: $background-color;
 
     @media (max-width: #{$screen-xs}) {
-      display: none;
+      // display: none;
+      margin: 75px 0px 0px 0px;
+      padding: 30px 0px 0px 35px;
     }
   
     .footer-content {
@@ -40,7 +42,11 @@
       .arc-logo {
         width: 8vw;
         margin-bottom: 6px;
-              }
+
+        @media (max-width: #{$screen-xs}) {
+          display: none;
+        }
+      }
     }
   
     .footer-box-2 {
