@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getCartProducts, changeQuantity, removeFromCart } from '../../ducks/reducer';
 import Checkout from '../Checkout/Checkout';
+// import { join } from 'path';
 
 class Cart extends Component {
     constructor() {
@@ -54,13 +55,16 @@ class Cart extends Component {
         if (this.props.cart) {
         var cartArray = this.props.cart.map((element, index) => {
             // console.log('cart', cartArray)
-  
+
+            // JS below takes the category off of the database, takes out the spaces and turns the first letter to lower case so the thumbnail on the cart will redirect to the correct page.
+            let category = element.category.split(' ').join('')
+            category = category[0].toLowerCase() + category.slice(1)
        
             return(
                 <div className="cart-main" key={index}>
                     <div className="product-details">
                         <div className="cart-array">
-                            <Link to={`/product/${element.product_id}`}><img className="product-thumbnail" src={element.img} alt="thumbnail" /></Link>
+                            <Link to={`/${category}Product/${element.product_id}`}><img className="product-thumbnail" src={element.img} alt="thumbnail" /></Link>
                         </div>
                         <div className="product-title">
                             <p>{element.title}</p>
