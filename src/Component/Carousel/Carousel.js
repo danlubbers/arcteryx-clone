@@ -15,7 +15,7 @@ export default class Carousel extends Component {
     render() {
     const settings = {
         dots: true, 
-        arrows: true,
+        arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
