@@ -15,6 +15,10 @@ const app = express();
 
 const {CONNECTION_STRING, SESSION_SECRET, DOMAIN, CLIENT_ID, CLIENT_SECRET, CALLBACK_URL, SERVER_PORT, S_STRIPE_KEY, REACT_APP_STRIPE_KEY} = process.env;
 
+
+// This is for the NPM RUN BUILD
+app.use(express.static(`${__dirname}/../build`));
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -90,8 +94,8 @@ app.get('/auth', passport.authenticate('auth0'));
 // This is where we want to redirect the user
 app.get('/auth/callback', passport.authenticate('auth0', {
       // Add # since we are using HashRouter
-      successRedirect: 'http://localhost:3000',
-      failureRedirect: 'http://localhost:3000'
+      successRedirect:  process.env.SUCCESS_REDIRECT,
+      failureRedirect:  process.env.FAILURE_REDIRECT
 }))
 
 // req.user comes from the serializeUser/deserializeUser user[0]
@@ -107,7 +111,7 @@ app.get('/auth/me', function(req, res) {
 app.get('/logout', function(req, res) {
       req.logOut();
       // Redirects you back to the Homepage
-      res.redirect('http://localhost:3000')
+      res.redirect(process.env.FAILURE_REDIRECT)
 })
 
 
