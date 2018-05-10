@@ -419,9 +419,8 @@ ul.slick-dots {
   text-decoration: none; }
   @media (max-width: 376px) {
     .single-product {
-      width: 100px;
-      height: 300px;
-      margin: 30px; } }
+      width: 150px;
+      height: 281px; } }
 
 .title-price {
   margin: 30px 0px 0px 0px;
@@ -429,12 +428,19 @@ ul.slick-dots {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 376px) {
+    .title-price {
+      align-items: flex-start; } }
 
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 0.7em;
   font-weight: bolder;
   padding-top: 5px; }
+
+@media (max-width: 376px) {
+  .category-price {
+    margin-left: 40px; } }
 
 h3 {
   font-family: "Montserrat", sans-serif;
@@ -494,12 +500,12 @@ h3 {
     @media (max-width: 376px) {
       .upper-right-box #description {
         margin: 10px 0px;
-        width: 100vw; } }
+        width: 375px; } }
   .upper-right-box #price {
     font-size: 1.2em; }
     @media (max-width: 376px) {
       .upper-right-box #price {
-        width: 100vw; } }
+        width: 375px; } }
   .upper-right-box .cartBtn {
     margin-top: 15px;
     width: 325px;

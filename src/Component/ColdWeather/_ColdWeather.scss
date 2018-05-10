@@ -129,9 +129,8 @@
     // color: black;
 
     @media (max-width: #{$screen-xs}) {
-      width: 100px;
-      height: 300px;
-      margin: 30px;
+      width: 150px;
+      height: 281px;
       }
   }
   
@@ -145,6 +144,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: #{$screen-xs}) {
+      align-items: flex-start;
+      }
   }
   
   p {
@@ -153,6 +156,18 @@
     font-weight: bolder;
     padding-top: 5px;
     }
+
+  .category-title {
+    @media (max-width: #{$screen-xs}) {
+      
+      }
+  }
+
+  .category-price {
+    @media (max-width: #{$screen-xs}) {
+      margin-left: 40px;
+      }
+  }
   
   h3 {
     font-family: $font-family;

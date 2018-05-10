@@ -19,8 +19,8 @@ class ColdWeather extends Component {
                 <Link to={`/coldWeatherProduct/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
-                        <p>{element.title}</p>
-                        <p className='price'>${element.price} USD</p>
+                        <p className='category-title'>{element.title}</p>
+                        <p className='category-price'>${element.price} USD</p>
                     </div>
                 </Link>
             )
