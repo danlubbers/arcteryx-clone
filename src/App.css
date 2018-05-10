@@ -322,6 +322,15 @@ ul.slick-dots {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 376px) {
+    .main-content {
+      margin: 25px 0px 0px 0px;
+      width: 100vw; } }
+
+@media (max-width: 376px) {
+  .booger {
+    height: 375px;
+    width: 300px; } }
 
 .insulation-img-2 {
   position: relative;
@@ -333,7 +342,7 @@ ul.slick-dots {
     .insulation-img-2 {
       height: 350px;
       width: 350px;
-      margin: 0px 80px 0px 0px;
+      margin: 0px 0px 0px -25px;
       position: relative;
       background-size: cover; } }
 
@@ -345,8 +354,8 @@ ul.slick-dots {
   font-size: .8em; }
   @media (max-width: 376px) {
     .category-text {
-      width: 100vw;
-      margin: 0px 0px 10px 0px; } }
+      width: 90vw;
+      margin: 0px 0px 10px -20px; } }
   .category-text .cold-weather-text {
     margin: 0px 0px 0px 10px;
     font-size: 1.2em; }
@@ -369,7 +378,7 @@ ul.slick-dots {
       width: 100vw;
       width: 350px;
       height: 162px;
-      margin-top: 225px; } }
+      margin: 225px 0px 0px -25px; } }
   .cold-weather-box .cold-weather-category {
     margin: 0px 0px 0px 20px;
     font-size: 1.4em; }
@@ -396,7 +405,7 @@ ul.slick-dots {
   align-items: flex-end; }
   @media (max-width: 376px) {
     .products-array {
-      width: 124vw;
+      width: 375px;
       margin: 50px 0px 0px 0px; } }
 
 .array-image {
@@ -408,6 +417,11 @@ ul.slick-dots {
   width: 162px;
   margin: 15px;
   text-decoration: none; }
+  @media (max-width: 376px) {
+    .single-product {
+      width: 100px;
+      height: 300px;
+      margin: 30px; } }
 
 .title-price {
   margin: 30px 0px 0px 0px;

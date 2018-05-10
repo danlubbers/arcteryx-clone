@@ -28,7 +28,7 @@ class ColdWeather extends Component {
 
         return(
             <div className="main-content">
-                <div>
+                <div className='booger'>
                     <div className="category-text">
                         <Link to="/" className="link-home-text"><h3 className="home-text">Home</h3></Link>
                         <h3 className="cold-weather-text">> COLD WEATHER INSULATION</h3>
