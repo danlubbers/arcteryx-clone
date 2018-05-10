@@ -1,6 +1,11 @@
 .content {
     margin: 40px 100px 10px 100px;
     // background-color: red;
+    @media (max-width: #{$screen-xs}) {
+      width: 100vw;
+      margin: 0 auto;
+      }
+    
     .upper-text {
       display: grid;
       grid-template-columns: 1fr  200px 200px 150px;
@@ -10,6 +15,12 @@
       text-align: left;
       border-bottom: 1px solid black;
       padding-bottom: 10px;
+
+      @media (max-width: #{$screen-xs}) {
+        width: 95vw;
+        grid-template-columns: 1fr  100px 100px 40px;
+        margin: 0px 0px 0px 10px;
+        }
 
       .mycart {
         justify-self: start;
@@ -34,6 +45,12 @@
       grid-template-columns: 1fr  200px 200px 150px;
       // grid-template-columns: repeat(4, 1fr);
       align-items: center;
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100vw;
+        grid-template-columns: 120px 100px 90px 30px;
+        padding: 0px 0px 0px 10px;
+        }
     }
   
     h5 {
@@ -63,6 +80,9 @@
       margin-left: 25px;
       width: 100px;
       // background-color: yellow;
+      @media (max-width: #{$screen-xs}) {
+        margin-left: 0px;
+        }
     }
   
     .product-quantity {
@@ -101,6 +121,14 @@
       justify-content: space-around;
       align-items: flex-end;
       // background-color: purple;
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
     }
   
     .product-quantity {
@@ -124,6 +152,15 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: baseline;
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        }
+      
     }
   
     .item-row {
@@ -135,6 +172,15 @@
         justify-content: space-between;
         align-items: center;
       // background-color: yellow;
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+        
+        }
     }
   
     .express-row {
@@ -161,6 +207,10 @@
       color: $font-color;
       background-color: $background-color;
       cursor: pointer;
+
+      @media (max-width: #{$screen-xs}) {
+        margin-top: 20px;
+        }
     }
     .checkoutBtn:focus {outline:0;}
   
