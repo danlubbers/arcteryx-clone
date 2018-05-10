@@ -453,7 +453,7 @@ h3 {
   align-items: flex-start; }
   @media (max-width: 376px) {
     .main-upper-box {
-      width: 50vw;
+      width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -466,8 +466,7 @@ h3 {
     width: 50vw; }
     @media (max-width: 376px) {
       .main-upper-box .upper-left-box {
-        width: 100vw;
-        margin: -12px 0px 20px 188px; } }
+        width: 100vw; } }
   .main-upper-box .upper-left-text {
     margin: 25px 0px 0px 100px;
     display: flex;
@@ -480,7 +479,7 @@ h3 {
     margin: 50px 0px 0px 25px; }
     @media (max-width: 376px) {
       .main-upper-box .hero-image {
-        margin: 0px;
+        margin: 20px 0px 20px 0px;
         width: 375px; } }
 
 .upper-right-box {
@@ -488,13 +487,13 @@ h3 {
   padding: 50px 100px 0px 100px; }
   @media (max-width: 376px) {
     .upper-right-box {
-      width: 100vw; } }
+      width: 100vw;
+      padding: 0px; } }
   .upper-right-box #title {
     font-size: 2em; }
     @media (max-width: 376px) {
       .upper-right-box #title {
-        width: 100vw;
-        padding: 0px 15px 0px 0px; } }
+        width: 100vw; } }
   .upper-right-box #description {
     font-size: 1em; }
     @media (max-width: 376px) {
