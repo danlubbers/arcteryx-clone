@@ -402,29 +402,61 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: flex-start; }
+  @media (max-width: 376px) {
+    .main-upper-box {
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .main-upper-box p {
     margin-right: 5px; }
   .main-upper-box #arcteryx, .main-upper-box #mens, .main-upper-box #title-link {
     letter-spacing: 2px; }
   .main-upper-box .upper-left-box {
     width: 50vw; }
+    @media (max-width: 376px) {
+      .main-upper-box .upper-left-box {
+        width: 100vw;
+        margin: -12px 0px 20px 188px; } }
   .main-upper-box .upper-left-text {
     margin: 25px 0px 0px 100px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start; }
+    @media (max-width: 376px) {
+      .main-upper-box .upper-left-text {
+        margin: 20px 20px 10px 20px; } }
   .main-upper-box .hero-image {
     margin: 50px 0px 0px 25px; }
+    @media (max-width: 376px) {
+      .main-upper-box .hero-image {
+        margin: 0px;
+        width: 375px; } }
 
 .upper-right-box {
   width: 50vw;
   padding: 50px 100px 0px 100px; }
+  @media (max-width: 376px) {
+    .upper-right-box {
+      width: 100vw; } }
   .upper-right-box #title {
     font-size: 2em; }
+    @media (max-width: 376px) {
+      .upper-right-box #title {
+        width: 100vw;
+        padding: 0px 15px 0px 0px; } }
   .upper-right-box #description {
     font-size: 1em; }
+    @media (max-width: 376px) {
+      .upper-right-box #description {
+        margin: 10px 0px;
+        width: 100vw; } }
   .upper-right-box #price {
     font-size: 1.2em; }
+    @media (max-width: 376px) {
+      .upper-right-box #price {
+        width: 100vw; } }
   .upper-right-box .cartBtn {
     margin-top: 15px;
     width: 325px;
@@ -433,8 +465,15 @@ h3 {
     font-family: "Montserrat", sans-serif;
     color: white;
     background-color: #000; }
+    @media (max-width: 376px) {
+      .upper-right-box .cartBtn {
+        margin: 20px 0px 10px 20px; } }
   .upper-right-box .cartBtn:focus {
     outline: 0; }
+
+@media (max-width: 376px) {
+  .lower-box {
+    display: none; } }
 
 .inputSearch {
   width: 600px;
@@ -527,6 +566,8 @@ h3 {
     align-items: center; }
   .content .item, .content .express, .content .total {
     margin-top: 5px; }
+  .content .free {
+    color: #d80000; }
   .content .checkoutBtn {
     width: 250px;
     height: 45px;

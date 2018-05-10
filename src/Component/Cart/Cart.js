@@ -107,7 +107,7 @@ class Cart extends Component {
                         <div className='express-row'>
                         <h5 className="express">Express Shipping:</h5>
                             <div> 
-                               <h5> Free-Ninety-Nine </h5>
+                               <h5 className='free'> Free-Ninety-Nine </h5>
                             </div>      
                         </div>
                         <div className='total-row'>
