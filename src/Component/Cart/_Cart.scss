@@ -120,6 +120,8 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: flex-end;
+      border-top: 1px solid black;
+      margin-top: 10px;
       // background-color: purple;
 
       @media (max-width: #{$screen-xs}) {
@@ -128,6 +130,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-top: 1px solid black;
         }
     }
   
@@ -210,6 +213,8 @@
 
       @media (max-width: #{$screen-xs}) {
         margin-top: 20px;
+        width: 350px;
+        height: 35px;
         }
     }
     .checkoutBtn:focus {outline:0;}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
+import Lock from 'react-icons/lib/fa/lock';
 
 class Checkout extends Component {
 
@@ -19,7 +20,7 @@ class Checkout extends Component {
                 token = {this.onToken}
                 stripeKey = {process.env.REACT_APP_STRIPE_KEY}
                 amount = {this.props.amount}>
-                <button className="checkoutBtn">CONTINUE CHECKOUT</button>
+                <button className="checkoutBtn">CONTINUE CHECKOUT <Lock/></button>
                 </StripeCheckout>
             </div>
         )
