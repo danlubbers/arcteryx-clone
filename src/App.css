@@ -77,6 +77,9 @@ h2, ul {
           display: none; } }
     .header .header-box-2 .search-box {
       display: flex; }
+      @media (max-width: 376px) {
+        .header .header-box-2 .search-box {
+          display: none; } }
     .header .header-box-2 .search {
       margin: 0px 0px 0px 0px;
       padding: 0px 0px 0px 50px;
@@ -110,6 +113,10 @@ h2, ul {
   @media (max-width: 376px) {
     .slide-menu {
       display: none; } }
+  @media (max-width: 963px) {
+    .slide-menu {
+      background-color: #333;
+      height: 500px; } }
 
 .slide-menu-position {
   top: 95px;
@@ -184,6 +191,9 @@ h2, ul {
   margin: 0px 70px 0px 0px;
   background-color: black;
   border: none; }
+  @media (min-width: 376px) {
+    .productsMobileTextBtn {
+      display: none; } }
 
 .slide-mobile-menu {
   background-color: #333;

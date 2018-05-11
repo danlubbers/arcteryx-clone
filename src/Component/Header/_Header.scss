@@ -107,6 +107,10 @@ h2, ul {
             .search-box {
               // background-color: red;
               display: flex;
+
+              @media (max-width: #{$screen-xs}) {
+                display: none;
+              }
             }
             
             .search {
@@ -155,6 +159,12 @@ h2, ul {
       @media (max-width: #{$screen-xs}) {
         // Does not show slide down menu in mobile mode
         display: none;
+      }
+
+      @media (max-width: #{$screen-lg}) {
+        // Does not show slide down menu in mobile mode
+        background-color: #333;
+        height: 500px;
       }
   
     }
@@ -264,6 +274,11 @@ h2, ul {
     margin: 0px 70px 0px 0px;
     background-color: black;
     border: none; 
+
+    @media (min-width: #{$screen-xs}){
+      display: none;
+    }
+
   }
   // 
   .slide-mobile-menu {
