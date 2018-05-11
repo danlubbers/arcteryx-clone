@@ -49,6 +49,7 @@ class Header extends Component {
     render() {
         let {showMenu} = this.state;
         let slideCSS = showMenu ? 'slide-menu slide-menu-position' : 'slide-menu';
+        let slideCSSMobile = showMenu ? 'slide-mobile-menu slide-mobile-menu-position' : 'slide-mobile-menu';
 
         let logInDisplay = this.props.user ? <a href={process.env.REACT_APP_LOGOUT}><button className='start-shoppingBtn'>LogOut</button></a> : <a href={process.env.REACT_APP_LOGIN}><button className='start-shoppingBtn'>Start Shopping</button></a>
 
@@ -120,13 +121,24 @@ class Header extends Component {
 
                         {/* Starting SUBNAV BAR FOR MOBILE */}
                         <div className='sub-dropdown'>
-                            <ul>
-                                <li>
-                                    <dt>
-                                       <h2>SHOP</h2>
-                                    </dt>
-                                </li>
+                            <ul className='header-ul-mobile'>
+                                <li><button className="productsMobileTextBtn" onClick={this.handleOver}>PRODUCTS {showMenu ? <TriangleUp className='triangle-up'/> : <TriangleDown className='triangle-down'/>}</button></li>
                             </ul>
+                            <div className={slideCSSMobile}>
+                                <ul className='mobile-content'>
+                                    <li className='mobile-text-content'>COMBAT UNIFORMS</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>BASE LAYER</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>MID LAYER</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>SOFTSHELL</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>WET WEATHER PROTECTION</li><div className='horizontal-line'></div>
+                                    <Link to='/coldWeather'><li className='mobile-text-content'>COLD WEATHER INSULATION</li><div className='horizontal-line'></div></Link>
+                                    <li className='mobile-text-content'>APPAREL ACCESSORIES</li><div className='horizontal-line'></div>
+                                    <Link to='/Xfunctional'><li className='mobile-text-content'>CROSS FUNCTIONAL EQUIPMENT</li><div className='horizontal-line'></div></Link>
+                                    <li className='mobile-text-content'>LOAD CARRIAGE EQUIPMENT</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>BELTS & HARNESS</li><div className='horizontal-line'></div>
+                                    <li className='mobile-text-content'>STATION IDENTIFICATION</li><div className='horizontal-line'></div>
+                                </ul>
+                            </div>
                         </div>
 
                         <div className="header-box-2">
