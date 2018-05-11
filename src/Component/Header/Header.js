@@ -143,7 +143,7 @@ class Header extends Component {
 
                         <div className="header-box-2">
                             <li className="find-store">Find A Store</li>
-                            <Link to='/search/'><li className="search">Search<SearchIcon id="fa-search" /></li></Link>
+                            <Link to='/search/' className='search-box'><li className="search">Search</li><SearchIcon id="fa-search" /></Link>
                             <li><Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
                         </div>
                     
