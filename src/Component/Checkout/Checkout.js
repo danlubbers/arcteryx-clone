@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
 import Lock from 'react-icons/lib/fa/lock';
+import {getCartProducts} from '../../ducks/reducer';
+import {connect} from 'react-redux';
 
 class Checkout extends Component {
 
@@ -12,6 +14,11 @@ class Checkout extends Component {
             console.log('Yeah, buddy! Gimme yo money')
         }).catch(err => console.log(err))
     }
+
+    onClose = () => {
+        this.props.getCartProducts();
+    }
+
     render() {
         // console.log(process.env.REACT_APP_STRIPE_KEY)
         return(
@@ -19,12 +26,13 @@ class Checkout extends Component {
                 <StripeCheckout 
                 token = {this.onToken}
                 stripeKey = {process.env.REACT_APP_STRIPE_KEY}
-                amount = {this.props.amount}>
+                amount = {this.props.amount}
+                closed = {this.onClose}>
                 <button className="checkoutBtn">CONTINUE CHECKOUT <Lock/></button>
                 </StripeCheckout>
             </div>
         )
     }
 }
-
-export default Checkout;
+// null is because we are not pulling any data from the store, we just need to update the data
+export default connect(null, {getCartProducts})(Checkout);

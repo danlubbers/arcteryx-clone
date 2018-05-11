@@ -101,7 +101,12 @@ module.exports = {
             source: req.body.token.id,
             description: 'Example charge'
         })
-        res.sendStatus(200) // clear out cart here
+        // console.log(req.user.user_id)
+        dbInstance.cart.emptyCart(req.user.user_id).then(noProducts=>{
+            res.status(200).send(noProducts) // clear out cart here
+        }).catch(err=>{
+            console.error(err)
+            res.status(500).send(err)
+        })
     }
-    
 }

@@ -47,6 +47,8 @@ class Cart extends Component {
     this.componentDidMount();
 }
 
+    
+
     render() {
         var cartTotal = 0;
         cartTotal = (this.props.cart.reduce((acc, val)=>acc+(val.quantity * val.price),0)).toFixed(2) || '0.00'
