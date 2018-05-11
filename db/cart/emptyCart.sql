@@ -1,0 +1,2 @@
+DELETE FROM CREATE
+WHERE user_id = $1;
