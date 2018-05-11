@@ -186,13 +186,13 @@ h2, ul {
 .slide-mobile-menu {
   background-color: #333;
   width: 100vw;
+  right: 0px;
   height: 500px;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: -100px;
-  transition: .25s ease-in-out;
   opacity: 0;
   transition-property: opacity;
   z-index: -1; }
