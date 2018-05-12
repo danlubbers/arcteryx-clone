@@ -59,10 +59,12 @@ class Header extends Component {
                     <ul className='header-ul'>
                         <div className="header-box-1">
                             <li><Link to="/"><img className="leaf-logo" src={logo} alt="bird-leaf-logo"/></Link></li>
-                            <li><button className="productsTextBtn" onMouseOver={this.handleOver}>PRODUCTS {showMenu ? <TriangleUp className='triangle-up'/> : <TriangleDown className='triangle-down'/>}</button></li>
+                            <li><button className="productsTextBtn" onMouseOver={this.handleOver}>PRODUCTS</button>{showMenu ? <TriangleUp className='triangle-up'/> : <TriangleDown className='triangle-down'/>}</li>
                         </div>
             
-                        <div className={slideCSS} onMouseLeave={this.handleLeave}>
+                        <div className={slideCSS} 
+                        // onMouseLeave={this.handleLeave}
+                        >
                         <div className='container-left'>
                             <h2 className='signin'>Sign-in here to start shopping as a LEAF customer.</h2>
                             {/* Sign-In to Auth0 */}
@@ -92,7 +94,7 @@ class Header extends Component {
                                     <img className="wetWeather" src={wetWeather} alt="wet weather" />
                                     <p className='nav-text'>Wet Weather Protection</p>
                                 </div>
-                                <Link to='/coldWeather'><div className='box6'>
+                                <Link to='/coldWeather' onClick={this.handleLeave}><div className='box6'>
                                     <img className="coldWeather" src={coldWeather} alt="cold weather" />
                                     <p className='nav-text'>Cold Weather Insulation</p>
                                 </div></Link>
@@ -100,7 +102,7 @@ class Header extends Component {
                                     <img className="accessories" src={accessories} alt="accessories" />
                                     <p className='nav-text'>Apparel Accessories</p>
                                 </div>
-                                <Link to='/Xfunctional'><div className='box8'>
+                                <Link to='/Xfunctional' onClick={this.handleLeave}><div className='box8'>
                                     <img className="crossFunctional" src={crossFunctional} alt="cross functional" />
                                     <p className='nav-text'>Cross Functional Equipment</p>
                                 </div></Link>
@@ -144,7 +146,7 @@ class Header extends Component {
                         <div className="header-box-2">
                             <li className="find-store">Find A Store</li>
                             <Link to='/search/' className='search-box'><li className="search">Search</li><SearchIcon id="fa-search" /></Link>
-                            <li><Link to="/cart"><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
+                            <li><Link to="/cart" ><img className="cart-icon" src={cart} alt="cart-logo"/></Link></li>
                         </div>
                     
                     </ul>

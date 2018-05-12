@@ -48,7 +48,7 @@ class Product extends Component {
                             <p id="description">{element.description}</p>
                             <p id="price">USD ${element.price}</p>
                             <div>
-                               <button className="cartBtn" onClick={_=> this.addToCart(this.props.product)}>ADD TO CART</button>
+                               <Link to="/cart"><button className="cartBtn" onClick={_=> this.addToCart(this.props.product)}>ADD TO CART</button></Link>
                             </div>
                         </div>
                         
