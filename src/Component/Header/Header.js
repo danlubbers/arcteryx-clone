@@ -82,10 +82,10 @@ class Header extends Component {
                                     <img className="baselayers" src={baseLayer} alt="baselayers" />
                                     <p className='nav-text'>Base Layer</p>
                                 </div>
-                                <div className='box3'>
+                                <Link to='/midLayers' onClick={this.handleLeave}><div className='box3'>
                                      <img className="midlayers" src={midLayer} alt="midlayers" />
                                      <p className='nav-text'>Mid Layer</p>
-                                </div>
+                                </div></Link>
                                 <div className='box4'>
                                     <img className="softshells" src={softShell} alt="softshells" />
                                     <p className='nav-text'>Softshell</p>
@@ -130,7 +130,7 @@ class Header extends Component {
                                 <ul className='mobile-content'>
                                     <li className='mobile-text-content'>COMBAT UNIFORMS</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>BASE LAYER</li><div className='horizontal-line'></div>
-                                    <li className='mobile-text-content'>MID LAYER</li><div className='horizontal-line'></div>
+                                    <Link to='/midLayers' onClick={this.handleLeave}><li className='mobile-text-content'>MID LAYER</li><div className='horizontal-line'></div></Link>
                                     <li className='mobile-text-content'>SOFTSHELL</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>WET WEATHER PROTECTION</li><div className='horizontal-line'></div>
                                     <Link to='/coldWeather' onClick={this.handleLeave}><li className='mobile-text-content'>COLD WEATHER INSULATION</li><div className='horizontal-line'></div></Link>

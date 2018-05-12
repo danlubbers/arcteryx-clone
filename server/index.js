@@ -124,6 +124,8 @@ app.get(`/api/getOneColdWeatherProduct/:id`, controller.coldWeatherProduct);
 app.get(`/api/getAllxFunctionalProducts`, controller.xFunctionalProducts)
 // GET ONE xFUNCATIONAL PRODUCT
 app.get(`/api/getOnexFunctionalProduct/:id`, controller.xFunctionalProduct);
+// Get ALL MidLayers
+app.get(`/api/midLayers`, controller.midLayerProducts)
 // Display Products that were added to the cart (componentDidMount)
 app.get(`/api/productCart`, controller.cartProducts);
 // POST endpoint for changing Quantity

@@ -7,6 +7,7 @@ const initialState = {
     oneColdProduct: [],
     allxFunctionalProducts: [],
     onexFunctionalProduct: [],
+    allMidLayers: [],
     addToCart: [],
     cartProducts: [],
     cartQuantity: [],
@@ -19,6 +20,7 @@ const ALL_COLD_PRODUCTS = 'ALL_COLD_PRODUCTS';
 const ONE_COLD_PRODUCT = 'ONE_COLD_PRODUCT';
 const ALL_X_FUNCTIONAL_PRODUCTS = 'ALL_X_FUNCTIONAL_PRODUCTS';
 const ONE_X_FUNCTIONAL_PRODUCT = 'ONE_X_FUNCTIONAL_PRODUCT';
+const ALL_MID_LAYERS = 'ALL_MID_LAYERS'
 const ADD_TO_CART = 'ADD_TO_CART';
 const CART_PRODUCTS = 'CART_PRODUCTS';
 const CART_QUANTITY = 'CART_QUANTITY';
@@ -89,6 +91,16 @@ export function getOnexFunctionalProduct(id) {
         }
 }
 
+export function getAllMidLayerProducts() {
+    let products = axios.get(`/api/midLayers`).then(res => {
+        return res.data 
+    });
+    return {
+        type: ALL_MID_LAYERS,
+        payload: products
+    }
+}
+
 export function addCart(id) {
     // console.log(id)
     let addToCart = axios.post(`/api/cart`, {productID: id}).then(res => {
@@ -152,6 +164,9 @@ export default function reducer(state=initialState, action) {
             return Object.assign( {}, state, {allxFunctionalProducts: action.payload});
         case ONE_X_FUNCTIONAL_PRODUCT + '_FULFILLED':
             return Object.assign( {}, state, {onexFunctionalProduct: action.payload});
+        case ALL_MID_LAYERS + '_FULFILLED':
+            console.log('midlayers')
+            return Object.assign( {}, state, {allMidLayers: action.payload});
         case ADD_TO_CART + '_FULFILLED':
             return Object.assign( {}, state, {addToCart: action.payload});
         case CART_PRODUCTS + '_FULFILLED':

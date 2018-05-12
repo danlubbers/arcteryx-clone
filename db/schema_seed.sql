@@ -80,27 +80,40 @@ insert into products (category, title, description, price, colour, img, large_im
 
 insert into products (category, title, description, price, colour, img, large_img) values ('xFunctional', 'V110 ROLLING DUFFLE', '110L rolling gear hauler with exceptional strength-to-weight ratio.', '449.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654031/xFunctional/V110-Rolling-Duffle-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1525654920/xFunctional/V110-Rolling-Duffle-Black-large.png');
 
+-- Mid Layers
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'ATOM LT HOODY LEAF', 'Exceptionally lightweight insulated mid layer that retains core warmth by blocking wind and trapping warm air next to the body, the Atom LT can also function as a wind resistant outer layer.', '259.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Atom-LT-Hoody-LEAF-Black.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155484/midLayers/Atom-LT-Hoody-LEAF-Black-large.png');
+
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'ATOM LT JACKET LEAF', 'Exceptionally lightweight insulated mid layer that retains core warmth by blocking wind and trapping warm air next to the body, the Atom LT can also function as a wind resistant outer layer.', '239.00', 'Wolf', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Atom-LT-Jacket-LEAF-Wolf.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Atom-LT-Jacket-LEAF-Wolf-large.png');
+
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'NAGA HOODY FULL ZIP', 'Warm technical mid layer with full zip closure, functional for everyday use.', '229.00', 'Wolf', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Naga-Hoody-Full-Zip-Wolf.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155484/midLayers/Naga-Hoody-Full-Zip-Wolf-large.png');
+
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'NAGA HOODY GEN 2', 'Warm technical thermal mid layer functional for everyday use.', '199.00', 'Ranger Green', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Naga-Hoody-Gen-2-Ranger-Green.gif', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Naga-Hoody-Gen-2-Ranger-large.png');
+
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'NAGA PULOVER AR', 'A mid layer that is worn in conjunction with a wet weather protective jacket when conducting Special Reconnaissance tasks.', '249.00', 'Crocodile', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Naga-Pullover-AR-Crocodile.gif','http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Naga-Pullover-AR-Crocodile-large.png');
+
+insert into products (category, title, description, price, colour, img, large_img) values ('midLayers', 'ATOM LT PANT LEAF', 'A lightweight and packable insulated mid layer bottom.', '229.00', 'Black', 'http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Atom-LT-Pant-LEAF-Black.gif','http://res.cloudinary.com/danlubbers/image/upload/v1526155491/midLayers/Atom-LT-Pant-LEAF-Black-large.png');
+
 -- INSERT FOR DETAILS TABLE
 
-insert into details (product_id, large_img) values (1, 'http://res.cloudinary.com/danlubbers/image/upload/v1524600909/Cold-WX-Parka-SVX-Harrier-large.png');
+-- insert into details (product_id, large_img) values (1, 'http://res.cloudinary.com/danlubbers/image/upload/v1524600909/Cold-WX-Parka-SVX-Harrier-large.png');
 
-insert into details (product_id, large_img) values (2, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602533/Cold-WX-Jacket-SV-Black-large.png');
+-- insert into details (product_id, large_img) values (2, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602533/Cold-WX-Jacket-SV-Black-large.png');
 
-insert into details (product_id, large_img) values (3, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602664/Cold-WX-Jacket-LT-MultiCam-Multicam-large.png');
+-- insert into details (product_id, large_img) values (3, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602664/Cold-WX-Jacket-LT-MultiCam-Multicam-large.png');
 
-insert into details (product_id, large_img) values (4, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602764/Cold-WX-Jacket-SV-MultiCam-Multicam-large.png');
+-- insert into details (product_id, large_img) values (4, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602764/Cold-WX-Jacket-SV-MultiCam-Multicam-large.png');
 
-insert into details (product_id, large_img) values (5, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602839/Cold-WX-Hoody-LT-Ranger-Green-large.png');
+-- insert into details (product_id, large_img) values (5, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602839/Cold-WX-Hoody-LT-Ranger-Green-large.png');
 
-insert into details (product_id, large_img) values (6, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602914/Cold-WX-Hoody-LT-MultiCam-Multicam-large.png');
+-- insert into details (product_id, large_img) values (6, 'http://res.cloudinary.com/danlubbers/image/upload/v1524602914/Cold-WX-Hoody-LT-MultiCam-Multicam-large.png');
 
-insert into details (product_id, large_img) values (7, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603031/Cold-WX-Jacket-LT-Crocodile-large.png');
+-- insert into details (product_id, large_img) values (7, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603031/Cold-WX-Jacket-LT-Crocodile-large.png');
 
-insert into details (product_id, large_img) values (8, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603113/Cold-WX-Bib-Pant-SVX-Harrier-large.png');
+-- insert into details (product_id, large_img) values (8, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603113/Cold-WX-Bib-Pant-SVX-Harrier-large.png');
 
-insert into details (product_id, large_img) values (9, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603183/Cold-WX-Pant-SV-Black-large.png');
+-- insert into details (product_id, large_img) values (9, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603183/Cold-WX-Pant-SV-Black-large.png');
 
-insert into details (product_id, large_img) values (10, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603258/Cold-WX-Pant-SV-MultiCam-Multicam-large.png');
+-- insert into details (product_id, large_img) values (10, 'http://res.cloudinary.com/danlubbers/image/upload/v1524603258/Cold-WX-Pant-SV-MultiCam-Multicam-large.png');
 
 
 
