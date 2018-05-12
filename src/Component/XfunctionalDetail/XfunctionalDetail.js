@@ -41,7 +41,7 @@ class XfunctionalDetail extends Component {
                         
                     </div>
                     <div className="lower-box">
-                        <p>{element.title}</p>
+                        {/* <p>{element.title}</p> */}
                     </div>
                 </div>
             )

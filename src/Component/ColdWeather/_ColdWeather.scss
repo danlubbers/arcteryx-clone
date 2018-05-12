@@ -89,14 +89,14 @@
     }  
   
     .cold-weather-description {
-      width: 30vw;
+      width: 380px;
       margin: 10px 0px 0px 20px;
       letter-spacing: 2.5px;
       font-size: 12px;
 
       @media (max-width: #{$screen-xs}) {
-        width: 90vw;
-        margin: 0px 10px;
+        width: 350px;
+        margin: 0px 0px 0px 10px;
         }
     }
   

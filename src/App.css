@@ -442,14 +442,14 @@ ul.slick-dots {
         width: 80vw;
         margin: -20px 0px 20px 15px; } }
   .cold-weather-box .cold-weather-description {
-    width: 30vw;
+    width: 380px;
     margin: 10px 0px 0px 20px;
     letter-spacing: 2.5px;
     font-size: 12px; }
     @media (max-width: 376px) {
       .cold-weather-box .cold-weather-description {
-        width: 90vw;
-        margin: 0px 10px; } }
+        width: 350px;
+        margin: 0px 0px 0px 10px; } }
 
 .products-array {
   margin: 50px 100px 0px 100px;
