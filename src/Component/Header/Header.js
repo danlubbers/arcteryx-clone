@@ -130,12 +130,12 @@ class Header extends Component {
                                 <ul className='mobile-content'>
                                     <li className='mobile-text-content'>COMBAT UNIFORMS</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>BASE LAYER</li><div className='horizontal-line'></div>
-                                    <Link to='/midLayers' onClick={this.handleLeave}><li className='mobile-text-content'>MID LAYER</li><div className='horizontal-line'></div></Link>
+                                    <Link to='/midLayers' onClick={this.handleLeave}><li className='mobile-text-content'>MID LAYER</li></Link><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>SOFTSHELL</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>WET WEATHER PROTECTION</li><div className='horizontal-line'></div>
-                                    <Link to='/coldWeather' onClick={this.handleLeave}><li className='mobile-text-content'>COLD WEATHER INSULATION</li><div className='horizontal-line'></div></Link>
+                                    <Link to='/coldWeather' onClick={this.handleLeave}><li className='mobile-text-content'>COLD WEATHER INSULATION</li></Link><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>APPAREL ACCESSORIES</li><div className='horizontal-line'></div>
-                                    <Link to='/Xfunctional' onClick={this.handleLeave}><li className='mobile-text-content'>CROSS FUNCTIONAL EQUIPMENT</li><div className='horizontal-line'></div></Link>
+                                    <Link to='/Xfunctional' onClick={this.handleLeave}><li className='mobile-text-content'>CROSS FUNCTIONAL EQUIPMENT</li></Link><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>LOAD CARRIAGE EQUIPMENT</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>BELTS & HARNESS</li><div className='horizontal-line'></div>
                                     <li className='mobile-text-content'>STATION IDENTIFICATION</li><div className='horizontal-line'></div>
