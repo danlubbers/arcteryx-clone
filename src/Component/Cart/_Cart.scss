@@ -28,10 +28,23 @@
 
       .quantity {
         justify-self: center;
+        @media (max-width: #{$screen-xs}) {
+          display: none;
+          }
+      }
+
+      .price {
+        @media (max-width: #{$screen-xs}) {
+          display: none;
+          }
       }
 
       .remove {
         justify-self: end;
+
+        @media (max-width: #{$screen-xs}) {
+          display: none;
+          }
       }
 
 
@@ -48,8 +61,9 @@
 
       @media (max-width: #{$screen-xs}) {
         width: 100vw;
-        grid-template-columns: 120px 100px 90px 30px;
-        padding: 0px 0px 0px 10px;
+        grid-template-columns: 150px 90px 90px 30px;
+        padding: 0px 10px 0px 0px;
+        justify-content: flex-end;
         }
     }
   
@@ -70,6 +84,10 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+
+      @media (max-width: #{$screen-xs}) {
+        margin: 0px 0px 0px 0px;
+        }
     }
   
     .product-thumbnail {
@@ -89,23 +107,38 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: #{$screen-xs}) {
+        margin-left: 35px;
+        }
     }
   
     #fa-minusBtn {
       margin: 0px 10px 0px 0px;
       border: none;
       cursor: pointer;
+
+      @media (max-width: #{$screen-xs}) {
+        margin: 0 auto;
+        }
     }
   
     #fa-plusBtn {
       @extend #fa-minusBtn;
       margin-right: -65px;
+
+      @media (max-width: #{$screen-xs}) {
+        margin: 0px -40px 0px -10px;
+        }
     }
   
     #removeBtn {
       border: none;
       cursor: pointer;
       
+      @media (max-width: #{$screen-xs}) {
+        
+        }
     }
   
     .cart-array {
