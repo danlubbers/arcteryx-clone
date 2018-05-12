@@ -7,6 +7,7 @@ import Cart from './Component/Cart/Cart';
 import Xfunctional from './Component/Xfunctional/Xfunctional';
 import XfunctionalDetail from './Component/XfunctionalDetail/XfunctionalDetail';
 import MidLayers from './Component/MidLayers/MidLayers';
+import MidLayersDetail from './Component/MidLayerDetail/MidLayerDetail';
 import Search from './Component/Search/Search';
 
 export default (
@@ -17,6 +18,7 @@ export default (
         <Route path="/midLayers" component={MidLayers} />
         <Route path="/coldWeatherProduct/:id" component={Product} />
         <Route path="/xFunctionalProduct/:id" component={XfunctionalDetail} />
+        <Route path="/midLayerProduct/:id" component={MidLayersDetail} />
         <Route path="/search" component={Search} />
         <Route path="/cart" component={Cart} />
     </Switch>

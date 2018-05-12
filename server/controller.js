@@ -42,12 +42,22 @@ module.exports = {
     },
 
     midLayerProducts: (req, res) => {
-        console.log('sucka')
+        // console.log('sucka')
         const dbInstance = req.app.get('db');
         dbInstance.products.getAllMidLayers().then(products => res.status(200).send(products)).catch((err)=>{
             console.error(err);
             res.status(500).send(err)
         })
+    },
+
+    midLayerProduct: (req, res) => {
+        console.log('sucka')
+        const dbInstance = req.app.get('db');
+    
+        dbInstance.products.getOneMidLayerProduct(req.params.id).then(productID => res.status(200).send(productID)).catch((err)=>{
+            console.error(err);
+            res.status(500).send(err)
+    })
     },
 
     cartProducts: (req, res) => {

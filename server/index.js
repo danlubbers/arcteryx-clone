@@ -121,17 +121,19 @@ app.get(`/api/getAllColdWeatherProducts`, controller.coldWeatherProducts);
 // Get ONE COLD WEATHER Product when clicked to display on Product Page (componentDidMount)
 app.get(`/api/getOneColdWeatherProduct/:id`, controller.coldWeatherProduct);
 // GET ALL xFUNCATIONAL PRODUCTS
-app.get(`/api/getAllxFunctionalProducts`, controller.xFunctionalProducts)
+app.get(`/api/getAllxFunctionalProducts`, controller.xFunctionalProducts);
 // GET ONE xFUNCATIONAL PRODUCT
 app.get(`/api/getOnexFunctionalProduct/:id`, controller.xFunctionalProduct);
 // Get ALL MidLayers
-app.get(`/api/midLayers`, controller.midLayerProducts)
+app.get(`/api/midLayers`, controller.midLayerProducts);
+// Get One MidLayer Product
+app.get(`/api/getOneMidLayerProduct/:id`, controller.midLayerProduct);
 // Display Products that were added to the cart (componentDidMount)
 app.get(`/api/productCart`, controller.cartProducts);
 // POST endpoint for changing Quantity
-app.put(`/api/cart`, controller.updateQuantity)
+app.put(`/api/cart`, controller.updateQuantity);
 // Get ONE Product when clicked and add to the CART page
-app.post(`/api/cart`, controller.addCart)
+app.post(`/api/cart`, controller.addCart);
 // Delete Product from Cart
 app.delete(`/api/deleteProduct/:id`, controller.delete);
 

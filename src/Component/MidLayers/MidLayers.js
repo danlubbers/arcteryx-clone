@@ -14,7 +14,7 @@ class MidLayers extends Component {
         if(this.props.midLayers){
             var productsArray = this.props.midLayers.map((element, index)=>{
                 return(
-                    <Link to={`/midLayers/${element.product_id}`} key={index} className="single-product">
+                    <Link to={`/midLayerProduct/${element.product_id}`} key={index} className="single-product">
                     <img className="array-image" src={element.img} alt="arcteryx-product"/>
                     <div className="title-price">
                         <p>{element.title}</p>
