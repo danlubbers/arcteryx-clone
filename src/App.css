@@ -17,7 +17,7 @@ h2, ul {
 
 .header {
   margin-bottom: 10px;
-  width: 100%;
+  width: 100vw;
   height: 96px;
   background-color: #000; }
   .header .navbar {
@@ -339,7 +339,7 @@ ul.slick-dots {
   position: relative;
   margin-top: 75px;
   padding: 50px 75px 0px 170px;
-  width: 100%;
+  width: 100vw;
   background-color: #000; }
   @media (max-width: 376px) {
     .footer {
@@ -551,10 +551,10 @@ h3 {
         width: 100vw;
         font-size: 1.5em; } }
   .upper-right-box #description {
-    font-size: 1em; }
+    font-size: 1em;
+    margin: 10px 0px; }
     @media (max-width: 376px) {
       .upper-right-box #description {
-        margin: 10px 0px;
         padding: 0px 20px;
         width: 375px;
         font-size: .8em; } }
