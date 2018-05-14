@@ -59,7 +59,7 @@ export default class Carousel extends Component {
                     <h1 className="text-title-3">New Naga Pullover AR </h1>
                     <p className="text-description-3">Air permeable midlayer with warmth with weather resistance for wet, cold environments.</p>
                 <div className="button-container-3">
-                    <Link to={`/product/`}><button className="text-button-3">VIEW NAGA PULLOVER AR</button></Link>
+                    <Link to={`/midLayerProduct/23`}><button className="text-button-3">VIEW NAGA PULLOVER AR</button></Link>
                 </div>
                 </div>
                     <img className="midlayers-img" src={midlayers} alt="midlayers"/>

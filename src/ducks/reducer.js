@@ -59,7 +59,7 @@ export function getAllColdProducts() {
 export function getOneColdProduct(id) {
     // console.log(id)
     let product = axios.get(`/api/getOneColdWeatherProduct/${id}`).then(res => {
-        console.log('test2', res.data)
+        // console.log('test2', res.data)
         return res.data
     });
         return {
@@ -84,7 +84,7 @@ export function getAllxFunctionalProducts() {
 export function getOnexFunctionalProduct(id) {
     // console.log(id)
     let xProduct = axios.get(`/api/getOnexFunctionalProduct/${id}`).then(res => {
-        console.log('test2', res.data)
+        // console.log('test2', res.data)
         return res.data
     });
         return {
@@ -104,9 +104,9 @@ export function getAllMidLayerProducts() {
 }
 
 export function getOneMidLayerProduct(id) {
-    console.log(id)
+    // console.log(id)
     let midLayerProduct = axios.get(`/api/getOneMidLayerProduct/${id}`).then(res => {
-        console.log('test2', res.data)
+        // console.log('test2', res.data)
         return res.data
     });
         return {
@@ -118,7 +118,7 @@ export function getOneMidLayerProduct(id) {
 export function addCart(id) {
     // console.log(id)
     let addToCart = axios.post(`/api/cart`, {productID: id}).then(res => {
-        console.log('test', res.data)
+        // console.log('test', res.data)
         return res.data
     });
         return {
@@ -129,7 +129,7 @@ export function addCart(id) {
 
 export function getCartProducts() {
     let cartProducts = axios.get(`/api/productCart`).then(res => {
-       console.log(res.data)
+    //    console.log(res.data)
         return res.data
     });
         return {
@@ -140,7 +140,7 @@ export function getCartProducts() {
 
 export function changeQuantity(cartID, newQuantity) {
     let cartQuantity = axios.put(`/api/cart`, {cartID, newQuantity}).then(res=>{
-        console.log(res)
+        // console.log(res)
         return res.data
     });
         return {
@@ -179,10 +179,10 @@ export default function reducer(state=initialState, action) {
         case ONE_X_FUNCTIONAL_PRODUCT + '_FULFILLED':
             return Object.assign( {}, state, {onexFunctionalProduct: action.payload});
         case ALL_MID_LAYERS + '_FULFILLED':
-            console.log('midlayers')
+            // console.log('midlayers')
             return Object.assign( {}, state, {allMidLayers: action.payload});
         case ONE_MID_LAYER + '_FULFILLED':
-            console.log('midlayer-single-product')
+            // console.log('midlayer-single-product')
             return Object.assign( {}, state, {oneMidLayer: action.payload});
         case ADD_TO_CART + '_FULFILLED':
             return Object.assign( {}, state, {addToCart: action.payload});

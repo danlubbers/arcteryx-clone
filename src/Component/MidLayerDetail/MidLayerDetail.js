@@ -8,7 +8,6 @@ import { addCart } from '../../ducks/reducer';
 class MidLayerDetail extends Component {
   
     componentDidMount() {
-        console.log('shit')
             this.props.getOneMidLayerProduct(this.props.match.params.id)
     }
     
