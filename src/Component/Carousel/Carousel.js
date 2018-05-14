@@ -23,6 +23,7 @@ export default class Carousel extends Component {
         autoplay: true, 
         autoPlaySpeed: 500,
         cssEase: "linear",
+        pauseOnHover: false,
         adaptiveHeight: true,
         initialSlide: 0
     };
