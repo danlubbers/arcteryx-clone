@@ -10,7 +10,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "massive": "^4.7.2",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
